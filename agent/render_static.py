@@ -15,7 +15,7 @@ import io
 import json
 import re
 from update import AI_FAMILIES, family_from_record
-from visualizations import sunburst, stacked, stacked_legend
+from visualizations import render_charts
 
 ROOT = Path(__file__).resolve().parents[1]
 IDX = ROOT / 'index.html'
@@ -118,12 +118,12 @@ def render():
     doc=replace_marker(doc,'trend-chart',year_chart(papers))
     doc=replace_marker(doc,'domain-bars',horizontal_bars(Counter(p.get('domain') or 'Other' for p in papers)))
     doc=replace_marker(doc,'method-bars',horizontal_bars(Counter(family_from_record(p) for p in papers), AI_FAMILIES))
-    review=[p for p in papers if p.get('source_group')=='original_review']
-    image,legend=sunburst(review,'Deep learning (DL)')
-    doc=replace_marker(doc,'sunburst',image)
-    doc=replace_marker(doc,'sun-legend',legend)
-    doc=replace_marker(doc,'stacked',stacked(review))
-    doc=replace_marker(doc,'stacked-legend',stacked_legend())
+    charts=render_charts(papers,collection='all',family='Deep learning (DL)')
+    doc=replace_marker(doc,'sunburst',charts['sun'])
+    doc=replace_marker(doc,'sun-legend',charts['legend'])
+    doc=replace_marker(doc,'stacked',charts['bars'])
+    doc=replace_marker(doc,'stacked-legend',charts['key'])
+    doc=replace_text(doc,'viz-sun-summary',escape(charts['summary']))
     digest=''.join(f'<div class="digest-entry"><span class="bullet"></span><a href="{e(p.get("url") or "https://doi.org/"+p.get("doi",""))}" target="_blank" rel="noopener noreferrer">{e(p.get("title"))}</a></div>' for p in papers[:3])
     doc=replace_marker(doc,'digest-list',digest)
     counts={'stat-papers':str(len(papers)),'stat-domains':str(len(set(p.get('domain') for p in papers if p.get('domain')))),
