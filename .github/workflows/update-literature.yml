@@ -6,11 +6,17 @@ on:
     paths:
       - 'index.html'
       - 'assets/**'
+      - 'agent/**'
+      - 'tests/**'
       - 'data/**'
       - '.github/workflows/update-literature.yml'
   schedule:
     - cron: '15 6 * * *' # Every day 06:15 UTC; free credits reset at midnight UTC
   workflow_dispatch:
+
+concurrency:
+  group: living-ai-food-safety-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   update:
