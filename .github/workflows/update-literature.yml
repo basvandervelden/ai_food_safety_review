@@ -1,0 +1,69 @@
+name: Refresh literature
+
+on:
+  schedule:
+    - cron: '15 6 * * 1' # Monday 06:15 UTC
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Retrieve and classify candidate studies
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-4.1-mini
+        run: python agent/update.py --days 90 --per-query 60
+      - name: Pre-render HTML and CSV for no-JavaScript viewing
+        run: python agent/render_static.py
+      - name: Validate generated data
+        run: python -m unittest discover -s tests -v
+      - name: Commit updated evidence index
+        run: |
+          git config user.name "living-review-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html data/papers.csv data/papers.json data/papers.js data/digest.json data/digest.js data/review_queue.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: weekly literature refresh"
+            git push
+          fi
+
+  deploy:
+    # Opt-in: enable GitHub Pages and set repository variable PUBLISH_PAGES=true.
+    # Direct deployment is necessary because bot commits do not trigger a Pages build.
+    if: ${{ vars.PUBLISH_PAGES == 'true' }}
+    needs: update
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Prepare public site files
+        run: |
+          mkdir -p _site/assets _site/data
+          cp index.html _site/
+          cp assets/app.js assets/styles.css _site/assets/
+          cp data/papers.json data/papers.js data/papers.csv data/digest.json data/digest.js _site/data/
+          touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
