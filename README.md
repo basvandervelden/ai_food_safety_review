@@ -1,109 +1,73 @@
-# Living AI for Food Safety — standalone research prototype
+# Living AI for Food Safety — evidence map (166 records)
 
-A standalone, responsive, locally viewable **living evidence map**, based on the four classification dimensions of van Meer et al., [*Artificial intelligence in food safety*](https://doi.org/10.1038/s41538-026-00925-1), *npj Science of Food* (2026).
+An independent, locally viewable and searchable evidence-map prototype that builds on van Meer et al. (2026), [*Artificial intelligence in food safety*](https://doi.org/10.1038/s41538-026-00925-1), *npj Science of Food*.
 
-## Included
+## What exactly is included?
 
-- **Website:** searchable publications, facets, publication details, evidence snapshots, descriptive charts, research pulse, CSV/JSON exports, dark mode, mobile layout.
-- **Seed collection:** 22 real publications with publisher DOI links. This is an illustrative, hand-selected reading list, **not** the paper's original screening dataset, **not** an exhaustive search, and **not** a validation of full text.
-- **Scheduled pipeline:** Python standard-library code to query OpenAlex, reconstruct abstracts, deduplicate by DOI, identify and classify *candidate* papers, optionally using an OpenAI model, generate JSON and JavaScript files, and preserve a review queue.
-- **Human validation:** optional `data/review_overrides.json` to verify, exclude or correct records.
-- **GitHub Actions:** weekly scheduled workflow and manual dispatch.
+**166 distinct bibliographic records:**
 
-## View locally (zero setup)
+- **160 unique original papers**, transcribed from the **161 included-study table entries** in Tables 1–5 of the published systematic review. One paper, reference **128** (Wang et al.), appears twice in Table 2 under two implementation contexts, so the number of unique papers in the tables is 160.
+- **6 additional research articles** published after the review's literature-search cutoff (1 April 2024). They came from the previous DOI-linked demonstration dataset. They are labelled `post_review_sample` and **must not be presented as included in the original systematic review**.
 
-Simply **open `index.html` in your browser**. The page works offline because it loads generated `data/papers.js` rather than relying on `fetch()` from `file://`. The index also contains **pre-rendered article cards, counts and charts**, so it stays useful in iOS previews or readers where JavaScript is disabled. The `data/papers.csv` file is an independent, readable download of the records.
+The published article explicitly reports **161 included studies**, not 166. Here, 166 is the size of this particular *expanded and deduplicated* collection. `data/original_review_records.json` contains the original source records and reference numbers, while `data/starter_22_archive.json` preserves all 22 records from the previous demonstration version (only six were added to the current collection).
 
-There is also a **single-file demo** (`Living_AI_Food_Safety_demo.html`) alongside the ZIP: this includes the CSS, JavaScript, dataset, and pre-rendered HTML. The single-file HTML can be opened without extracting an archive. Use Safari/Chrome for interactive filters; file previews may block JavaScript.
+All original paper titles, years, and citations were transcribed from the article's reference list, with original table-level classifications retained (`domain`, `application`, `data_collection_method`, `original_ai_techniques`, and `target`). The extra broad display tags (`data_type`, `ai_method`) are automatically grouped from these table values and **have not been manually validated against the underlying papers**. Metadata were not re-checked paper by paper against publisher sites. Not every article has an explicit DOI in the article's references; missing DOI links therefore open a bibliographic search rather than asserting a guessed DOI. The published extraction tables should be the authoritative source for research-grade interpretation.
 
-You can also run a local server:
+## Open the site
+
+Open `index.html` in a browser, or open the separate **`Living_AI_Food_Safety_demo.html`** next to the ZIP. The standalone demo includes its data, CSS and JavaScript in one HTML file and works offline. All **166 records are prerendered**, even with JavaScript disabled. JavaScript adds full-text metadata search, filters (including review versus newer publications), article details, descriptive charts, review decisions, and downloads.
+
+For local serving:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Then visit `http://localhost:8000` from the project directory.
 
-## First live literature update
+## Data and provenance
+
+- `data/papers.json` — live display database, all 166 distinct records, source-labelled.
+- `data/papers.csv` — complete flat bibliographic export, including original table method and citation fields. The `additional_contexts` field is JSON encoded where needed.
+- `data/original_review_records.json` — 160 original unique bibliographic records, original reference numbers and any secondary implementation contexts.
+- `data/starter_22_archive.json` — preserved earlier curated demonstration data, not all displayed in the updated site.
+- `agent/import_original_review.py` — reproducible extraction of Tables 1–5 from a locally provided PDF of the open-access review. The original PDF itself is not redistributed in this project.
+- `agent/build_baseline.py` — creates the 166-record baseline from the original data and six post-review publications. **This overwrites `papers.json`; do not run after an automated update unless you intend to reset the dataset.**
+- `agent/render_static.py` — rebuilds prerendered HTML, standalone HTML, and CSV after changes.
+
+## Automatic candidate monitoring (not yet activated)
+
+`agent/update.py` can search OpenAlex for new articles, deduplicate DOI-based records and classify candidate studies by rule-based heuristics or by an optional OpenAI model. The supplied `.github/workflows/update-literature.yml` schedules Monday updates when installed in a GitHub repository. Use repository secret `OPENALEX_API_KEY` (free key from https://openalex.org/settings/api); optionally `OPENAI_API_KEY` (separate, usage-billed OpenAI API). No OpenAI key means heuristic-only screening. On GitHub, enable Actions and run **Refresh literature** manually for the first test. The script writes new candidates and the generated dataset back to the default branch. The standalone offline demo does NOT update itself. This release has **not** been tested end-to-end with a live OpenAlex API in this network-restricted environment.
 
 ```bash
-# Optional, but recommended for the OpenAlex API's higher usage allowance:
-export OPENALEX_API_KEY='your-free-openalex-api-key'
-
-# Optional: enables more nuanced title/abstract classification.
-# Without it, conservative keyword/rule-based classification is used.
-export OPENAI_API_KEY='your-openai-api-key'
-export OPENAI_MODEL='gpt-4.1-mini'
-
+export OPENALEX_API_KEY='your-openalex-key'       # optional depending on API access
+export OPENAI_API_KEY='your-openai-key'           # optional; usage costs may apply
+python agent/update.py --dry-run --days 90 --per-query 40
 python agent/update.py --days 90 --per-query 40
+python agent/render_static.py
 ```
 
-This requires outbound Internet access. The delivered demo could not be run against OpenAlex from the build environment (its network is restricted). API execution is consequently **not yet end-to-end verified**. API parameters follow [OpenAlex's current docs](https://help.openalex.org/api/). The API may have usage charges above free limits, and OpenAI calls incur model usage costs.
+Newly retrieved papers are `automated_candidate`, never automatically marked as expert verified. A separate reviewer workspace records local browser decisions; download overrides to `data/review_overrides.json` to apply these through the pipeline. This is not a secure multiuser research-audit system; researcher approval and validation are necessary before treating candidates as review inclusions.
 
-**First-run data note:** newly retrieved publications are tagged `automated_candidate`, never `verified`. A record with ambiguous relevance goes into `data/review_queue.json`; highly irrelevant entries are dropped by the conservative screening rule. A pipeline run merges into the existing preview collection; it does not remove the 22 starter records.
+## Automatic public site publishing (optional)
 
-If you want to evaluate the pipeline without overwriting the example collection, run `python agent/update.py --dry-run`.
+When the workflow commits updated files using its automatic `GITHUB_TOKEN`, this does **not** by itself trigger a GitHub Pages branch build. The package therefore includes a separate opt-in `deploy` job that directly deploys a fresh Pages artifact on every successful literature refresh.
 
-## Enable weekly automatic updates
+1. On GitHub: **Settings → Pages → Source: GitHub Actions**. For GitHub Free, use a public repository for Pages.
+2. In **Settings → Secrets and variables → Actions → Variables**, create repository variable `PUBLISH_PAGES` with value `true`. This is a **variable**, not a secret.
+3. Trigger **Actions → Refresh literature → Run workflow**. The `update` job refreshes data and the `deploy` job publishes the site. The public URL appears in Pages settings or the deploy job.
 
-1. Push this *entire folder* to your own GitHub repository. Keep `.github/workflows/update-literature.yml`.
-2. Under repository **Settings → Secrets and variables → Actions**, add the repository secret `OPENALEX_API_KEY` (recommended) and optionally `OPENAI_API_KEY`.
-3. Enable GitHub Actions; run the **Refresh literature** workflow manually once to test permissions and API access. The schedule is **Mondays at 06:15 UTC** (not necessarily Dutch local time).
-4. The workflow rebuilds and commits the updated JSON, JS, CSV and static HTML snapshot to the repository. Publish the site using GitHub Pages, Netlify, or any static host. For FTP hosting, synchronize the **entire project or just `index.html`, `assets/`, and `data/papers.js`, `data/digest.js`** after updates. GitHub Pages/Netlify deployments can be automated; normal FTP upload requires a separate deployment step.
+No Pages hosting is needed just to search and update the source data on GitHub. Keep in mind that a separate manually downloaded HTML demo is never live-connected to the GitHub repository. The site has no background browser agent; all retrieval occurs in the scheduled Python job.
 
-GitHub workflow repository write permissions must be available. The project does not ship with secrets; **never commit API keys**.
+If GitHub Actions cannot commit, check branch protection and workflow permissions. The workflow declares `contents: write` for its update job. Scheduled runs only execute on the repository's default branch and GitHub may disable inactive scheduled workflows in public repositories.
 
-## Review and override records
-
-You can use the **Reviewer workspace** at the bottom of the website to mark records as verified, excluded or requiring review. These choices are stored in browser local storage only; download `review_overrides.json` and put it in `data/` before rerunning the pipeline. This is a convenience interface, **not an authenticated or audit-trailed scholarly review system**.
-
-Alternatively, populate `data/review_overrides.json` with the DOI as a key:
-
-```json
-{
-  "10.1234/example": {
-    "status": "verified",
-    "domain": "Chemical hazards",
-    "application": "Risk forecasting"
-  },
-  "10.5678/not-relevant": {"status": "excluded"}
-}
-```
-
-Run the pipeline again to apply changes. Valid `status` values are `verified`, `excluded`, `needs_review`. The labels **refer to manual decisions entered by an authorized reviewer**; the script does not independently authenticate the reviewer. You should record reviewer identity, screening criteria and full-text audit trails before treating this as a scholarly screening system.
-
-## Research-grade enhancements before publication
-
-- Import the **161 included articles** from the original review, using the authors' actual extraction tables and original taxonomy (the starter data here is not a substitute).
-- Freeze, version and validate search strings across OpenAlex and other indexes; add date windows that detect delayed indexing and backfilled records.
-- Evaluate retrieval recall and title/abstract screening against gold-standard included and excluded sets; estimate missed papers; use dual human screening of uncertain records.
-- Create a repeatable full-text assessment protocol. Automated candidates should be separated from verified inclusions in quantitative charts.
-- Use validated topic codes, track disagreements and changes, and publish reproducible snapshots with methods and limitations.
-- Add periodic synthesis with cited, exact-source-evidence sentences only once source-level checks are in place. This version intentionally avoids hallucinated AI summaries of research trends.
-
-## Technical layout
-
-```text
-index.html                     Single-page website
-assets/styles.css              Responsive styles
-assets/app.js                  Filtering, charts, article details, exports
-data/papers.json               Source dataset
- data/papers.csv               Static CSV for direct inspection
- agent/render_static.py        Rebuild no-JavaScript HTML snapshot, CSV, and standalone demo
- data/papers.js                JS mirror for offline viewing
- data/digest.json              Generated by pipeline on first run
- data/digest.js                Generated digest / preview placeholder
- data/review_overrides.json    Manual review decisions
- agent/seed.py                 Rebuild illustrative demo dataset (overwrites JSON/JS)
- agent/update.py               Scheduled OpenAlex candidate discovery & classification
- tests/test_pipeline.py        Unit tests
- .github/workflows/           Weekly scheduled workflow
-```
-
-## Tests
+## Quality checks
 
 ```bash
 python -m unittest discover -s tests -v
+node --check assets/app.js
 ```
 
-No npm dependencies, runtime backend, database, or paid UI libraries. `python agent/render_static.py` rebuilds the progressive HTML snapshot after each data update. Work provided as an **independent research prototype**, not as an official Wageningen University & Research or FAO product.
+The supplied records, counts, filters, offline fallback and local page rendering were tested. In a headless browser, the search matched 13 Salmonella-related records, and the source filters returned 160 original-review and 6 newer records. A no-JavaScript test rendered all 166 records. The scholarly extraction has not been checked independently against every full text.
+
+This is an independent research prototype, not an official Wageningen University & Research, FAO, or journal service.

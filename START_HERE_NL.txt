@@ -1,0 +1,34 @@
+LIVING AI FOR FOOD SAFETY — AGENT ACTIVEREN (2026)
+
+1. Download het ZIP-pakket en pak het uit.
+2. Maak op GitHub een repository (bijvoorbeeld living-ai-food-safety).
+   Upload de INHOUD van de map living-ai-food-safety naar de hoofdmap
+   van de repository, inclusief .github/workflows/update-literature.yml.
+3. Maak een gratis OpenAlex API-key: https://openalex.org/settings/api
+4. GitHub repository > Settings > Secrets and variables > Actions > Secrets:
+   voeg OPENALEX_API_KEY toe met je persoonlijke OpenAlex API-key.
+5. Optioneel: voeg OPENAI_API_KEY toe (een afzonderlijke betaalde API,
+   niet inbegrepen in je ChatGPT-abonnement). Zonder deze sleutel blijft
+   de regelgebaseerde classificatie actief.
+6. GitHub > Actions > Refresh literature > Run workflow.
+   Controleer bij de logs de regels 'Retrieved=', 'added=' en 'total='.
+7. De agent draait daarna elke maandag om 06:15 UTC en slaat updates op
+   in data/papers.json, data/papers.csv en data/review_queue.json.
+
+DE WEBSITE OOK AUTOMATISCH ONLINE BIJWERKEN (OPTIONEEL)
+8. Repository > Settings > Pages > Source: GitHub Actions.
+9. Repository > Settings > Secrets and variables > Actions > Variables:
+   maak de variabele PUBLISH_PAGES met waarde true.
+10. Start Refresh literature opnieuw via Actions > Run workflow.
+    De workflow publiceert dan automatisch de geactualiseerde site.
+    Op GitHub Free heb je voor Pages normaal een publieke repo nodig.
+
+BELANGRIJK
+- De offline HTML-demo op je computer ververst NIET zelfstandig.
+- De 166 bestaande records zijn het uitgangspunt; extra papers zijn
+  nieuwe, automatisch gevonden KANDIDATEN, geen geverifieerde inclusies.
+- Je moet nieuwe papers inhoudelijk beoordelen.
+- Een mislukte workflow? Bekijk het rode onderdeel bij Actions > run > logs.
+- Dit prototype is niet live getest met de OpenAlex-/OpenAI-API.
+
+Documentatie: README.md.
