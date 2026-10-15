@@ -167,6 +167,31 @@
   }
   function setupTheme(){const saved=(()=>{try{return localStorage.getItem('living-review-theme')}catch(_){return null}})();if(saved==='dark')document.body.classList.add('dark');
     const sync=()=>{$('theme-btn').innerHTML=icon(document.body.classList.contains('dark')?'sun':'moon');$('theme-btn').setAttribute('aria-label',document.body.classList.contains('dark')?'Switch to light mode':'Switch to dark mode');};sync();$('theme-btn').addEventListener('click',()=>{document.body.classList.toggle('dark');try{localStorage.setItem('living-review-theme',document.body.classList.contains('dark')?'dark':'light')}catch(_){}sync();});}
+
+  function setupLandscape(){
+    if(!window.LIVING_CHARTS)return;
+    const render=()=>{
+      const result=window.LIVING_CHARTS.render(papers,$('viz-collection').value,$('viz-family').value);
+      $('viz-sunburst').innerHTML=result.sun;
+      $('viz-sun-legend').innerHTML=result.legend;
+      $('viz-sun-summary').textContent=result.summary;
+      $('viz-stacked').innerHTML=result.bars;
+      $('viz-stacked-legend').innerHTML=result.key;
+    };
+    $('viz-collection').addEventListener('change',render);
+    $('viz-family').addEventListener('change',render);
+    document.querySelector('.viz-grid').addEventListener('click',(event)=>{
+      const piece=event.target.closest('[data-viz-domain],[data-viz-year]');
+      if(!piece)return;
+      if(piece.dataset.vizDomain){state.domain=piece.dataset.vizDomain;state.application=piece.dataset.vizApp||'';}
+      if(piece.dataset.vizYear){state.year=String(piece.dataset.vizYear);state.family=piece.dataset.vizFamily||'';}
+      state.limit=6;
+      for(const [id,val] of [['domain-filter',state.domain],['app-filter',state.application],['year-filter',state.year],['family-filter',state.family]]) $(id).value=val||'';
+      renderList();
+      $('explore').scrollIntoView({behavior:'smooth',block:'start'});
+    });
+    render();
+  }
   function setupNavigation(){const anchors=document.querySelectorAll('.nav-link');anchors.forEach(a=>a.addEventListener('click',()=>{anchors.forEach(it=>it.classList.remove('active'));a.classList.add('active');}));}
-  setupTheme();setupFilters();setupDetails();setupExport();setupNavigation();setupCuration();renderStats();renderList();renderTrends();renderDigest();
+  setupTheme();setupFilters();setupDetails();setupExport();setupNavigation();setupCuration();renderStats();renderList();renderTrends();renderDigest();setupLandscape();
 })();
