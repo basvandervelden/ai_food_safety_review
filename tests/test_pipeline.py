@@ -20,6 +20,18 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(update.family_from_record({'title':'CNN for pathogen detection', 'ai_method':'Deep learning'}),'Deep learning (DL)')
         self.assertEqual(update.family_from_record({'title':'Food safety policy review','ai_method':'Review / synthesis'}),'Other / mixed')
         self.assertEqual(update.heuristic_classify('Food safety with foundation models','We test a pretrained foundation model.','article')['ai_method'],'LLMs / foundation models')
+    def test_full_dataset_charts(self):
+        import json
+        from visualizations import render_charts
+        rows=json.loads((Path(__file__).resolve().parents[1]/'data'/'papers.json').read_text(encoding='utf-8'))['papers']
+        figures=render_charts(rows,collection='all',family='Deep learning (DL)')
+        eligible=[p for p in rows if p.get('screening',{}).get('status')!='excluded']
+        self.assertIn(f'of {len(eligible)} papers',figures['sun'])
+        self.assertIn('class="science-sunburst"',figures['sun'])
+        self.assertIn('class="science-stacked"',figures['bars'])
+        self.assertIn('LLMs / foundation models',figures['key'])
+        self.assertGreater(figures['sun'].count('class="science-segment"'),10)
+        self.assertGreater(figures['bars'].count('class="science-bar-segment"'),10)
     def test_unique_and_valid_records(self):
         import json
         data=json.loads((Path(__file__).resolve().parents[1]/'data'/'papers.json').read_text())
