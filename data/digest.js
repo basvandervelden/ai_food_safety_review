@@ -1,1 +1,1 @@
-window.LIVING_REVIEW_DIGEST = null;
+window.LIVING_REVIEW_DIGEST = {"generated_on":"2026-10-15","new_last_30_days":239,"domains":{"Microbiological hazards":74,"General food safety":50,"Chemical hazards":58,"Food fraud & authenticity":47,"Foodborne illness":10},"recent_ids":["doi:10.3390/foods15203640","doi:10.22219/kinetik.v11i4.2776","doi:10.3390/foods15203624","doi:10.5296/ijssr.v14i3.24090","doi:10.1080/03067319.2026.2742467"],"caveat":"Counts reflect ingestion into this prototype, not all papers published in the period."};
