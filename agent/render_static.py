@@ -14,6 +14,7 @@ import csv
 import io
 import json
 import re
+from update import AI_FAMILIES, family_from_record
 
 ROOT = Path(__file__).resolve().parents[1]
 IDX = ROOT / 'index.html'
@@ -42,8 +43,8 @@ def domain_style(domain):
 def card(p):
     authors=[a for a in p.get('authors',[]) if a]
     byline=(', '.join(authors[:3]) + (' et al.' if len(authors)>3 else '')) if authors else (p.get('journal') or 'Author details via DOI')
-    tags=''.join(f'<span class="tag">{e(p.get(field) or label)}</span>' for field,label in [
-        ('ai_method','Unspecified method'),('application','Unclassified'),('data_type','Unclassified')])
+    tags=f'<span class="tag">{e(family_from_record(p))}</span>'+''.join(f'<span class="tag">{e(p.get(field) or label)}</span>' for field,label in [
+        ('application','Unclassified'),('data_type','Unclassified')])
     url=p.get('url') or f"https://doi.org/{p.get('doi','')}"
     linklabel='Open DOI ↗' if p.get('doi') else 'Find article ↗'
     return f'''<article class="paper-card">
@@ -55,8 +56,8 @@ def card(p):
     </article>'''
 
 
-def horizontal_bars(counts):
-    items=sorted(counts.items(),key=lambda it:-it[1])
+def horizontal_bars(counts, order=None):
+    items=[(name,counts.get(name,0)) for name in order] if order else sorted(counts.items(),key=lambda it:-it[1])
     peak=max(counts.values(),default=1)
     return '\n'.join(f'''<div class="bar-item"><div class="bar-label"><span>{e(label)}</span><span>{num} {'paper' if num==1 else 'papers'}</span></div><div class="track"><div class="fill" style="width:{max(3, num / peak * 100):.2f}%"></div></div></div>''' for label,num in items)
 
@@ -99,12 +100,12 @@ def replace_text(doc, ident, content):
 
 
 def create_csv(papers):
-    columns=['date','title','authors','journal','doi','domain','application','data_type','ai_method','publication_type','summary','url','source','source_group','original_reference_number','target','data_collection_method','original_ai_techniques','citation_text','additional_contexts']
+    columns=['date','title','authors','journal','doi','domain','application','data_type','ai_method','ai_family','publication_type','summary','url','source','source_group','original_reference_number','target','data_collection_method','original_ai_techniques','citation_text','additional_contexts']
     with CSV.open('w',newline='',encoding='utf-8-sig') as f:
         writer=csv.writer(f)
         writer.writerow(columns)
         for p in papers:
-            writer.writerow(['; '.join(p.get(c,[]) or []) if isinstance(p.get(c),list) and all(isinstance(x,str) for x in (p.get(c,[]) or [])) else json.dumps(p.get(c,[]),ensure_ascii=False) if isinstance(p.get(c),list) else p.get(c,'') for c in columns])
+            writer.writerow(['; '.join(p.get(c,[]) or []) if isinstance(p.get(c),list) and all(isinstance(x,str) for x in (p.get(c,[]) or [])) else json.dumps(p.get(c,[]),ensure_ascii=False) if isinstance(p.get(c),list) else family_from_record(p) if c=='ai_family' else p.get(c,'') for c in columns])
 
 
 def render():
@@ -115,11 +116,11 @@ def render():
     doc=replace_marker(doc,'paper-list','\n'.join(card(p) for p in papers))
     doc=replace_marker(doc,'trend-chart',year_chart(papers))
     doc=replace_marker(doc,'domain-bars',horizontal_bars(Counter(p.get('domain') or 'Other' for p in papers)))
-    doc=replace_marker(doc,'method-bars',horizontal_bars(Counter(p.get('ai_method') or 'Other' for p in papers)))
+    doc=replace_marker(doc,'method-bars',horizontal_bars(Counter(family_from_record(p) for p in papers), AI_FAMILIES))
     digest=''.join(f'<div class="digest-entry"><span class="bullet"></span><a href="{e(p.get("url") or "https://doi.org/"+p.get("doi",""))}" target="_blank" rel="noopener noreferrer">{e(p.get("title"))}</a></div>' for p in papers[:3])
     doc=replace_marker(doc,'digest-list',digest)
     counts={'stat-papers':str(len(papers)),'stat-domains':str(len(set(p.get('domain') for p in papers if p.get('domain')))),
-            'stat-methods':str(len(set(p.get('ai_method') for p in papers if p.get('ai_method')))),
+            'stat-methods':'3',
             'stat-latest':str(max((p.get('year',0) for p in papers),default=0)),'results-count':f'{len(papers)} results',
             'tab-total':str(len(papers))}
     for key,val in counts.items():
