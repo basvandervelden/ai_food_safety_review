@@ -51,3 +51,53 @@ body.dark{--bg:#191821;--bg-soft:#201e2b;--ink:#f1edf8;--ink-2:#c7bfce;--muted:#
 .viz-loading{color:var(--muted);font-size:12px;padding:70px 0;text-align:center}
 body.dark .viz-domain-text,body.dark .viz-context-text{fill:#302637}
 @media(max-width:760px){.viz-heading,.viz-header{flex-direction:column;align-items:stretch}.viz-sun-layout{grid-template-columns:1fr}.viz-domain-legend{display:grid;grid-template-columns:1fr 1fr}.viz-card{padding:18px 14px}.viz-stacked-legend{gap:12px}}
+
+
+/* Scientific landscape figure 2 redesign, based on the original review palette. */
+.viz-heading{margin-top:80px;padding-top:30px;border-top:1px solid var(--line-soft)}
+.viz-grid{display:flex;flex-direction:column;gap:26px}
+.viz-card{overflow:hidden;padding:32px 36px}
+.viz-card-sun{background:var(--card)}
+.viz-card-stacked{background:var(--card)}
+.viz-header{align-items:center;margin-bottom:15px;padding-bottom:16px;border-bottom:1px solid var(--line-soft)}
+.viz-header h3{font-size:20px;font-weight:720;letter-spacing:-.5px}
+.viz-header p{max-width:670px;font-size:12px;color:var(--muted)}
+.viz-header select,.viz-select-label select{border-radius:8px;border:1px solid var(--line);background:var(--bg-soft);color:var(--ink);padding:10px 12px;min-height:39px}
+.viz-sun-layout{grid-template-columns:minmax(0,3.2fr) minmax(190px,.95fr);align-items:center;gap:14px;max-width:none;margin:8px auto 0}
+.viz-card-sun .viz-chart{max-width:1020px;margin:0 auto}
+.viz-card-sun .viz-chart svg{width:100%;height:auto;max-height:none;display:block;overflow:visible}
+.viz-domain-legend{display:flex;flex-direction:column;gap:0;margin:0}
+.science-domain-row{display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--line-soft);padding:14px 0;font-size:12px;color:var(--ink-2)}
+.science-domain-row>i{width:12px;height:32px;border-radius:5px;flex:none}
+.science-domain-row>div{flex:1;min-width:0}
+.science-domain-row span{font-weight:680;line-height:1.3;display:block}
+.science-domain-row small{font-size:10px;display:block;color:var(--muted);margin-top:5px;line-height:1.55}
+.science-domain-row strong{color:var(--ink);font-weight:750;font-size:14px}
+.viz-sun-summary{margin:20px 0;font-size:11px;color:var(--muted);line-height:1.6}
+.science-segment{cursor:pointer;transition:filter .15s,stroke-width .15s;stroke:var(--card);stroke-width:1.5}
+.science-segment:hover{filter:brightness(1.08);stroke:var(--ink);stroke-width:2}
+.science-domain-text{font:600 12px Inter,Arial,sans-serif;pointer-events:none}
+.science-percent{font:750 12px Inter,Arial,sans-serif;fill:#302738;pointer-events:none}
+.science-leader{fill:none;stroke:#bdb1bd;stroke-width:1.1;pointer-events:none}
+.science-callout{fill:var(--ink-2);font:500 13px Inter,Arial,sans-serif;pointer-events:none}
+.science-callout-count{fill:var(--muted);font-size:11px}
+.science-center-cap{fill:var(--muted);font:750 10px Inter,Arial,sans-serif;letter-spacing:1px}
+.science-center-method{fill:var(--ink);font:680 16px Inter,Arial,sans-serif}
+.science-center-count{fill:var(--ink);font:780 27px Inter,Arial,sans-serif}
+.science-center-sub{fill:var(--muted);font:11px Inter,Arial,sans-serif}
+.viz-card-stacked .viz-chart{max-width:1150px;margin:16px auto 0}
+.viz-card-stacked .viz-chart svg{width:100%;height:auto;max-height:none}
+.science-grid{stroke:var(--line);stroke-width:1;stroke-dasharray:3 5}
+.science-axis-text{fill:var(--ink-2);font:11px Inter,Arial,sans-serif}
+.science-axis-title{fill:var(--ink-2);font:12px Inter,Arial,sans-serif}
+.science-bar-segment{cursor:pointer;transition:opacity .15s;stroke:var(--card);stroke-width:.8}
+.science-bar-segment:hover{opacity:.76}
+.viz-stacked-legend{display:flex;justify-content:center;flex-wrap:wrap;gap:23px;margin:8px 0 20px}
+.science-key{display:inline-flex;align-items:center;gap:9px;font-size:12px;color:var(--ink-2)}
+.science-key i{width:15px;height:11px;border-radius:2px}
+.viz-card .chart-bottom{font-size:11px;line-height:1.65}
+body.dark{--science-inner-empty:#514a5e}
+body.dark .science-percent{fill:#fcf6ff}
+body.dark .science-domain-text[fill="#28212a"]{fill:#30242b}
+@media(max-width:900px){.viz-sun-layout{grid-template-columns:1fr}.viz-card-sun .viz-chart{max-width:880px}.viz-domain-legend{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}}
+@media(max-width:600px){.viz-card{padding:19px 14px}.science-callout{font-size:12px}.viz-domain-legend{display:flex}.viz-header{gap:12px}.viz-heading{margin-top:45px}.viz-stacked-legend{justify-content:flex-start;gap:12px}}
