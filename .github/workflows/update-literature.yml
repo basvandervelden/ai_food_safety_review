@@ -57,7 +57,7 @@ jobs:
         run: |
           mkdir -p _site/assets _site/data
           cp index.html _site/
-          cp assets/app.js assets/styles.css _site/assets/
+          cp assets/app.js assets/landscape.js assets/styles.css _site/assets/
           cp data/papers.json data/papers.js data/papers.csv data/digest.json data/digest.js _site/data/
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
