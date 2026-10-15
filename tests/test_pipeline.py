@@ -44,4 +44,6 @@ class StaticPreviewTests(unittest.TestCase):
         self.assertIn('<svg class="chart-svg"',html)
         self.assertIn('id="family-filter"',html)
         self.assertIn('AI technology families',html)
+        self.assertIn('id="viz-sunburst"',html)
+        self.assertIn('id="viz-stacked"',html)
         self.assertTrue((root/'data/papers.csv').is_file())
