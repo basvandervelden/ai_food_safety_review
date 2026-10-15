@@ -1,6 +1,29 @@
-# Living AI for Food Safety — evidence map (166 records)
+# Living AI for Food Safety — living evidence map
 
 An independent, locally viewable and searchable evidence-map prototype that builds on van Meer et al. (2026), [*Artificial intelligence in food safety*](https://doi.org/10.1038/s41538-026-00925-1), *npj Science of Food*.
+
+## Daily OpenAlex scan (from 2024)
+
+The `Refresh literature` GitHub Actions workflow runs **every day at 06:15 UTC**.
+It searches each year from **2024-01-01 through today**, fetching up to 20 pages
+of 100 works per query/year. The results are deduplicated by DOI, classified as
+**automated candidates**, and added to the public dashboard.
+
+**Costs:** OpenAlex search is $0.001 per API call. The pipeline stops after at
+most 900 search requests per run (approximately $0.90), or earlier if the
+API reports that the available daily credits are nearly exhausted. It saves
+`data/search_progress.json` and resumes from the next query/page on the next run.
+Once all planned searches finish, it stops rather than artificially spending
+the remaining free budget. New daily runs rescan the period to discover newly
+indexed older publications. If the OpenAlex API cap or a query's 20-page limit
+is reached, completeness is **not** guaranteed.
+
+Set `OPENALEX_API_KEY` under repository **Settings → Secrets and variables
+→ Actions → Repository secrets**. The API key is free; the workflow fails
+with an actionable error if it is absent. Daily runs deliberately leave
+`OPENAI_API_KEY` unset to avoid separate paid LLM costs. Avoid enabling paid
+OpenAlex prepayment if you require strictly zero payment, since other use
+of the same key can affect the remaining free budget.
 
 ## What exactly is included?
 
