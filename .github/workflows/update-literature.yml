@@ -9,7 +9,7 @@ on:
       - 'data/**'
       - '.github/workflows/update-literature.yml'
   schedule:
-    - cron: '15 6 * * 1' # Monday 06:15 UTC
+    - cron: '15 6 * * *' # Every day 06:15 UTC; free credits reset at midnight UTC
   workflow_dispatch:
 
 jobs:
@@ -35,9 +35,8 @@ jobs:
       - name: Search all publications from 1 January 2024 through today
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: gpt-4.1-mini
-        run: python agent/update.py --start-date 2024-01-01 --per-query 100 --max-pages 8
+          OPENAI_API_KEY: '' # Metadata-only screening; avoid paid LLM charges in the daily job
+        run: python agent/update.py --start-date 2024-01-01 --per-query 100 --max-pages 20
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -49,9 +48,9 @@ jobs:
         run: |
           git config user.name "living-review-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html data/papers.csv data/papers.json data/papers.js data/digest.json data/digest.js data/review_queue.json
+          git add index.html data/papers.csv data/papers.json data/papers.js data/digest.json data/digest.js data/review_queue.json data/search_progress.json
           if ! git diff --cached --quiet; then
-            git commit -m "data: weekly literature refresh"
+            git commit -m "data: daily literature search checkpoint"
             git push
           fi
 
