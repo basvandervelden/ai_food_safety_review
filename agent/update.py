@@ -25,6 +25,26 @@ DOMAINS = ['Microbiological hazards','Chemical hazards','Food fraud & authentici
 APPLICATIONS = ['Laboratory testing','Risk forecasting','Risk factor analysis','Inspection & enforcement','Early warning','Methods & perspectives']
 DATATYPES = ['Spectroscopy','Imaging & microscopy','Mass spectrometry','Monitoring & climate','Genomics & sequencing','Text & reports','Sensors & biosensors','Multimodal','Literature & reviews','Other']
 AI_METHODS = ['Classical machine learning','Deep learning','LLMs / foundation models','Hybrid / ensemble','Review / synthesis','Other / unspecified']
+
+# Dashboard grouping: single-label by prominent technique, without modifying the
+# historical per-paper taxonomy or conflating reviews with techniques.
+AI_FAMILIES = ['Machine learning (ML)', 'Deep learning (DL)', 'LLMs / foundation models', 'Other / mixed']
+FM_SIGNALS = [r'\blarge language models?\b',r'\bfoundation models?\b',r'\bLLMs?\b',r'\bChatGPT\b',
+              r'\bGPT[- ]?[345]\b',r'\bgenerative (?:AI|artificial intelligence|language model)',
+              r'\bvision[- ]language models?\b',r'\bmultimodal (?:large )?language models?\b']
+def family_from_record(p):
+    method=str(p.get('ai_method') or '').lower()
+    title=str(p.get('title') or '')
+    family=p.get('ai_family')
+    if family in AI_FAMILIES and family != 'Other / mixed': return family
+    if any(re.search(pattern,title,re.I) for pattern in FM_SIGNALS) or 'llm' in method or 'foundation model' in method:
+        return AI_FAMILIES[2]
+    if 'deep learning' in method or 'neural network' in method or re.search(r'\bdeep learning\b',title,re.I):
+        return AI_FAMILIES[1]
+    if 'classical machine learning' in method or re.search(r'\bmachine learning\b',title,re.I):
+        return AI_FAMILIES[0]
+    return AI_FAMILIES[3]
+
 # Deliberately include broader subject queries to catch works that do not say "AI".
 SEARCHES = [
     '"food safety" "machine learning"',
@@ -39,9 +59,16 @@ SEARCHES = [
     '"foodborne" outbreak forecasting',
     '"mass spectrometry" food authentication',
     '"food safety" language models',
+    '"food safety" "large language model"',
+    '"food safety" "foundation model"',
+    '"food safety" "generative AI"',
+    '"food safety" "ChatGPT"',
+    '"foodborne" "language model"',
+    '"contaminants" "foundation model"',
+    '"food safety" "vision language model"',
 ]
 FOOD = [r'food\s*safe',r'foodborne',r'contaminat',r'mycotoxin',r'aflatoxin',r'ochratoxin',r'fusarium',r'pesticide',r'veterinary residue',r'salmonella',r'listeria',r'e\. coli',r'escherichia coli',r'pathogen',r'food fraud',r'food authentic',r'adulterat',r'shellfish toxin',r'heavy metal',r'cadmium',r'dioxin',r'microplastic',r'food spoilage',r'food inspection']
-AI = [r'machine learning',r'deep learning',r'neural network',r'random forest',r'support vector',r'gradient boost',r'xgboost',r'artificial intelligence',r'computer vision',r'convolutional',r'transformer',r'large language model',r'foundation model',r'chemometric',r'pattern recognition',r'partial least squares discriminant',r'bayesian network',r'predictive model',r'multivariate classification',r'YOLO\b',r'ResNet']
+AI = [r'machine learning',r'deep learning',r'neural network',r'random forest',r'support vector',r'gradient boost',r'xgboost',r'artificial intelligence',r'computer vision',r'convolutional',r'transformer',r'large language model',r'foundation model',r'\bLLMs?\b',r'\bChatGPT\b',r'\bGPT[- ]?[345]\b',r'generative AI',r'vision.language model',r'chemometric',r'pattern recognition',r'partial least squares discriminant',r'bayesian network',r'predictive model',r'multivariate classification',r'YOLO\b',r'ResNet']
 
 def http_json(url, *, payload=None, api_key=None, retries=3):
     headers={'User-Agent':'LivingAIFoodSafety/0.1 (noncommercial academic prototype)', 'Accept':'application/json'}
@@ -111,7 +138,7 @@ def heuristic_classify(title,abstract,publication_type):
       ('Text & reports',[r'natural language',r'news',r'report']),
     ],'Literature & reviews' if is_review else 'Other')
     method='Review / synthesis' if is_review else pick(text,[
-      ('LLMs / foundation models',[r'large language model',r'foundation model',r'\bLLM\b']),
+      ('LLMs / foundation models',FM_SIGNALS),
       ('Deep learning',[r'deep learning',r'convolutional',r'neural network',r'transformer',r'\bcnn\b',r'YOLO',r'ResNet']),
       ('Classical machine learning',[r'machine learning',r'random forest',r'support vector',r'chemometric',r'xgboost']),
     ],'Other / unspecified')
@@ -128,7 +155,7 @@ def llm_classify(title,abstract,publication_type):
        'Do NOT include generic agriculture, food quality, food security, or nutrition with no explicit food-safety connection. '
        'Return a JSON object ONLY with keys relevant (boolean), score (number 0-1, subjective not calibrated), domain, application, '
        'data_type, ai_method, summary (one neutral <=35-word sentence paraphrasing only title/abstract), reason (brief). '
-       'Choose exactly one value per taxonomy. Set no invented results, quantitative claims, authors, or methods. '
+       'Choose exactly one value per taxonomy. Classify LLMs/foundation models separately from general deep learning when central to the study; generic transformers alone are deep learning. Set no invented results, quantitative claims, authors, or methods. '
        'If unclear mark relevant=false or score<0.65.\n'
        f'Domains: {DOMAINS}\nApplications: {APPLICATIONS}\nData types: {DATATYPES}\nAI techniques: {AI_METHODS}\n'
        f'Type: {publication_type}\nTITLE: {title[:800]}\nABSTRACT: {abstract[:6500]}'
@@ -231,6 +258,7 @@ def main(argv=None):
             queued.append({'id':doc['id'],'title':title,'doi':doc['doi'],'score':output['score'],'reason':output['reason']})
             continue
         doc.update({k:output[k] for k in ('domain','application','data_type','ai_method')})
+        doc['ai_family']=family_from_record(doc)
         doc['source_group']='automated_candidate'
         doc['summary']=output.get('summary') or ('Automated candidate identified from title and abstract. Open the source to assess the study.')
         doc['screening']={'status':'automated_candidate','confidence':output['score'],
@@ -246,6 +274,8 @@ def main(argv=None):
         for field,valid in [('domain',DOMAINS),('application',APPLICATIONS),('data_type',DATATYPES),('ai_method',AI_METHODS)]:
             if override.get(field) in valid: paper[field]=override[field]
         if 'summary' in override and isinstance(override['summary'],str): paper['summary']=override['summary'][:500]
+    for paper in existing.values():
+        paper['ai_family']=family_from_record(paper)
     papers=sorted(existing.values(),key=lambda p:(p.get('date',''),p['id']),reverse=True)
     payload={'meta':{'mode':'automated_candidates','title':'Living AI for Food Safety','updated_at':datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
                      'note':'Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.',
