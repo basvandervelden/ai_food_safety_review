@@ -11,6 +11,12 @@ on:
   schedule:
     - cron: '15 6 * * 1' # Monday 06:15 UTC
   workflow_dispatch:
+    inputs:
+      historical_backfill:
+        description: 'Backfill missing publications in 2024 and 2025 (metadata screening, no paid LLM calls)'
+        type: boolean
+        required: false
+        default: false
 
 jobs:
   update:
@@ -25,11 +31,22 @@ jobs:
         with:
           python-version: '3.12'
       - name: Retrieve and classify candidate studies
+        if: ${{ !inputs.historical_backfill }}
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-4.1-mini
         run: python agent/update.py --days 90 --per-query 60
+      - name: Historical backfill for 2024–2025
+        if: ${{ inputs.historical_backfill }}
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          OPENAI_API_KEY: ''
+        run: |
+          echo "Backfill 2024 (automatic candidates only)"
+          python agent/update.py --start-date 2024-01-01 --end-date 2024-12-31 --per-query 200 --max-pages 4
+          echo "Backfill 2025 (automatic candidates only)"
+          python agent/update.py --start-date 2025-01-01 --end-date 2025-12-31 --per-query 200 --max-pages 4
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
