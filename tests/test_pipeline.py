@@ -32,6 +32,30 @@ class PipelineTests(unittest.TestCase):
         self.assertIn('LLMs / foundation models',figures['key'])
         self.assertGreater(figures['sun'].count('class="science-segment"'),10)
         self.assertGreater(figures['bars'].count('class="science-bar-segment"'),10)
+    def test_search_year_partitions(self):
+        self.assertEqual(list(update.year_windows('2024-01-01','2026-03-03')),
+                         [('2024-01-01','2024-12-31'),
+                          ('2025-01-01','2025-12-31'),
+                          ('2026-01-01','2026-03-03')])
+    def test_daily_budget_pause_and_resume(self):
+        from unittest.mock import patch
+        from tempfile import TemporaryDirectory
+        import json
+        with TemporaryDirectory() as tmp:
+            progress_file=Path(tmp)/'search_progress.json'
+            fetch=lambda url: {'results':[{'doi':'https://doi.org/10.5555/'+('first' if 'search.title_and_abstract=a' in url else 'second')}], 'meta':{'count':1}}
+            normalize=lambda obj: {'id':'doi:'+obj['doi'].split('/')[-1], 'doi':obj['doi']}
+            with patch.object(update,'PROGRESS',progress_file),patch.object(update,'SEARCHES',['a','b']), \
+                 patch.object(update,'http_json',side_effect=fetch),patch.object(update,'normalize_work',side_effect=normalize), \
+                 patch.object(update,'OPENALEX_REMAINING_CREDITS',None):
+                first,status=update.fetch_works(90,100,start_date='2024-01-01',end_date='2024-12-31',max_requests=1)
+                self.assertEqual(status['status'],'paused')
+                self.assertEqual((status['year'],status['query_index'],status['page']),(2024,1,1))
+                self.assertEqual(len(first),1)
+                progress_file.write_text(json.dumps(status),encoding='utf-8')
+                second,status2=update.fetch_works(90,100,start_date='2024-01-01',end_date='2024-12-31',max_requests=1)
+                self.assertEqual(status2['status'],'completed')
+                self.assertEqual(len(second),1)
     def test_unique_and_valid_records(self):
         import json
         data=json.loads((Path(__file__).resolve().parents[1]/'data'/'papers.json').read_text())
