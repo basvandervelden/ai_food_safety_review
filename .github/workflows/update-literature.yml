@@ -1,12 +1,20 @@
 name: Refresh literature
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'assets/**'
+      - 'data/**'
+      - '.github/workflows/update-literature.yml'
   schedule:
     - cron: '15 6 * * 1' # Monday 06:15 UTC
   workflow_dispatch:
 
 jobs:
   update:
+    if: ${{ github.event_name != 'push' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
@@ -22,6 +30,9 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-4.1-mini
         run: python agent/update.py --days 90 --per-query 60
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
       - name: Pre-render HTML and CSV for no-JavaScript viewing
         run: python agent/render_static.py
       - name: Validate generated data
@@ -39,7 +50,7 @@ jobs:
   deploy:
     # Opt-in: enable GitHub Pages and set repository variable PUBLISH_PAGES=true.
     # Direct deployment is necessary because bot commits do not trigger a Pages build.
-    if: ${{ vars.PUBLISH_PAGES == 'true' }}
+    if: ${{ always() && vars.PUBLISH_PAGES == 'true' && (github.event_name == 'push' || needs.update.result == 'success') }}
     needs: update
     runs-on: ubuntu-latest
     permissions:
