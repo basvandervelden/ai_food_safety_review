@@ -14,6 +14,12 @@ class PipelineTests(unittest.TestCase):
         x=update.heuristic_classify('Deep learning detection of Salmonella in food','Raman spectroscopy with neural networks','article')
         self.assertTrue(x['relevant'])
         self.assertEqual(x['domain'],'Microbiological hazards')
+    def test_ai_families(self):
+        self.assertEqual(update.family_from_record({'title':'Large language models for food safety', 'ai_method':'Deep learning'}),'LLMs / foundation models')
+        self.assertEqual(update.family_from_record({'title':'Random forest for aflatoxin', 'ai_method':'Classical machine learning'}),'Machine learning (ML)')
+        self.assertEqual(update.family_from_record({'title':'CNN for pathogen detection', 'ai_method':'Deep learning'}),'Deep learning (DL)')
+        self.assertEqual(update.family_from_record({'title':'Food safety policy review','ai_method':'Review / synthesis'}),'Other / mixed')
+        self.assertEqual(update.heuristic_classify('Food safety with foundation models','We test a pretrained foundation model.','article')['ai_method'],'LLMs / foundation models')
     def test_unique_and_valid_records(self):
         import json
         data=json.loads((Path(__file__).resolve().parents[1]/'data'/'papers.json').read_text())
@@ -36,4 +42,6 @@ class StaticPreviewTests(unittest.TestCase):
         self.assertEqual(html.count('class="paper-card"'),len(rows))
         self.assertIn(f'id="stat-papers">{len(rows)}</strong>',html)
         self.assertIn('<svg class="chart-svg"',html)
+        self.assertIn('id="family-filter"',html)
+        self.assertIn('AI technology families',html)
         self.assertTrue((root/'data/papers.csv').is_file())
