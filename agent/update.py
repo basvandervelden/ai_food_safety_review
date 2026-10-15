@@ -191,33 +191,57 @@ def normalize_work(w):
             'publication_type':'Review' if w.get('type')=='review' else 'Research article',
             'source':'OpenAlex','first_seen':date.today().isoformat(),'openalex_id':w.get('id','')}
 
-def fetch_works(days,per_query,*,start_date=None,end_date=None,max_pages=1):
-    """Search explicit historical dates or a rolling interval with bounded pages.
+def year_windows(start_date,end_date):
+    """Inclusive yearly date partitions prevent recent records crowding out older years."""
+    current=date.fromisoformat(start_date)
+    last=date.fromisoformat(end_date)
+    if last<current: raise ValueError('Invalid date range')
+    while current<=last:
+        stop=min(last,date(current.year,12,31))
+        yield current.isoformat(),stop.isoformat()
+        current=stop+timedelta(days=1)
 
-    Counts are a candidate evidence map, not an exhaustive systematic search.
+
+def fetch_works(days,per_query,*,start_date=None,end_date=None,max_pages=1):
+    """Search every year since the start date, paginating and deduplicating.
+
+    Search coverage depends on OpenAlex indexing and available API budget.
+    A warning is logged if a year/query reaches max_pages and may be truncated.
     """
     key=os.getenv('OPENALEX_API_KEY','')
     since=start_date or (date.today()-timedelta(days=days)).isoformat()
     until=end_date or date.today().isoformat()
     found={}
-    for i,query in enumerate(SEARCHES,1):
-        total=0
-        for page in range(1,max_pages+1):
-            params={'search.title_and_abstract':query,
-                    'filter':f'from_publication_date:{since},to_publication_date:{until}',
-                    'per_page':per_query,'page':page,'sort':'publication_date:desc',
-                    'select':'id,doi,title,publication_date,language,type,authorships,primary_location,abstract_inverted_index'}
-            if key: params['api_key']=key
-            url='https://api.openalex.org/works?'+urlencode(params)
-            js=http_json(url)
-            batch=js.get('results',[])
-            for work in batch:
-                doc=normalize_work(work)
-                if doc: found[doc['id']]=doc
-            total+=len(batch)
-            if len(batch)<per_query: break
-            time.sleep(0.15)
-        print(f'  [{i}/{len(SEARCHES)}] {query}: {total} records ({since} to {until})',file=sys.stderr)
+    warnings=[]
+    for start,stop in year_windows(since,until):
+        print(f'Searching full publication window {start} to {stop}',file=sys.stderr)
+        for i,query in enumerate(SEARCHES,1):
+            count=0
+            for page in range(1,max_pages+1):
+                params={'search.title_and_abstract':query,
+                        'filter':f'from_publication_date:{start},to_publication_date:{stop}',
+                        'per_page':per_query,'page':page,'sort':'publication_date:desc',
+                        'select':'id,doi,title,publication_date,language,type,authorships,primary_location,abstract_inverted_index'}
+                if key: params['api_key']=key
+                url='https://api.openalex.org/works?'+urlencode(params)
+                js=http_json(url)
+                batch=js.get('results',[])
+                for work in batch:
+                    doc=normalize_work(work)
+                    if doc: found[doc['id']]=doc
+                count+=len(batch)
+                reported=js.get('meta',{}).get('count')
+                if len(batch)<per_query or (isinstance(reported,int) and count>=reported):
+                    break
+                if page==max_pages:
+                    warnings.append(f'{start[:4]}: {query} ({count} retrieved; OpenAlex reports {reported} matches)')
+                time.sleep(0.12)
+            print(f'  [{i}/{len(SEARCHES)}] {query}: {count} records ({start[:4]})',file=sys.stderr)
+    if warnings:
+        print('WARNING: OpenAlex result pagination cap reached for '+str(len(warnings))+
+              ' year/query combinations; coverage may be incomplete:',file=sys.stderr)
+        for msg in warnings: print('  '+msg,file=sys.stderr)
+    print(f'Search interval {since}–{until}: {len(found)} unique DOI-bearing results (prior to relevance screening)',file=sys.stderr)
     return list(found.values())
 
 
@@ -239,26 +263,29 @@ def write_json_and_js(name, data, variable):
 
 def main(argv=None):
     arg=argparse.ArgumentParser(description=__doc__)
-    arg.add_argument('--days',type=int,default=60,help='Look-back window in publication days (default 60)')
-    arg.add_argument('--start-date',default=None,help='Inclusive YYYY-MM-DD backfill start')
-    arg.add_argument('--end-date',default=None,help='Inclusive YYYY-MM-DD backfill end')
-    arg.add_argument('--max-pages',type=int,default=1,help='Maximum pages per OpenAlex query (default 1)')
-    arg.add_argument('--per-query',type=int,default=40,help='First-page maximum per query (1-200)')
+    arg.add_argument('--days',type=int,default=None,help='Optional rolling lookback; normally the full period since 2024 is searched')
+    arg.add_argument('--start-date',default='2024-01-01',help='Inclusive start date (default: 2024-01-01)')
+    arg.add_argument('--end-date',default=None,help='Inclusive end date (default: today)')
+    arg.add_argument('--max-pages',type=int,default=8,help='Maximum pages per year and query (default 8)')
+    arg.add_argument('--per-query',type=int,default=100,help='Works per result page (1-100)')
     arg.add_argument('--dry-run',action='store_true',help='Run without modifying data files')
     a=arg.parse_args(argv)
-    if not 1<=a.per_query<=200 or a.days<1 or not 1<=a.max_pages<=10: arg.error('Invalid days, per-query or max-pages')
-    if bool(a.start_date)!=bool(a.end_date): arg.error('Use start-date and end-date together')
-    if a.start_date:
-        try:
-            first=date.fromisoformat(a.start_date); last=date.fromisoformat(a.end_date)
-        except ValueError: arg.error('Dates must be YYYY-MM-DD')
-        if last<first or last>date.today(): arg.error('Invalid backfill date interval')
+    if not 1<=a.per_query<=100 or not 1<=a.max_pages<=30 or (a.days is not None and a.days<1):
+        arg.error('Invalid per-query, max-pages or days')
+    try:
+        if a.days is not None:
+            a.start_date=(date.today()-timedelta(days=a.days)).isoformat()
+        first=date.fromisoformat(a.start_date)
+        last=date.fromisoformat(a.end_date) if a.end_date else date.today()
+    except ValueError: arg.error('Dates must be YYYY-MM-DD')
+    if last<first or last>date.today(): arg.error('Invalid publication-date interval')
+    a.end_date=last.isoformat()
     old=json.loads(DB.read_text(encoding='utf-8')) if DB.exists() else {'meta':{},'papers':[]}
     existing={p['id']:p for p in old['papers']}
     overrides_file=ROOT/'data'/'review_overrides.json'
     overrides=json.loads(overrides_file.read_text(encoding='utf-8')) if overrides_file.exists() else {}
-    print('Retrieving '+('historical' if a.start_date else 'recent')+' publications…',file=sys.stderr)
-    works=fetch_works(a.days,a.per_query,start_date=a.start_date,end_date=a.end_date,max_pages=a.max_pages)
+    print(f'Retrieving all publication years {a.start_date} through {a.end_date}…',file=sys.stderr)
+    works=fetch_works(a.days or 0,a.per_query,start_date=a.start_date,end_date=a.end_date,max_pages=a.max_pages)
     added=0; queued=[]; dropped=0
     for doc in works:
         if doc['id'] in existing: continue
@@ -303,7 +330,7 @@ def main(argv=None):
                      'original_review_doi':'10.1038/s41538-026-00925-1',
                      'source':'OpenAlex title/abstract search + optional LLM classification',
                      'retrieved':len(works),'new_candidates':added,'review_queue':len(queued),
-                     'lookback_days':None if a.start_date else a.days,
+                     'lookback_days':a.days,
                      'search_start':a.start_date,'search_end':a.end_date,'max_pages':a.max_pages,
                      'query_count':len(SEARCHES),'llm_enabled':bool(os.getenv('OPENAI_API_KEY'))},
               'papers':papers}
