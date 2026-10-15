@@ -17,3 +17,37 @@ body.dark{--bg:#191821;--bg-soft:#201e2b;--ink:#f1edf8;--ink-2:#c7bfce;--muted:#
 .paper-title[href]{display:block;text-align:left}
 .digest-entry a{color:inherit;font:inherit;font-weight:600;text-decoration:none}
 .digest-entry a:hover,.paper-title[href]:hover{text-decoration:underline}
+
+
+/* Living review: data-derived version of the original domain/context sunburst and stacked temporal trends. */
+.viz-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:54px 0 22px}
+.viz-heading h2{margin:0 0 8px;font-size:29px;letter-spacing:-.8px}
+.viz-heading p,.viz-header p{font-size:12px;line-height:1.6;color:var(--muted);margin:0}
+.viz-heading .section-kicker{margin-bottom:7px}
+.viz-select-label,.viz-header label{font-size:11px;font-weight:650;display:flex;align-items:center;gap:9px;color:var(--ink-2)}
+.viz-select-label select,.viz-header select{font:inherit;font-size:12px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:9px 10px;min-width:120px}
+.viz-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.viz-card{min-height:0}
+.viz-header{display:flex;gap:20px;align-items:start;justify-content:space-between}
+.viz-header h3{margin:0 0 7px;font-size:17px}
+.viz-sun-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(160px,.6fr);align-items:center;gap:12px;max-width:1000px;margin:10px auto}
+.viz-chart svg{display:block;width:100%;height:auto;max-height:600px}
+.viz-card-stacked .viz-chart{max-width:1090px;margin:25px auto 3px}
+.viz-piece{cursor:pointer;transition:filter .15s,stroke .15s}
+.viz-piece:hover{filter:brightness(1.1);stroke:var(--ink);stroke-width:1.4px}
+.viz-domain-text{fill:#302637;font:600 11px Inter,Arial,sans-serif;pointer-events:none}
+.viz-context-text{fill:#423b45;font:9px Inter,Arial,sans-serif;pointer-events:none}
+.viz-center-small{fill:var(--muted);font:10px Inter,Arial,sans-serif;letter-spacing:.4px}
+.viz-center-name{fill:var(--ink);font:600 16px Inter,Arial,sans-serif}
+.viz-center-ratio{fill:var(--ink);font:750 27px Inter,Arial,sans-serif}
+.viz-domain-legend{display:flex;flex-direction:column;gap:13px;margin:20px 0}
+.viz-legend-item{display:inline-flex;align-items:center;gap:9px;color:var(--ink-2);font-size:11px;line-height:1.45}
+.viz-legend-item i{flex:0 0 11px;height:11px;border-radius:3px}
+.viz-legend-item b{margin-left:auto;color:var(--ink);font-size:11px}
+.viz-sun-summary{font-size:11px;color:var(--muted);margin:25px 0 0}
+.viz-stacked-legend{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin:10px 0 17px}
+.viz-axis-text{fill:var(--muted);font:11px Inter,Arial,sans-serif}
+.viz-axis-title{fill:var(--ink-2);font:12px Inter,Arial,sans-serif}
+.viz-loading{color:var(--muted);font-size:12px;padding:70px 0;text-align:center}
+body.dark .viz-domain-text,body.dark .viz-context-text{fill:#302637}
+@media(max-width:760px){.viz-heading,.viz-header{flex-direction:column;align-items:stretch}.viz-sun-layout{grid-template-columns:1fr}.viz-domain-legend{display:grid;grid-template-columns:1fr 1fr}.viz-card{padding:18px 14px}.viz-stacked-legend{gap:12px}}
