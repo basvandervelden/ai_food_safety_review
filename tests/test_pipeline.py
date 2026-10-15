@@ -19,7 +19,7 @@ class PipelineTests(unittest.TestCase):
         data=json.loads((Path(__file__).resolve().parents[1]/'data'/'papers.json').read_text())
         ids=[p['id'] for p in data['papers']]
         self.assertEqual(len(ids),len(set(ids)))
-        self.assertEqual(len(data['papers']),166)
+        self.assertGreaterEqual(len(data['papers']),166)  # Baseline has 166; automated discovery appends new studies
         self.assertTrue(all(p['url'].startswith('https://') for p in data['papers']))
         self.assertEqual(sum(p.get('source_group')=='original_review' for p in data['papers']),160)
         self.assertEqual(sum(p.get('source_group')=='post_review_sample' for p in data['papers']),6)
