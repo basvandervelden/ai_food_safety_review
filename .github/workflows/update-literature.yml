@@ -24,6 +24,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Verify OpenAlex API key
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+        run: |
+          if [ -z "$OPENALEX_API_KEY" ]; then
+            echo "::error::Missing OPENALEX_API_KEY. Get a free key at https://openalex.org/settings/api and add it under Settings > Secrets and variables > Actions > Repository secrets."
+            exit 1
+          fi
       - name: Search all publications from 1 January 2024 through today
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
@@ -50,7 +58,7 @@ jobs:
   deploy:
     # Opt-in: enable GitHub Pages and set repository variable PUBLISH_PAGES=true.
     # Direct deployment is necessary because bot commits do not trigger a Pages build.
-    if: ${{ always() && vars.PUBLISH_PAGES == 'true' && (github.event_name == 'push' || needs.update.result == 'success') }}
+    if: ${{ always() && vars.PUBLISH_PAGES == 'true' && (needs.update.result == 'success' || (github.event_name == 'push' && needs.update.result == 'skipped')) }}
     needs: update
     runs-on: ubuntu-latest
     permissions:
