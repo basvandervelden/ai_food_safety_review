@@ -78,7 +78,8 @@ def stacked(rows):
     svg=[f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Yearly publications stacked by AI method">']
     for i in range(6):
         tick=round(ymax*i/5);y=T+gh-gh*tick/ymax
-        svg.append(f'<line x1="{L}" x2="{W-R}" y1="{y}" y2="{y}" stroke="var(--line)" stroke-dasharray="{("3 5" if i else "0")}"/><text x="{L-12}" y="{y+4}" text-anchor="end" class="viz-axis-text">{tick}</text>')
+        dash="3 5" if i else "0"
+        svg.append(f'<line x1="{L}" x2="{W-R}" y1="{y}" y2="{y}" stroke="var(--line)" stroke-dasharray="{dash}"/><text x="{L-12}" y="{y+4}" text-anchor="end" class="viz-axis-text">{tick}</text>')
     for i,year in enumerate(years):
         x=L+i*step+(step-bw)/2;bottom=T+gh
         for fam,color in zip(AI_FAMILIES,ACOLORS):
