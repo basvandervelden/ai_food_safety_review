@@ -4,7 +4,19 @@
   const digest = window.LIVING_REVIEW_DIGEST || null;
   const papers = Array.isArray(dataset.papers) ? dataset.papers : [];
   const $ = (id) => document.getElementById(id);
-  const state = { search:'', domain:'', method:'', application:'', datatype:'', year:'', collection:'', tab:'all', sort:'newest', limit:6 };
+  const families = ['Machine learning (ML)', 'Deep learning (DL)', 'LLMs / foundation models', 'Other / mixed'];
+  // Three mutually exclusive technology families, plus an unclassified/mixed bucket.
+  // This is a derived dashboard grouping, not a replacement of review taxonomy.
+  const familyOf = (p) => {
+    if (families.includes(p.ai_family)) return p.ai_family;
+    const method = String(p.ai_method || '').toLowerCase();
+    const title = String(p.title || '');
+    if (/large language models?|foundation models?|\bLLMs?\b|ChatGPT|\bGPT[- ]?[345]\b|generative (?:AI|artificial intelligence)|vision[- ]language models?/i.test(title) || /llm|foundation model/i.test(method)) return families[2];
+    if (/deep learning|neural network|transformer/i.test(method) || /deep learning/i.test(title)) return families[1];
+    if (/classical machine learning|random forest|support vector/i.test(method) || /machine learning/i.test(title)) return families[0];
+    return families[3];
+  };
+  const state = { search:'', domain:'', family:'', method:'', application:'', datatype:'', year:'', collection:'', tab:'all', sort:'newest', limit:6 };
   let activeId = null;
   let lastFocused = null;
   const esc = (s) => String(s ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
@@ -28,13 +40,14 @@
       if(p.screening?.status==='excluded')return false;
       if(state.domain && p.domain!==state.domain)return false;
       if(state.collection && (p.source_group||'automated_candidate')!==state.collection)return false;
+      if(state.family && familyOf(p)!==state.family)return false;
       if(state.method && p.ai_method!==state.method)return false;
       if(state.application && p.application!==state.application)return false;
       if(state.datatype && p.data_type!==state.datatype)return false;
       if(state.year && String(p.year)!==state.year)return false;
       if(state.tab==='research' && isReview(p))return false;
       if(state.tab==='review' && !isReview(p))return false;
-      if(query){const hay=[p.title,p.abstract,p.summary,p.journal,p.doi,p.domain,p.ai_method,p.data_type,p.application,p.target,p.data_collection_method,p.original_ai_techniques,p.citation_text,...(p.authors || [])].join(' ').toLowerCase();if(!hay.includes(query))return false;}
+      if(query){const hay=[p.title,p.abstract,p.summary,p.journal,p.doi,p.domain,familyOf(p),p.ai_method,p.data_type,p.application,p.target,p.data_collection_method,p.original_ai_techniques,p.citation_text,...(p.authors || [])].join(' ').toLowerCase();if(!hay.includes(query))return false;}
       return true;
     });
     arr.sort((a,b)=>state.sort==='title'?a.title.localeCompare(b.title):state.sort==='oldest'?a.date.localeCompare(b.date):b.date.localeCompare(a.date));
@@ -47,12 +60,12 @@
     <button class="paper-title" data-open="${esc(p.id)}">${esc(p.title)}</button>
     <p class="paper-byline">${esc(authorsOf(p))} · ${esc(p.publication_type||'Publication')}</p>
     <p class="paper-summary">${esc(summaryOf(p))}</p>
-    <div class="paper-bottom"><div class="tag-group"><span class="tag">${esc(p.ai_method||'Unspecified method')}</span><span class="tag">${esc(p.application||'Unclassified')}</span><span class="tag">${esc(p.data_type||'Unclassified')}</span></div><button class="paper-read" data-open="${esc(p.id)}">View study ${icon('arrow')}</button></div>
+    <div class="paper-bottom"><div class="tag-group"><span class="tag">${esc(familyOf(p))}</span><span class="tag">${esc(p.application||'Unclassified')}</span><span class="tag">${esc(p.data_type||'Unclassified')}</span></div><button class="paper-read" data-open="${esc(p.id)}">View study ${icon('arrow')}</button></div>
   </article>`;}
   function renderList(){const all=filtered();const visible=all.slice(0,state.limit);$('paper-list').innerHTML=visible.map(card).join('');$('results-count').textContent=`${all.length} ${all.length===1?'result':'results'}`;$('tab-total').textContent=papers.filter(p=>p.screening?.status!=='excluded').length;$('empty-state').hidden=all.length>0;$('show-more').hidden=all.length<=state.limit;$('show-more').textContent=`Show more papers (${Math.max(0,all.length-state.limit)} remaining)`;if(all.length>state.limit)$('show-more').insertAdjacentHTML('beforeend',' '+icon('chevron'));}
   function fillSelect(id,items){const select=$(id);items.forEach(value=>{const option=document.createElement('option');option.value=String(value);option.textContent=String(value);select.appendChild(option);});}
-  function setupFilters(){fillSelect('domain-filter',uniq('domain'));for(const key of uniq('source_group')){const o=document.createElement('option');o.value=key;o.textContent=key==='original_review'?'Published review (160)':key==='post_review_sample'?'Newer studies (6)':'Automated candidates';$('collection-filter').appendChild(o);}fillSelect('method-filter',uniq('ai_method'));fillSelect('app-filter',uniq('application'));fillSelect('data-filter',uniq('data_type'));fillSelect('year-filter',[...new Set(papers.map(p=>p.year))].sort((a,b)=>b-a));
-    for(const [name,id] of [['collection','collection-filter'],['domain','domain-filter'],['method','method-filter'],['application','app-filter'],['datatype','data-filter'],['year','year-filter']]){
+  function setupFilters(){fillSelect('domain-filter',uniq('domain'));for(const key of uniq('source_group')){const o=document.createElement('option');o.value=key;o.textContent=key==='original_review'?'Published review (160)':key==='post_review_sample'?'Newer studies (6)':'Automated candidates';$('collection-filter').appendChild(o);}fillSelect('family-filter',families);fillSelect('method-filter',uniq('ai_method'));fillSelect('app-filter',uniq('application'));fillSelect('data-filter',uniq('data_type'));fillSelect('year-filter',[...new Set(papers.map(p=>p.year))].sort((a,b)=>b-a));
+    for(const [name,id] of [['collection','collection-filter'],['domain','domain-filter'],['family','family-filter'],['method','method-filter'],['application','app-filter'],['datatype','data-filter'],['year','year-filter']]){
       $(id).addEventListener('change',e=>{state[name]=e.target.value;state.limit=6;renderList();});
     }
     $('search-input').addEventListener('input',e=>{state.search=e.target.value;state.limit=6;renderList();});
@@ -62,8 +75,8 @@
       document.querySelectorAll('[data-tab]').forEach(b=>{b.classList.toggle('active',b===btn);b.setAttribute('aria-selected',String(b===btn));});renderList();
     }));
     $('show-more').addEventListener('click',()=>{state.limit+=6;renderList();});
-    function reset(){state.search=state.domain=state.method=state.application=state.datatype=state.year=state.collection='';state.tab='all';state.sort='newest';state.limit=6;
-      for(const id of ['collection-filter','domain-filter','method-filter','app-filter','data-filter','year-filter']) $(id).value='';
+    function reset(){state.search=state.domain=state.family=state.method=state.application=state.datatype=state.year=state.collection='';state.tab='all';state.sort='newest';state.limit=6;
+      for(const id of ['collection-filter','domain-filter','family-filter','method-filter','app-filter','data-filter','year-filter']) $(id).value='';
       $('search-input').value='';$('sort-select').value='newest';
       document.querySelectorAll('[data-tab]').forEach(b=>{const active=b.dataset.tab==='all';b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active));});renderList();}
     $('reset-filters').addEventListener('click',reset);$('empty-reset').addEventListener('click',reset);
@@ -80,7 +93,8 @@
       <div><small>Data type</small><strong>${esc(p.data_type||'Unclassified')}</strong></div>
       ${p.data_collection_method?`<div><small>Data collection (review)</small><strong>${esc(p.data_collection_method)}</strong></div>`:''}
       ${p.original_ai_techniques?`<div><small>AI techniques (review)</small><strong>${esc(p.original_ai_techniques)}</strong></div>`:''}
-      <div><small>AI approach</small><strong>${esc(p.ai_method||'Unclassified')}</strong></div>
+      <div><small>AI family</small><strong>${esc(familyOf(p))}</strong></div>
+      <div><small>AI approach (detailed)</small><strong>${esc(p.ai_method||'Unclassified')}</strong></div>
       <div><small>Publication type</small><strong>${esc(p.publication_type||'Unknown')}</strong></div>
       <div><small>DOI</small><strong>${esc(p.doi||'Not available')}</strong></div>
       </div>
@@ -93,7 +107,7 @@
   function hideDetail(){$('detail-backdrop').hidden=true;document.body.style.overflow='';activeId=null;if(lastFocused?.focus)lastFocused.focus();}
   function setupDetails(){document.addEventListener('click',e=>{const btn=e.target.closest('[data-open]');if(btn)showDetail(btn.dataset.open);});$('detail-backdrop').addEventListener('click',e=>{if(e.target===$('detail-backdrop'))hideDetail();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('detail-backdrop').hidden)hideDetail();if(e.key==='Tab'&&!$('detail-backdrop').hidden){const focusable=[...$('detail-dialog').querySelectorAll('button,a[href]')];if(!focusable.length)return;const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});}
   function countBy(key){return papers.filter(p=>p.screening?.status!=='excluded').reduce((counts,p)=>{const value=p[key]||'Other';counts[value]=(counts[value]||0)+1;return counts;},{});}
-  function barsHtml(counts){const items=Object.entries(counts).sort((a,b)=>b[1]-a[1]);const max=items[0]?.[1]||1;return items.map(([title,n])=>`<div class="bar-item"><div class="bar-label"><span>${esc(title)}</span><span>${n} ${n===1?'paper':'papers'}</span></div><div class="track"><div class="fill" style="width:${Math.max(3,(n/max)*100)}%"></div></div></div>`).join('');}
+  function barsHtml(counts, order=null){const items=order?order.map(label=>[label,counts[label]||0]):Object.entries(counts).sort((a,b)=>b[1]-a[1]);const max=items[0]?.[1]||1;return items.map(([title,n])=>`<div class="bar-item"><div class="bar-label"><span>${esc(title)}</span><span>${n} ${n===1?'paper':'papers'}</span></div><div class="track"><div class="fill" style="width:${Math.max(3,(n/max)*100)}%"></div></div></div>`).join('');}
   function renderTrends(){const ys=countBy('year'),years=Object.keys(ys).map(Number).sort((a,b)=>a-b),max=Math.max(1,...Object.values(ys)),width=500,height=176,top=17,base=147;
     const span=Math.max(years.length,4),step=width/span,barW=Math.min(48,step*.53);
     let svg=`<svg class="chart-svg" viewBox="0 0 540 ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Publication counts by year">`;
@@ -101,7 +115,8 @@
     years.forEach((year,i)=>{const val=ys[year],x=42+step*i+step/2,y=base-(val/max)*(base-top);svg+=`<rect x="${x-barW/2}" y="${y}" width="${barW}" height="${base-y}" rx="5" fill="${i===years.length-1?'#8063ac':'#c8b4e2'}"><title>${year}: ${val} paper(s) in the selected collection</title></rect><text x="${x}" y="168" text-anchor="middle">${year}</text><text x="${x}" y="${Math.max(10,y-6)}" text-anchor="middle">${val}</text>`;});
     $('trend-chart').innerHTML=svg+'</svg>';
     $('domain-bars').innerHTML=barsHtml(countBy('domain'));
-    $('method-bars').innerHTML=barsHtml(countBy('ai_method'));
+    const familyCounts=Object.fromEntries(families.map(f=>[f,0])); papers.filter(p=>p.screening?.status!=='excluded').forEach(p=>familyCounts[familyOf(p)]++);
+    $('method-bars').innerHTML=barsHtml(familyCounts, families);
   }
   function renderDigest(){const recent=papers.filter(p=>p.screening?.status!=='excluded').sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3);
     const updateDate=dataset.meta?.updated_at||'2026-10-15';$('digest-date').textContent=dataset.meta?.mode==='review_baseline'?'Published review + curated extension':dataset.meta?.mode==='preview'?'Curated preview':`Updated ${labelDate(updateDate)}`;
@@ -110,7 +125,7 @@
     else{const n=digest?.new_last_30_days??dataset.meta?.new_candidates??0;$('digest-intro').textContent=`${n} indexed paper${n===1?'':'s'} added over the last 30 days. New additions are automated candidates pending expert validation.`;}
     $('digest-list').innerHTML=recent.map(p=>`<div class="digest-entry"><span class="bullet"></span><button data-open="${esc(p.id)}">${esc(p.title)}</button></div>`).join('');
   }
-  function renderStats(){const active=papers.filter(p=>p.screening?.status!=='excluded');$('stat-papers').textContent=active.length.toLocaleString('en-GB');$('stat-domains').textContent=new Set(active.map(p=>p.domain).filter(Boolean)).size;$('stat-methods').textContent=new Set(active.map(p=>p.ai_method).filter(Boolean)).size;$('stat-latest').textContent=Math.max(0,...active.map(p=>Number(p.year)||0))||'—';
+  function renderStats(){const active=papers.filter(p=>p.screening?.status!=='excluded');$('stat-papers').textContent=active.length.toLocaleString('en-GB');$('stat-domains').textContent=new Set(active.map(p=>p.domain).filter(Boolean)).size;$('stat-methods').textContent=3;$('stat-latest').textContent=Math.max(0,...active.map(p=>Number(p.year)||0))||'—';
     $('snapshot-updated').textContent=dataset.meta?.mode==='review_baseline'?'160 original + 6 post-review · 15 October 2026':dataset.meta?.mode==='preview'?'Curated starter collection · 15 October 2026':`Index refreshed · ${labelDate(dataset.meta?.updated_at)}`;
     if(dataset.meta?.mode==='review_baseline'){$('header-badge').textContent='Published review + new research';$('collection-disclaimer').textContent='166 distinct records: 160 unique studies from the 161 table entries in van Meer et al. (2026), plus 6 more recent studies. The newer studies are not included in the published systematic review.';}
     else if(dataset.meta?.mode!=='preview'){$('header-badge').innerHTML='<span class="pulse-dot"></span> Automated evidence map';$('collection-disclaimer').textContent='Automatically discovered records are candidates, not confirmed systematic-review inclusions. The figures describe indexed records and depend on search coverage.';}
@@ -118,8 +133,8 @@
   function csvValue(val){const text=Array.isArray(val)?val.join('; '):String(val??'');return '"'+text.replaceAll('"','""')+'"';}
   function setupExport(){$('export-btn').addEventListener('click',e=>{e.stopPropagation();$('export-menu').hidden=!$('export-menu').hidden;});document.addEventListener('click',e=>{if(!e.target.closest('.export-dropdown'))$('export-menu').hidden=true;});
     function download(format){const rows=filtered();let content,mime,filename;if(format==='csv'){
-      const cols=['date','title','authors','journal','doi','domain','application','data_type','ai_method','publication_type','summary','url','source','source_group','original_reference_number','target','data_collection_method','original_ai_techniques','citation_text'];
-      content=[cols.join(','),...rows.map(p=>cols.map(c=>csvValue(p[c])).join(','))].join('\r\n');mime='text/csv;charset=utf-8';filename='living-ai-food-safety-filtered.csv';
+      const cols=['date','title','authors','journal','doi','domain','application','data_type','ai_method','ai_family','publication_type','summary','url','source','source_group','original_reference_number','target','data_collection_method','original_ai_techniques','citation_text'];
+      content=[cols.join(','),...rows.map(p=>cols.map(c=>csvValue(c==='ai_family'?familyOf(p):p[c])).join(','))].join('\r\n');mime='text/csv;charset=utf-8';filename='living-ai-food-safety-filtered.csv';
     }else{content=JSON.stringify({meta:dataset.meta,papers:rows},null,2);mime='application/json;charset=utf-8';filename='living-ai-food-safety-filtered.json';}
     const blob=new Blob(['\ufeff'+content],{type:mime});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),500);$('export-menu').hidden=true;}
     $('export-csv').addEventListener('click',()=>download('csv'));
