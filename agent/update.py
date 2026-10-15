@@ -7,6 +7,7 @@ Standard-library-only implementation, suitable for GitHub Actions and cron.
 """
 from __future__ import annotations
 import argparse
+import hashlib
 from collections import Counter
 from datetime import date, datetime, timedelta, timezone
 import json
@@ -21,6 +22,12 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 DB = ROOT/'data'/'papers.json'
+PROGRESS = ROOT/'data'/'search_progress.json'
+# A search costs 10 OpenAlex credits ($0.001); stop with a $0.10 buffer.
+# This is a local budget limit, not a billing-control API. Do not enable prepaid
+# usage if strict zero-cost operation is required.
+FREE_SEARCH_MAX_CALLS = 900
+OPENALEX_REMAINING_CREDITS = None
 DOMAINS = ['Microbiological hazards','Chemical hazards','Food fraud & authenticity','Foodborne illness','General food safety']
 APPLICATIONS = ['Laboratory testing','Risk forecasting','Risk factor analysis','Inspection & enforcement','Early warning','Methods & perspectives']
 DATATYPES = ['Spectroscopy','Imaging & microscopy','Mass spectrometry','Monitoring & climate','Genomics & sequencing','Text & reports','Sensors & biosensors','Multimodal','Literature & reviews','Other']
@@ -71,6 +78,7 @@ FOOD = [r'food\s*safe',r'foodborne',r'contaminat',r'mycotoxin',r'aflatoxin',r'oc
 AI = [r'machine learning',r'deep learning',r'neural network',r'random forest',r'support vector',r'gradient boost',r'xgboost',r'artificial intelligence',r'computer vision',r'convolutional',r'transformer',r'large language model',r'foundation model',r'\bLLMs?\b',r'\bChatGPT\b',r'\bGPT[- ]?[345]\b',r'generative AI',r'vision.language model',r'chemometric',r'pattern recognition',r'partial least squares discriminant',r'bayesian network',r'predictive model',r'multivariate classification',r'YOLO\b',r'ResNet']
 
 def http_json(url, *, payload=None, api_key=None, retries=3):
+    global OPENALEX_REMAINING_CREDITS
     headers={'User-Agent':'LivingAIFoodSafety/0.1 (noncommercial academic prototype)', 'Accept':'application/json'}
     if payload is not None:
         headers['Content-Type']='application/json'
@@ -80,6 +88,10 @@ def http_json(url, *, payload=None, api_key=None, retries=3):
     for attempt in range(retries):
         try:
             with urlopen(Request(url, data=body, headers=headers), timeout=35) as r:
+                if url.startswith('https://api.openalex.org/works?'):
+                    remaining=r.headers.get('X-RateLimit-Remaining')
+                    if remaining is not None:
+                        OPENALEX_REMAINING_CREDITS=int(float(remaining))
                 return json.load(r)
         except HTTPError as exc:
             if exc.code in (429,500,502,503,504) and attempt+1<retries:
@@ -202,47 +214,81 @@ def year_windows(start_date,end_date):
         current=stop+timedelta(days=1)
 
 
-def fetch_works(days,per_query,*,start_date=None,end_date=None,max_pages=1):
-    """Search every year since the start date, paginating and deduplicating.
+def search_signature(start,per_query,max_pages):
+    definition=json.dumps({'start':start,'queries':SEARCHES,'per_query':per_query,'max_pages':max_pages},sort_keys=True)
+    return hashlib.sha256(definition.encode('utf-8')).hexdigest()[:16]
 
-    Search coverage depends on OpenAlex indexing and available API budget.
-    A warning is logged if a year/query reaches max_pages and may be truncated.
+
+def load_search_progress(signature):
+    if not PROGRESS.exists(): return None
+    try: saved=json.loads(PROGRESS.read_text(encoding='utf-8'))
+    except (ValueError,OSError): return None
+    return saved if saved.get('signature')==signature and saved.get('status')=='paused' else None
+
+
+def fetch_works(days,per_query,*,start_date=None,end_date=None,max_pages=1,max_requests=FREE_SEARCH_MAX_CALLS):
+    """Incrementally search by year, resuming from a durable page checkpoint.
+
+    Stops at a local maximum of $0.90 in search calls or near OpenAlex's
+    reported remaining credit limit. Returns all fetched works and progress.
+    The caller must persist its data and the checkpoint together.
     """
     key=os.getenv('OPENALEX_API_KEY','')
     since=start_date or (date.today()-timedelta(days=days)).isoformat()
     until=end_date or date.today().isoformat()
+    signature=search_signature(since,per_query,max_pages)
+    previous=load_search_progress(signature)
+    resume=(int(previous['year']),int(previous['query_index']),int(previous['page'])) if previous else None
     found={}
     warnings=[]
+    calls=0
     for start,stop in year_windows(since,until):
-        print(f'Searching full publication window {start} to {stop}',file=sys.stderr)
-        for i,query in enumerate(SEARCHES,1):
-            count=0
-            for page in range(1,max_pages+1):
+        year=int(start[:4])
+        if resume and year<resume[0]: continue
+        print(f'Searching {start}–{stop}',file=sys.stderr)
+        for i,query in enumerate(SEARCHES):
+            if resume and year==resume[0] and i<resume[1]: continue
+            first_page=resume[2] if resume and (year,i)==resume[:2] else 1
+            reported=None
+            for page in range(first_page,max_pages+1):
+                if calls>=max_requests or (OPENALEX_REMAINING_CREDITS is not None and OPENALEX_REMAINING_CREDITS<=100):
+                    position={'status':'paused','year':year,'query_index':i,'page':page,'signature':signature,
+                              'calls_this_run':calls,'last_checked':date.today().isoformat()}
+                    print(f'PAUSED: budget guard reached after {calls} calls; next: {year}, query {i+1}, page {page}',file=sys.stderr)
+                    return list(found.values()),position
                 params={'search.title_and_abstract':query,
                         'filter':f'from_publication_date:{start},to_publication_date:{stop}',
                         'per_page':per_query,'page':page,'sort':'publication_date:desc',
                         'select':'id,doi,title,publication_date,language,type,authorships,primary_location,abstract_inverted_index'}
                 if key: params['api_key']=key
                 url='https://api.openalex.org/works?'+urlencode(params)
-                js=http_json(url)
+                try:
+                    js=http_json(url)
+                except RuntimeError as err:
+                    if 'HTTP 429' not in str(err): raise
+                    position={'status':'paused','year':year,'query_index':i,'page':page,'signature':signature,
+                              'calls_this_run':calls,'last_checked':date.today().isoformat(),
+                              'note':'OpenAlex rate or daily budget limit reached'}
+                    print(f'PAUSED: OpenAlex 429; resume next run from {year}, query {i+1}, page {page}',file=sys.stderr)
+                    return list(found.values()),position
+                calls+=1
                 batch=js.get('results',[])
                 for work in batch:
                     doc=normalize_work(work)
                     if doc: found[doc['id']]=doc
-                count+=len(batch)
                 reported=js.get('meta',{}).get('count')
-                if len(batch)<per_query or (isinstance(reported,int) and count>=reported):
-                    break
+                if len(batch)<per_query or (isinstance(reported,int) and page*per_query>=reported): break
                 if page==max_pages:
-                    warnings.append(f'{start[:4]}: {query} ({count} retrieved; OpenAlex reports {reported} matches)')
-                time.sleep(0.12)
-            print(f'  [{i}/{len(SEARCHES)}] {query}: {count} records ({start[:4]})',file=sys.stderr)
-    if warnings:
-        print('WARNING: OpenAlex result pagination cap reached for '+str(len(warnings))+
-              ' year/query combinations; coverage may be incomplete:',file=sys.stderr)
-        for msg in warnings: print('  '+msg,file=sys.stderr)
-    print(f'Search interval {since}–{until}: {len(found)} unique DOI-bearing results (prior to relevance screening)',file=sys.stderr)
-    return list(found.values())
+                    warnings.append(f'{year}: {query} (OpenAlex count {reported}; only {max_pages} pages retrieved)')
+                time.sleep(0.14)
+            print(f'  [{i+1}/{len(SEARCHES)}] {query}: through page {page} ({year})',file=sys.stderr)
+        resume=None
+    for warning in warnings:
+        print('COVERAGE WARNING: '+warning,file=sys.stderr)
+    position={'status':'completed','signature':signature,'calls_this_run':calls,'last_checked':date.today().isoformat(),
+              'coverage_warnings':warnings}
+    print(f'Completed date-range search after {calls} calls, {len(found)} unique DOI works',file=sys.stderr)
+    return list(found.values()),position
 
 
 def make_digest(papers):
@@ -285,7 +331,7 @@ def main(argv=None):
     overrides_file=ROOT/'data'/'review_overrides.json'
     overrides=json.loads(overrides_file.read_text(encoding='utf-8')) if overrides_file.exists() else {}
     print(f'Retrieving all publication years {a.start_date} through {a.end_date}…',file=sys.stderr)
-    works=fetch_works(a.days or 0,a.per_query,start_date=a.start_date,end_date=a.end_date,max_pages=a.max_pages)
+    works, progress=fetch_works(a.days or 0,a.per_query,start_date=a.start_date,end_date=a.end_date,max_pages=a.max_pages)
     added=0; queued=[]; dropped=0
     for doc in works:
         if doc['id'] in existing: continue
@@ -332,6 +378,7 @@ def main(argv=None):
                      'retrieved':len(works),'new_candidates':added,'review_queue':len(queued),
                      'lookback_days':a.days,
                      'search_start':a.start_date,'search_end':a.end_date,'max_pages':a.max_pages,
+                     'search_progress':progress,
                      'query_count':len(SEARCHES),'llm_enabled':bool(os.getenv('OPENAI_API_KEY'))},
               'papers':papers}
     print(f'Retrieved={len(works)}, added={added}, queued={len(queued)}, basic-screen rejected={dropped}, total={len(papers)}',file=sys.stderr)
@@ -339,6 +386,7 @@ def main(argv=None):
         write_json_and_js('papers.json',payload,'LIVING_REVIEW_DATA')
         write_json_and_js('digest.json',make_digest(papers),'LIVING_REVIEW_DIGEST')
         (ROOT/'data'/'review_queue.json').write_text(json.dumps(queued,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        PROGRESS.write_text(json.dumps(progress,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     return 0
 
 if __name__=='__main__': raise SystemExit(main())
