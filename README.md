@@ -94,3 +94,26 @@ node --check assets/app.js
 The supplied records, counts, filters, offline fallback and local page rendering were tested. In a headless browser, the search matched 13 Salmonella-related records, and the source filters returned 160 original-review and 6 newer records. A no-JavaScript test rendered all 166 records. The scholarly extraction has not been checked independently against every full text.
 
 This is an independent research prototype, not an official Wageningen University & Research, FAO, or journal service.
+
+## One-time OpenAlex fulltext availability audit (166 baseline papers)
+
+Use **Actions → Audit 166 papers: OpenAlex OA, PDF and XML → Run workflow**,
+or allow the workflow to start on its initial addition to `main`.
+Requires the existing `OPENALEX_API_KEY` GitHub Actions repository secret.
+
+This metadata-only audit checks the **160 unique original-review papers plus the
+six post-review samples** (not the automatically discovered candidates).
+DOIs are looked up directly; missing DOI matches use stringent checks on
+title, first author and publication year. Uncertain matches remain *unknown*.
+
+Successful runs commit three results:
+- [data/fulltext_audit.md](data/fulltext_audit.md): headline counts and audit provenance.
+- [data/fulltext_audit.csv](data/fulltext_audit.csv): each paper's OA status, PDF/XML
+  availability, resolver links and match confidence.
+- [data/fulltext_audit.json](data/fulltext_audit.json): machine-readable counts.
+
+These files are only created after the first successful run. The job also uploads
+them as downloadable GitHub Actions artifacts. No article content is downloaded
+or redistributed; OpenAlex availability does **not** establish permission to
+reproduce, mine or redistribute copyrighted material. OpenAlex PDF/XML availability
+is a metadata indicator rather than proof that the content was retrieved and parsed.
