@@ -1,0 +1,26 @@
+{
+  "generated_at_utc": "2026-10-17T12:51:39+00:00",
+  "scope": "160 original unique review papers + 6 post-review sample papers; excludes automated candidates",
+  "total": 166,
+  "matched": 135,
+  "unresolved": 31,
+  "oa": 76,
+  "pdf": 47,
+  "xml": 47,
+  "by_group": {
+    "original_review": {
+      "total": 160,
+      "matched": 129,
+      "oa": 72,
+      "pdf": 44,
+      "xml": 44
+    },
+    "post_review_sample": {
+      "total": 6,
+      "matched": 6,
+      "oa": 4,
+      "pdf": 3,
+      "xml": 3
+    }
+  }
+}
