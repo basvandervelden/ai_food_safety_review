@@ -115,7 +115,13 @@ def get_by_doi(doi, key):
 
 
 def search_by_title(title, key):
-    params = urlencode({"search.title": title[:500], "per_page": 7})
+    # OpenAlex treats * and ? as wildcard operators, even when URL-encoded.
+    # Normalize punctuation before searching; compare against the original
+    # title afterwards to maintain conservative bibliographic matching.
+    query = cleaned(title)[:500]
+    if not query:
+        return []
+    params = urlencode({"search.title": query, "per_page": 7})
     return api_json(BASE_URL + "?" + params, key).get("results") or []
 
 
@@ -132,7 +138,15 @@ def resolve(paper, key):
             if "HTTP 404" not in str(exc):
                 raise
             notes.append("DOI not found in OpenAlex")
-    results = search_by_title(paper.get("title") or "", key)
+    try:
+        results = search_by_title(paper.get("title") or "", key)
+    except RuntimeError as exc:
+        # Malformed/unsupported individual searches must not destroy the
+        # whole audit. Retain a distinct unknown/error status, never non-OA.
+        # Propagate authorization, rate-limit and server/network failures.
+        if "OpenAlex HTTP 400:" in str(exc):
+            return None, "lookup_error", None, "; ".join(notes + ["Title lookup rejected: " + str(exc)[:180]])
+        raise
     matches = []
     for w in results:
         accepted, how, score = assess_match(paper, w)
