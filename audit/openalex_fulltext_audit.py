@@ -36,7 +36,7 @@ def cleaned(s):
 
 def normalize_doi(s):
     s = str(s or "").strip()
-    s = re.sub(r"^https?://(?:dx\\.)?doi\\.org/", "", s, flags=re.I)
+    s = re.sub(r"^https?://(?:dx\.)?doi\.org/", "", s, flags=re.I)
     return s.casefold()
 
 
