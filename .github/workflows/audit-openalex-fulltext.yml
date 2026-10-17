@@ -1,10 +1,11 @@
 name: "Audit 166 papers: OpenAlex OA, PDF and XML"
 
 on:
-  # Starts automatically on first addition to main; rerun manually at any time.
+  # Re-run automatically if the audit logic, its tests, or this workflow changes.
   push:
     branches: [main]
     paths:
+      - 'audit/**'
       - '.github/workflows/audit-openalex-fulltext.yml'
   workflow_dispatch:
 
