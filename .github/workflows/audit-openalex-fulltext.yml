@@ -1,0 +1,56 @@
+name: "Audit 166 papers: OpenAlex OA, PDF and XML"
+
+on:
+  # Starts automatically on first addition to main; rerun manually at any time.
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/audit-openalex-fulltext.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: openalex-fulltext-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify conservative bibliographic matching
+        run: python -m unittest discover -s audit -p 'test_*.py' -v
+      - name: Confirm OpenAlex API key
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+        run: |
+          if [ -z "$OPENALEX_API_KEY" ]; then
+            echo "::error::Set OPENALEX_API_KEY in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+      - name: Audit OA, OpenAlex PDFs and GROBID XML
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+        run: python audit/openalex_fulltext_audit.py
+      - name: Save availability CSV, JSON and summary to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fulltext_audit.csv data/fulltext_audit.json data/fulltext_audit.md
+          if ! git diff --cached --quiet; then
+            git commit -m "data: add OpenAlex OA, PDF and XML coverage report"
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fulltext-availability-audit
+          path: |
+            data/fulltext_audit.csv
+            data/fulltext_audit.json
+            data/fulltext_audit.md
