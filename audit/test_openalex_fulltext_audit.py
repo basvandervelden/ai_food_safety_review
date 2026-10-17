@@ -1,6 +1,10 @@
 import unittest
+from unittest.mock import patch
+from urllib.parse import parse_qs, urlsplit
 
-from audit.openalex_fulltext_audit import assess_match, normalize_doi, summarize
+from audit.openalex_fulltext_audit import (
+    assess_match, normalize_doi, resolve, search_by_title, summarize
+)
 
 
 class TestBibliographicMatching(unittest.TestCase):
@@ -38,6 +42,31 @@ class TestBibliographicMatching(unittest.TestCase):
         self.paper["doi"] = "10.1234/ABC"
         self.work["doi"] = "https://doi.org/10.1234/abc"
         self.assertTrue(assess_match(self.paper, self.work, by_doi=True)[0])
+
+    @patch("audit.openalex_fulltext_audit.api_json")
+    def test_questions_in_titles_are_safe_for_openalex(self, mock_api):
+        mock_api.return_value = {"results": []}
+        for title in (
+            "Is my food safe? – AI-based classification of lentil flour",
+            "nEmesis: Which restaurants should you avoid today?",
+            "Example* wildcard? term"
+        ):
+            with self.subTest(title=title):
+                search_by_title(title, "unused-key")
+                url = mock_api.call_args.args[0]
+                term = parse_qs(urlsplit(url).query)["search.title"][0]
+                self.assertNotIn("?", term)
+                self.assertNotIn("*", term)
+                self.assertIn(" ", term)
+
+    @patch("audit.openalex_fulltext_audit.search_by_title")
+    def test_bad_title_query_is_unknown_not_abort_or_non_oa(self, search):
+        search.side_effect = RuntimeError("OpenAlex HTTP 400: bad wildcard query")
+        paper = {**self.paper, "doi": ""}
+        work, status, score, note = resolve(paper, "unused-key")
+        self.assertIsNone(work)
+        self.assertEqual(status, "lookup_error")
+        self.assertIn("HTTP 400", note)
 
     def test_unresolved_papers_are_not_recorded_as_non_oa(self):
         rows = [
