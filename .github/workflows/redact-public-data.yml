@@ -1,0 +1,36 @@
+name: One-time removal of public abstract data
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/redact-public-data.yml']
+  workflow_dispatch:
+
+jobs:
+  redact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Strip third-party abstract text from current public data
+        run: |
+          python agent/redact_public_abstracts.py
+          python agent/render_static.py
+          python agent/redact_public_abstracts.py
+      - name: Commit sanitized data and website to main
+        run: |
+          git config user.name "living-review-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data/openalex_pool.json data/papers.json data/papers.js data/papers.csv data/original_review_records.json data/starter_22_archive.json data/review_queue.json data/abstract_enrichment.json index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "safety: remove copied abstracts from publicly available dataset and site"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
