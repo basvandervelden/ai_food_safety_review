@@ -1,0 +1,59 @@
+name: Purge abstract-bearing Git history
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/purge-abstract-history.yml']
+
+jobs:
+  purge:
+    if: ${{ github.event.head_commit.message == 'safety: launch history purge' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate current sanitized tree before rewriting history
+        run: |
+          python agent/redact_public_abstracts.py
+          test ! -e data/abstract_enrichment.json
+          git diff --exit-code -- data/openalex_pool.json data/papers.json data/papers.js data/papers.csv data/original_review_records.json data/starter_22_archive.json data/review_queue.json index.html
+      - name: Remove all historical copies of third-party abstract datasets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          OLD_SHA="$(git rev-parse HEAD)"
+          mkdir -p /tmp/safe-snapshot
+          for f in index.html data/openalex_pool.json data/papers.json data/papers.js data/papers.csv data/original_review_records.json data/starter_22_archive.json data/review_queue.json; do
+            mkdir -p "/tmp/safe-snapshot/$(dirname "$f")"
+            cp "$f" "/tmp/safe-snapshot/$f"
+          done
+          python -m pip install --disable-pip-version-check 'git-filter-repo==2.47.0'
+          git filter-repo --force \
+            --path data/abstract_enrichment.json \
+            --path data/openalex_pool.json \
+            --path data/papers.json \
+            --path data/papers.js \
+            --path data/papers.csv \
+            --path data/original_review_records.json \
+            --path data/starter_22_archive.json \
+            --path data/review_queue.json \
+            --path index.html \
+            --invert-paths
+          cp -a /tmp/safe-snapshot/. .
+          test ! -e data/abstract_enrichment.json
+          python agent/redact_public_abstracts.py
+          git add -A index.html data/openalex_pool.json data/papers.json data/papers.js data/papers.csv data/original_review_records.json data/starter_22_archive.json data/review_queue.json
+          git -c user.name=living-review-bot -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'safety: restore metadata-only public site after history purge'
+          git remote remove origin 2>/dev/null || true
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${REPOSITORY}.git"
+          git push --force-with-lease="refs/heads/main:${OLD_SHA}" origin HEAD:refs/heads/main
