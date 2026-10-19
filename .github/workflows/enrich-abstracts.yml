@@ -1,0 +1,42 @@
+name: Recover missing abstracts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/enrich-abstracts.yml'
+  schedule:
+    - cron: '45 8 * * *' # Every day at 08:45 UTC; separate from OpenAlex indexing
+  workflow_dispatch:
+
+concurrency:
+  group: living-ai-food-safety-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate API parsing and bounded retries
+        run: |
+          python -m compileall -q agent/enrich_abstracts.py
+          python -m unittest discover -s tests -p 'test_enrich_abstracts.py' -v
+      - name: Recover missing abstracts (500 maximum)
+        run: python agent/enrich_abstracts.py --max-articles 500 --max-requests 1600
+      - name: Commit incremental cache and provenance report
+        run: |
+          git config user.name "living-review-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/abstract_enrichment.json data/abstract_enrichment_report.json data/abstract_enrichment_report.md
+          if ! git diff --cached --quiet; then
+            git commit -m "data: additional abstracts from public scholarly APIs"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
