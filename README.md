@@ -1,5 +1,10 @@
 # Living AI for Food Safety — living evidence map
 
+## ASReview classifier (ready for original Excel export)
+
+The standalone [ASReview classifier workflow](docs/asreview_classifier.md) prepares TF-IDF/logistic-regression training from original human **1/0 screening labels**, with an internal holdout, a score for the complete OpenAlex discovery pool, and an independently blinded 300-paper validation sample. No human labels or trained models are published. Nothing is deployed to the live site until scientific validation is complete.
+
+
 An independent, locally viewable and searchable evidence-map prototype that builds on van Meer et al. (2026), [*Artificial intelligence in food safety*](https://doi.org/10.1038/s41538-026-00925-1), *npj Science of Food*.
 
 ## Daily OpenAlex scan (from 2024)
