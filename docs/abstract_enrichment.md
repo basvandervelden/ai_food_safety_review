@@ -1,57 +1,57 @@
-# Filling missing OpenAlex abstracts without ChatGPT Work
+# Private abstract retrieval: OpenAlex + Europe PMC / PubMed / Crossref
 
-## Overview
+**Status (19 October 2026): paused pending private repository setup.**
 
-The [Recover missing abstracts](../.github/workflows/enrich-abstracts.yml)
-workflow runs daily at **08:45 UTC** (GitHub Actions can start later).
-It operates exclusively through HTTP APIs, **not through ChatGPT Work, a browser
-agent, publisher website scraping, or a subscription**.
+The original public GitHub Actions workflow was disabled and removed.
+Previously copied abstracts have been deleted from the current public
+repository, and affected public data / website histories were rewritten.
+Older direct GitHub commit URLs or platform caches may remain accessible
+until GitHub performs its own purge.
 
-Baseline from 19 October 2026: **3,763 DOI-bearing OpenAlex records**, of which
-**2,458 (65.3%)** already have reconstructed abstracts and **1,305** lack one.
+## Public vs. private data
 
-For up to **500 missing papers per run**, the code requests in order:
+**Public repository (this one):** code, article DOIs, titles, provenance counts,
+human screening labels where explicitly released, predictions, and evaluation.
+The public discovery pool (`data/openalex_pool.json`) intentionally has
+**no article abstract fields**. The publication website likewise contains
+only bibliographic metadata and original short summaries.
 
-1. [Europe PMC REST](https://europepmc.org/RestfulWebService) by exact DOI.
-2. [PubMed E-utilities](https://www.ncbi.nlm.nih.gov/books/NBK25497/) with
-   DOI search, then XML abstract, verifying the returned DOI.
-3. [Crossref REST](https://www.crossref.org/documentation/retrieve-metadata/rest-api/)
-   by exact DOI (with HTML/JATS markup removed).
+**Private storage:** third-party abstract text, source URLs, timestamps, DOI
+checks, and any restricted Scopus exports. Never commit those texts to this
+public repository. The local path `private/abstract_enrichment.json` is
+ignored by Git and is understood by the retrieval and classifier scripts.
+**No remote private repository has been created or populated yet.**
+Create a private repository and store the retrieved texts there before
+turning on any scheduled bulk retrieval. GitHub's repository creation and
+visibility controls are not exposed to the connected GitHub tool.
 
-The script never accepts an abstract when the returned DOI differs from the
-requested DOI. It waits between API calls, handles rate limits with retries,
-has a hard maximum of **1,600 requests** and **500 candidate articles** per
-run, pauses after persistent provider errors and records the original source.
+## Retrieval (after secure storage is ready)
 
-## Files and integration
+`agent/enrich_abstracts.py` retrieves abstracts by **exact DOI** from:
 
-- `agent/enrich_abstracts.py`: standard-library retrieval and safe caching.
-- `data/abstract_enrichment.json`: persistent DOI-keyed provenance, abstracts,
-  lookup timestamps and negative lookups.
-- `data/abstract_enrichment_report.md`: public summary of coverage
-  and additional sources.
-- `data/abstract_enrichment_report.json`: machine-readable metrics.
-- `agent/asreview_classifier.py`: automatically uses recovered abstracts
-  where OpenAlex has none. Original OpenAlex text is never overwritten.
+1. Europe PMC REST API
+2. PubMed E-utilities
+3. Crossref REST API
 
-The GitHub Pages deployment does **not** copy the enrichment cache. It is
-stored as source data in the repository and is therefore available to GitHub
-repository readers.
+It uses no ChatGPT Work, browser browsing, Scopus API, paid service, or PDFs.
+Hard upper bounds are 500 paper lookups and 1,600 API requests per run.
+It records source provenance; unavailable abstracts are rechecked after
+30 days. The local private JSON cache is resumable.
 
-Previously unavailable abstracts are rechecked only after **30 days**,
-rather than wasting calls every day. Newly indexed OpenAlex publications
-are picked up on subsequent runs. Manual action:
-**Actions → Recover missing abstracts → Run workflow**.
+`agent/asreview_classifier.py` reads the local private cache when scoring
+public OpenAlex records. It does not publish that cache.
 
-## Reuse and provenance
+## Baseline and first run
 
-The public APIs make text retrievable, but publisher copyright or licenses
-may still govern bulk redistribution of abstracts. Crossref warns
-specifically that abstracts can carry publisher/author copyright. This
-pipeline retains exact source and identifiers to support later permission
-audits. **Do not add private Scopus exports or institution-only full-text
-material to this public repository.** A private repository is optional if
-we decide to archive that restricted material later.
+19 October 2026: 3,763 OpenAlex records, with 2,458 reconstructed abstracts.
+The first enrichment run recovered an additional **208** abstracts from
+Europe PMC, for a measured combined availability of **70.8%**.
+Those recovery files are no longer in the public repository. This count
+describes a historical run, not currently stored public text.
 
-This pipeline does not estimate search recall: it only enriches previously
-discovered, DOI-bearing articles.
+## Licensing
+
+Publicly accessible APIs and research use do not necessarily authorize
+bulk third-party abstract republication. Check reuse terms before distributing
+a collection of full abstract texts. Original 0/1 ASReview labels and
+DOI-linked bibliographic information can be published separately.
