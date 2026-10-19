@@ -302,7 +302,15 @@ def make_digest(papers):
             'domains':dict(by_domain),'recent_ids':[p['id'] for p in highlights],
             'caveat':'Counts reflect ingestion into this prototype, not all papers published in the period.'}
 
+def _public_metadata_only(item):
+    # Screens on abstract text in-memory, but publish only metadata and our own labels.
+    if isinstance(item,list): return [_public_metadata_only(x) for x in item]
+    if isinstance(item,dict):
+        return {k:_public_metadata_only(v) for k,v in item.items() if k.lower() not in ('abstract','abstract_inverted_index','abstract_text','abstract_source')}
+    return item
+
 def write_json_and_js(name, data, variable):
+    data=_public_metadata_only(data)
     path=ROOT/'data'/name
     payload=json.dumps(data,indent=2,ensure_ascii=False)+'\n'
     path.write_text(payload,encoding='utf-8')
@@ -398,7 +406,7 @@ def main(argv=None):
         write_json_and_js('digest.json',make_digest(papers),'LIVING_REVIEW_DIGEST')
         (ROOT/'data'/'review_queue.json').write_text(json.dumps(queued,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         PROGRESS.write_text(json.dumps(progress,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-        OPENALEX_POOL.write_text(json.dumps(list(all_found.values()),ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+        OPENALEX_POOL.write_text(json.dumps(_public_metadata_only(list(all_found.values())),ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
     return 0
 
 if __name__=='__main__': raise SystemExit(main())
