@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-10-19T18:07:24.187402+00:00",
+  "scope": "All DOI-bearing, English-language article/review OpenAlex records retained by the automated discovery pipeline",
+  "measurement": "Nonempty reconstructed abstract; >=100 characters is a rough proxy for usable text, not validation",
+  "overall": {
+    "total": 3763,
+    "abstract_present": 2458,
+    "abstract_missing": 1305,
+    "abstract_present_pct": 65.3,
+    "abstract_100_chars_or_more": 2458,
+    "abstract_100_chars_or_more_pct": 65.3
+  },
+  "by_publication_year": {
+    "2024": {
+      "total": 854,
+      "abstract_present": 543,
+      "abstract_missing": 311,
+      "abstract_present_pct": 63.6,
+      "abstract_100_chars_or_more": 543,
+      "abstract_100_chars_or_more_pct": 63.6
+    },
+    "2025": {
+      "total": 1421,
+      "abstract_present": 936,
+      "abstract_missing": 485,
+      "abstract_present_pct": 65.9,
+      "abstract_100_chars_or_more": 936,
+      "abstract_100_chars_or_more_pct": 65.9
+    },
+    "2026": {
+      "total": 1488,
+      "abstract_present": 979,
+      "abstract_missing": 509,
+      "abstract_present_pct": 65.8,
+      "abstract_100_chars_or_more": 979,
+      "abstract_100_chars_or_more_pct": 65.8
+    }
+  }
+}
