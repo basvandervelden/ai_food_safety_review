@@ -10,9 +10,6 @@ on:
       - 'tests/**'
       - 'data/**'
       - '.github/workflows/update-literature.yml'
-  schedule:
-    - cron: '0 6 * * *' # Every day 06:00 Dutch local time, including DST
-      timezone: 'Europe/Amsterdam'
   workflow_dispatch:
 
 concurrency:
@@ -21,7 +18,7 @@ concurrency:
 
 jobs:
   update:
-    if: ${{ github.event_name != 'push' || contains(github.event.head_commit.message, '[full-refresh]') }}
+    if: ${{ false }} # Paused: would commit third-party abstract text publicly
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
