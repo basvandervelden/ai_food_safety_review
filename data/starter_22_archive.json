@@ -1,0 +1,612 @@
+{
+  "meta": {
+    "mode": "preview",
+    "title": "Living AI for Food Safety",
+    "updated_at": "2026-10-15",
+    "note": "Curated illustrative starter list, not a systematic or exhaustive evidence base. Some publication dates are normalized to month/year where precise publication day was not confirmed.",
+    "original_review_doi": "10.1038/s41538-026-00925-1",
+    "source": "Cross-checked publisher DOI landing pages"
+  },
+  "papers": [
+    {
+      "id": "doi:10.1016/j.foodcont.2015.09.026",
+      "doi": "10.1016/j.foodcont.2015.09.026",
+      "title": "Prediction of food fraud type using data from Rapid Alert System for Food and Feed (RASFF) and Bayesian network modelling",
+      "authors": [],
+      "date": "2016-03-01",
+      "year": 2016,
+      "journal": "Food Control",
+      "url": "https://doi.org/10.1016/j.foodcont.2015.09.026",
+      "summary": "Uses Bayesian-network models with historical RASFF food-fraud notifications to predict fraud types and help target border inspections.",
+      "domain": "Food fraud & authenticity",
+      "application": "Inspection & enforcement",
+      "data_type": "Text & reports",
+      "ai_method": "Classical machine learning",
+      "publication_type": "Research article",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1038/s43016-021-00229-5",
+      "doi": "10.1038/s43016-021-00229-5",
+      "title": "Machine learning-enabled non-destructive paper chromogenic array detection of multiplexed viable pathogens on food",
+      "authors": [
+        "Manyun Yang",
+        "Xiaobo Liu",
+        "Yaguang Luo",
+        "Arne J. Pearlstein",
+        "Shilong Wang",
+        "Hayden Dillow",
+        "Kevin Reed",
+        "Zhen Jia",
+        "Arnav Sharma",
+        "Bin Zhou",
+        "Dan Pearlstein",
+        "Hengyong Yu",
+        "Boce Zhang"
+      ],
+      "date": "2021-02-18",
+      "year": 2021,
+      "journal": "Nature Food",
+      "url": "https://doi.org/10.1038/s43016-021-00229-5",
+      "summary": "Uses a machine-learning-enabled chromogenic array to detect and distinguish viable pathogens on foods such as fresh-cut lettuce.",
+      "domain": "Microbiological hazards",
+      "application": "Laboratory testing",
+      "data_type": "Sensors & biosensors",
+      "ai_method": "Deep learning",
+      "publication_type": "Research article",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1016/j.foodcont.2021.108697",
+      "doi": "10.1016/j.foodcont.2021.108697",
+      "title": "A comparison of neural and non-neural machine learning models for food safety risk prediction with European Union RASFF data",
+      "authors": [],
+      "date": "2022-04-01",
+      "year": 2022,
+      "journal": "Food Control",
+      "url": "https://doi.org/10.1016/j.foodcont.2021.108697",
+      "summary": "Compares neural and non-neural machine-learning methods to predict food safety issues from European RASFF notifications.",
+      "domain": "General food safety",
+      "application": "Risk forecasting",
+      "data_type": "Text & reports",
+      "ai_method": "Hybrid / ensemble",
+      "publication_type": "Research article",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1016/j.foodcont.2022.108872",
+      "doi": "10.1016/j.foodcont.2022.108872",
+      "title": "Automated food safety early warning system in the dairy supply chain using machine learning",
+      "authors": [
+        "Ningjing Liu",
+        "Yamine Bouzembrak",
+        "Leonieke M. van den Bulk",
+        "Anand Gavai",
+        "Lukas J. van den Heuvel",
+        "Hans J. P. Marvin"
+      ],
+      "date": "2022-06-01",
+      "year": 2022,
+      "journal": "Food Control",
+      "url": "https://doi.org/10.1016/j.foodcont.2022.108872",
+      "summary": "Combines unsupervised anomaly detection with Bayesian networks to identify early-warning signals of chemical hazards in dairy supply chains.",
+      "domain": "General food safety",
+      "application": "Early warning",
+      "data_type": "Monitoring & climate",
+      "ai_method": "Hybrid / ensemble",
+      "publication_type": "Research article",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1038/s41538-023-00226-x",
+      "doi": "10.1038/s41538-023-00226-x",
+      "title": "Review of visual analytics methods for food safety risks",
+      "authors": [
+        "Yi Chen",
+        "Caixia Wu",
+        "Qinghui Zhang",
+        "Di Wu"
+      ],
+      "date": "2023-09-12",
+      "year": 2023,
+      "journal": "npj Science of Food",
+      "url": "https://doi.org/10.1038/s41538-023-00226-x",
+      "summary": "Surveys visual analytics approaches for food safety risk analysis and early warning, combining machine intelligence with expert exploration.",
+      "domain": "General food safety",
+      "application": "Methods & perspectives",
+      "data_type": "Literature & reviews",
+      "ai_method": "Review / synthesis",
+      "publication_type": "Review",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1038/s41598-024-67459-y",
+      "doi": "10.1038/s41598-024-67459-y",
+      "title": "Application of untargeted liquid chromatography-mass spectrometry to routine analysis of food using three-dimensional bucketing and machine learning",
+      "authors": [
+        "Jule Hansen",
+        "Christof Kunert",
+        "Hella Münstermann",
+        "Kurt-Peter Raezke",
+        "Stephan Seifert"
+      ],
+      "date": "2024-07-18",
+      "year": 2024,
+      "journal": "Scientific Reports",
+      "url": "https://doi.org/10.1038/s41598-024-67459-y",
+      "summary": "Explores machine learning and LC-HRMS fingerprinting to support non-targeted analysis of food authenticity and adulteration.",
+      "domain": "Food fraud & authenticity",
+      "application": "Laboratory testing",
+      "data_type": "Mass spectrometry",
+      "ai_method": "Classical machine learning",
+      "publication_type": "Research article",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1038/s41538-026-00925-1",
+      "doi": "10.1038/s41538-026-00925-1",
+      "title": "Artificial intelligence in food safety",
+      "authors": [
+        "Floor van Meer",
+        "Masami Takeuchi",
+        "Phillis E. Ochieng",
+        "Raffaella Tavelli",
+        "Arjen Gerssen",
+        "Bas H. M. van der Velden"
+      ],
+      "date": "2026-06-11",
+      "year": 2026,
+      "journal": "npj Science of Food",
+      "url": "https://doi.org/10.1038/s41538-026-00925-1",
+      "summary": "A systematic review mapping peer-reviewed applications of AI in food safety across research domains, implementation contexts, data collection methods and AI techniques.",
+      "domain": "General food safety",
+      "application": "Methods & perspectives",
+      "data_type": "Literature & reviews",
+      "ai_method": "Review / synthesis",
+      "publication_type": "Review",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1038/s41538-026-01005-0",
+      "doi": "10.1038/s41538-026-01005-0",
+      "title": "Leveraging artificial intelligence for mycotoxin management in food systems",
+      "authors": [
+        "Francesca Caloni",
+        "Thomas Hartung"
+      ],
+      "date": "2026-07-30",
+      "year": 2026,
+      "journal": "npj Science of Food",
+      "url": "https://doi.org/10.1038/s41538-026-01005-0",
+      "summary": "A perspective on AI-supported mycotoxin detection, forecasting and control, and the challenges of integrating multi-omics and toxicity evidence.",
+      "domain": "Chemical hazards",
+      "application": "Methods & perspectives",
+      "data_type": "Literature & reviews",
+      "ai_method": "Review / synthesis",
+      "publication_type": "Perspective",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1038/s41538-026-00858-9",
+      "doi": "10.1038/s41538-026-00858-9",
+      "title": "Projected mycotoxin contamination in European wheat under future climate and socioeconomic scenarios",
+      "authors": [
+        "Xinxin Wang",
+        "Clàudia Rodés-Bachs",
+        "H. J. van der Fels-Klerx"
+      ],
+      "date": "2026-05-23",
+      "year": 2026,
+      "journal": "npj Science of Food",
+      "url": "https://doi.org/10.1038/s41538-026-00858-9",
+      "summary": "A hybrid machine-learning and crop-phenology framework explores scenario-dependent shifts in European wheat mycotoxin risks under climate change.",
+      "domain": "Chemical hazards",
+      "application": "Risk forecasting",
+      "data_type": "Monitoring & climate",
+      "ai_method": "Hybrid / ensemble",
+      "publication_type": "Research article",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1038/s41538-025-00634-1",
+      "doi": "10.1038/s41538-025-00634-1",
+      "title": "Early warning predictions of contaminants in animal feed using machine learning",
+      "authors": [
+        "L. M. van den Bulk",
+        "R. G. Hobé",
+        "W. Hoenderdaal",
+        "D. Giržadas",
+        "A. Nijrolder",
+        "H. J. van der Fels-Klerx"
+      ],
+      "date": "2025-11-21",
+      "year": 2025,
+      "journal": "npj Science of Food",
+      "url": "https://doi.org/10.1038/s41538-025-00634-1",
+      "summary": "Machine-learning models investigate prediction of mycotoxins, heavy metals, dioxins and pesticides in animal feed to support risk-based monitoring.",
+      "domain": "Chemical hazards",
+      "application": "Risk forecasting",
+      "data_type": "Monitoring & climate",
+      "ai_method": "Classical machine learning",
+      "publication_type": "Research article",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1038/s41538-025-00636-z",
+      "doi": "10.1038/s41538-025-00636-z",
+      "title": "Deep learning enabled rapid detection of live bacteria in the presence of food debris",
+      "authors": [
+        "Hyeon Woo Park",
+        "Zhengao Li",
+        "Luyao Ma",
+        "Nitin Nitin"
+      ],
+      "date": "2025-11-21",
+      "year": 2025,
+      "journal": "npj Science of Food",
+      "url": "https://doi.org/10.1038/s41538-025-00636-z",
+      "summary": "A deep-learning approach detects live bacterial microcolonies from white-light microscopy while distinguishing them from food debris.",
+      "domain": "Microbiological hazards",
+      "application": "Laboratory testing",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "publication_type": "Research article",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1038/s41538-025-00650-1",
+      "doi": "10.1038/s41538-025-00650-1",
+      "title": "Non-destructive food authentication by vapor-assisted desorption chemical ionization mass spectrometry paired with machine learning",
+      "authors": [
+        "Yijun Wang",
+        "Shuqing Gao",
+        "Junxian Wu",
+        "Xiang Li",
+        "Yaqiu Zhao",
+        "Li Zhou",
+        "Yutong Hua",
+        "Liping Kang",
+        "Zidong Qiu"
+      ],
+      "date": "2025-11-29",
+      "year": 2025,
+      "journal": "npj Science of Food",
+      "url": "https://doi.org/10.1038/s41538-025-00650-1",
+      "summary": "Explores pairing rapid, non-destructive mass spectrometry with machine learning for food authentication.",
+      "domain": "Food fraud & authenticity",
+      "application": "Laboratory testing",
+      "data_type": "Mass spectrometry",
+      "ai_method": "Classical machine learning",
+      "publication_type": "Research article",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1038/s41538-026-01054-5",
+      "doi": "10.1038/s41538-026-01054-5",
+      "title": "Micro- and nanoplastics in food and water from farm-to-fork: exposure pathways, human biomonitoring and AI-enhanced detection – a systematic review",
+      "authors": [],
+      "date": "2026-09-01",
+      "year": 2026,
+      "journal": "npj Science of Food",
+      "url": "https://doi.org/10.1038/s41538-026-01054-5",
+      "summary": "A systematic review covering micro- and nanoplastics exposure pathways and AI-assisted Raman and FTIR analysis; a subset of the included studies evaluates AI detection.",
+      "domain": "Chemical hazards",
+      "application": "Methods & perspectives",
+      "data_type": "Spectroscopy",
+      "ai_method": "Review / synthesis",
+      "publication_type": "Review",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1016/j.fbio.2026.109554",
+      "doi": "10.1016/j.fbio.2026.109554",
+      "title": "High-throughput hyperspectral imaging with deep learning for rapid foodborne bacteria screening",
+      "authors": [],
+      "date": "2026-09-01",
+      "year": 2026,
+      "journal": "Food Bioscience",
+      "url": "https://doi.org/10.1016/j.fbio.2026.109554",
+      "summary": "Combines hyperspectral imaging with deep learning to classify foodborne bacteria and address weak signals under food-matrix interference.",
+      "domain": "Microbiological hazards",
+      "application": "Laboratory testing",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "publication_type": "Research article",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1016/j.foodchem.2026.149208",
+      "doi": "10.1016/j.foodchem.2026.149208",
+      "title": "Multimodal large language models for food safety detection within deep learning frameworks: a review",
+      "authors": [
+        "Haohan Ding",
+        "Chengcheng Chen",
+        "Xiaodong Song",
+        "Guanjun Dong",
+        "Haoheng Chen",
+        "Haoke Hou",
+        "Xiaohui Cui",
+        "Wei Yu",
+        "David I. Wilson"
+      ],
+      "date": "2026-06-30",
+      "year": 2026,
+      "journal": "Food Chemistry",
+      "url": "https://doi.org/10.1016/j.foodchem.2026.149208",
+      "summary": "Reviews multimodal large language models and deep-learning frameworks for food safety detection and monitoring.",
+      "domain": "General food safety",
+      "application": "Methods & perspectives",
+      "data_type": "Multimodal",
+      "ai_method": "LLMs / foundation models",
+      "publication_type": "Review",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1016/j.tifs.2025.105072",
+      "doi": "10.1016/j.tifs.2025.105072",
+      "title": "Artificial intelligence algorithms-assisted biosensors in the detection of foodborne pathogenic bacteria: Recent advances and future trends",
+      "authors": [],
+      "date": "2025-07-01",
+      "year": 2025,
+      "journal": "Trends in Food Science & Technology",
+      "url": "https://doi.org/10.1016/j.tifs.2025.105072",
+      "summary": "Surveys opportunities and limits of machine-learning-enabled biosensors for detection of foodborne pathogenic bacteria.",
+      "domain": "Microbiological hazards",
+      "application": "Methods & perspectives",
+      "data_type": "Sensors & biosensors",
+      "ai_method": "Review / synthesis",
+      "publication_type": "Review",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1016/j.tifs.2026.105687",
+      "doi": "10.1016/j.tifs.2026.105687",
+      "title": "Applications and advances of deep learning in food microbiology: From data to intelligent analysis",
+      "authors": [],
+      "date": "2026-06-01",
+      "year": 2026,
+      "journal": "Trends in Food Science & Technology",
+      "url": "https://doi.org/10.1016/j.tifs.2026.105687",
+      "summary": "A review of deep learning in food microbiology, organized around different data modalities and their analytical applications.",
+      "domain": "Microbiological hazards",
+      "application": "Methods & perspectives",
+      "data_type": "Multimodal",
+      "ai_method": "Review / synthesis",
+      "publication_type": "Review",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1016/j.afres.2026.102100",
+      "doi": "10.1016/j.afres.2026.102100",
+      "title": "Machine and deep learning for food integrity: A review of emerging analytical applications in safety, quality, and authenticity",
+      "authors": [],
+      "date": "2026-06-01",
+      "year": 2026,
+      "journal": "Applied Food Research",
+      "url": "https://doi.org/10.1016/j.afres.2026.102100",
+      "summary": "Discusses machine-learning applications in food safety, quality and authenticity, including sensing, analytics, prediction and traceability.",
+      "domain": "General food safety",
+      "application": "Methods & perspectives",
+      "data_type": "Literature & reviews",
+      "ai_method": "Review / synthesis",
+      "publication_type": "Review",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1016/j.bios.2025.118296",
+      "doi": "10.1016/j.bios.2025.118296",
+      "title": "Deep learning assisted PfAgo-programmable genetic circuit for ultrasensitive visual detection of foodborne pathogen in one-tube",
+      "authors": [],
+      "date": "2026-01-01",
+      "year": 2026,
+      "journal": "Biosensors and Bioelectronics",
+      "url": "https://doi.org/10.1016/j.bios.2025.118296",
+      "summary": "Combines a pathogen-detection genetic circuit with visual readout and deep-learning assistance.",
+      "domain": "Microbiological hazards",
+      "application": "Laboratory testing",
+      "data_type": "Sensors & biosensors",
+      "ai_method": "Deep learning",
+      "publication_type": "Research article",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1038/s44460-026-00099-z",
+      "doi": "10.1038/s44460-026-00099-z",
+      "title": "Intelligent sensing is reshaping personalized food safety",
+      "authors": [
+        "Siyu Yao",
+        "Tong Yu",
+        "Luis Rodriguez-Saona",
+        "Zhongkun Zhang",
+        "Xiaonan Lu",
+        "Jianbo Xiao",
+        "Vijaya Raghavan",
+        "Jin Wang"
+      ],
+      "date": "2026-07-21",
+      "year": 2026,
+      "journal": "Nature Sensors",
+      "url": "https://doi.org/10.1038/s44460-026-00099-z",
+      "summary": "Discusses the opportunities and governance challenges of personalized food safety monitoring using intelligent sensing.",
+      "domain": "General food safety",
+      "application": "Methods & perspectives",
+      "data_type": "Sensors & biosensors",
+      "ai_method": "Review / synthesis",
+      "publication_type": "Perspective",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1016/j.crfs.2026.101495",
+      "doi": "10.1016/j.crfs.2026.101495",
+      "title": "Deep learning in food quality and safety management: A review of architectures, applications, and future directions",
+      "authors": [],
+      "date": "2026-01-01",
+      "year": 2026,
+      "journal": "Current Research in Food Science",
+      "url": "https://doi.org/10.1016/j.crfs.2026.101495",
+      "summary": "Reviews deep-learning architectures for food quality and safety monitoring, process control and inspection.",
+      "domain": "General food safety",
+      "application": "Methods & perspectives",
+      "data_type": "Literature & reviews",
+      "ai_method": "Review / synthesis",
+      "publication_type": "Review",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    },
+    {
+      "id": "doi:10.1016/j.microc.2026.119227",
+      "doi": "10.1016/j.microc.2026.119227",
+      "title": "A fluorescence biosensor based on iron ball-enhanced microdroplet generation system and deep learning for fast and sensitive detection of foodborne pathogens",
+      "authors": [
+        "Xinyang Zhang",
+        "Nana Jin",
+        "Yuanhong Tang",
+        "Yanbin Li",
+        "Jianhan Lin",
+        "Yuanjie Liu"
+      ],
+      "date": "2026-09-01",
+      "year": 2026,
+      "journal": "Microchemical Journal",
+      "url": "https://doi.org/10.1016/j.microc.2026.119227",
+      "summary": "Integrates a fluorescence microdroplet biosensor with a YOLO-based imaging model for foodborne pathogen detection.",
+      "domain": "Microbiological hazards",
+      "application": "Laboratory testing",
+      "data_type": "Sensors & biosensors",
+      "ai_method": "Deep learning",
+      "publication_type": "Research article",
+      "screening": {
+        "status": "curated_metadata",
+        "confidence": null,
+        "reason": "Hand-selected preview record; labels are illustrative and not full-text inclusion decisions."
+      },
+      "source": "Curated DOI-checked starter list",
+      "first_seen": "2026-10-15"
+    }
+  ]
+}

@@ -1,0 +1,2333 @@
+[
+  {
+    "id": "doi:10.56705/ijodas.v5i3.199",
+    "title": "Classification of Mushroom Edibility Using K-Nearest Neighbors: A Machine Learning Approach",
+    "doi": "10.56705/ijodas.v5i3.199",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.56294/dm2024.592",
+    "title": "Revolutionizing Smart Agriculture: Enhancing Apple Quality with Machine Learning",
+    "doi": "10.56294/dm2024.592",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/land13122158",
+    "title": "Quantitative Change or Qualitative Change: The Impact of Whole-Region Comprehensive Land Consolidation on Cultivated Land Security—Based on Panel Data from Townships in Zhejiang Province",
+    "doi": "10.3390/land13122158",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s00521-024-10750-w",
+    "title": "Food fraud detection in Octopus mimus using hyperspectral imaging and machine learning techniques",
+    "doi": "10.1007/s00521-024-10750-w",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.2903/sp.efsa.2024.en-9120",
+    "title": "Ontologies and Case Studies",
+    "doi": "10.2903/sp.efsa.2024.en-9120",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.58346/jisis.2024.i4.030",
+    "title": "Intrusion Detection Systems for Smart Tourism Platforms: Safeguarding Food Safety and User Privacy",
+    "doi": "10.58346/jisis.2024.i4.030",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jfp.2024.100407",
+    "title": "Classifiability Analysis of Spectroscopic Profiling Datasets in Food Safety-related Discriminative Tasks",
+    "doi": "10.1016/j.jfp.2024.100407",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.30574/wjarr.2024.24.2.3357",
+    "title": "Optimizing food transportation processes for grocery stores across the US",
+    "doi": "10.30574/wjarr.2024.24.2.3357",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2024.141869",
+    "title": "Machine learning driven metal oxide-based portable sensor array for on-site detection and discrimination of mycotoxins in corn sample",
+    "doi": "10.1016/j.foodchem.2024.141869",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.56294/sctconf2024.698",
+    "title": "Research on fresh image recognition algorithms based on machine learning",
+    "doi": "10.56294/sctconf2024.698",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.6026/973206300200986",
+    "title": "Species annotation using a k-merbased KNN model",
+    "doi": "10.6026/973206300200986",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.trac.2024.117974",
+    "title": "Advances in machine learning-assisted SERS sensing towards food safety and biomedical analysis",
+    "doi": "10.1016/j.trac.2024.117974",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/bioengineering11090912",
+    "title": "Optical Image Sensors for Smart Analytical Chemiluminescence Biosensors",
+    "doi": "10.3390/bioengineering11090912",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.bios.2024.116782",
+    "title": "Progress of machine learning-based biosensors for the monitoring of food safety: A review",
+    "doi": "10.1016/j.bios.2024.116782",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s11356-024-34795-5",
+    "title": "Hybrid machine learning approach integrating GMDH and SVR for heavy metal concentration prediction in dust samples",
+    "doi": "10.1007/s11356-024-34795-5",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1111/ijfs.17499",
+    "title": "Assessment of the synergy degree of China's food safety risk governance policy tools based on text mining and machine learning methods",
+    "doi": "10.1111/ijfs.17499",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jfca.2024.106700",
+    "title": "Detecting starch-adulterated turmeric using Vis-NIR spectroscopy and multispectral imaging with machine learning",
+    "doi": "10.1016/j.jfca.2024.106700",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/foods13172680",
+    "title": "Construction of a Food Safety Evaluation System Based on the Factor Analysis of Mixed Data Method",
+    "doi": "10.3390/foods13172680",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.64122/hqnr9502",
+    "title": "Assessment of robustness of machine learning-assisted modelling approach to describe growth kinetics of microorganisms using Monte Carlo simulation",
+    "doi": "10.64122/hqnr9502",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodcont.2024.110802",
+    "title": "Safety assurance and nutritional quality enhancement of Phyllospora comosa biomass using hydrothermal treatment derived ensemble machine learning models",
+    "doi": "10.1016/j.foodcont.2024.110802",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1108/caer-11-2023-0323",
+    "title": "Media coverage of food safety and expenditures for food away from home: empirical evidence from China’s family panel studies",
+    "doi": "10.1108/caer-11-2023-0323",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.5281/zenodo.22107022",
+    "title": "IoT Enabled Smart Packaging System for Food Safety and Quality Control: A Systematic Review",
+    "doi": "10.5281/zenodo.22107022",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1111/1541-4337.13393",
+    "title": "Definition, detection, and tracking of nanowaste in foods: Challenges and perspectives",
+    "doi": "10.1111/1541-4337.13393",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.trac.2024.117794",
+    "title": "Machine learning-assisted image-based optical devices for health monitoring and food safety",
+    "doi": "10.1016/j.trac.2024.117794",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.7771/2836-5666.1012",
+    "title": "Development of Next Generation Phage Applications Using -omics and Machine Learning",
+    "doi": "10.7771/2836-5666.1012",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acs.analchem.4c00234",
+    "title": "Rapid Sample Pretreatment Facilitating SERS Detection of Trace Weak Organic Acids/Bases in Complex Matrices",
+    "doi": "10.1021/acs.analchem.4c00234",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jfoodeng.2024.112129",
+    "title": "Rapid screening of tuna samples for food safety issues related to histamine content using fourier-transform mid-infrared (FT-MIR) and chemometrics",
+    "doi": "10.1016/j.jfoodeng.2024.112129",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.15586/qas.v16i2.1467",
+    "title": "Enhancing agricultural product trade efficiency through machine learning predictions and multi-objective optimization of financial strategies",
+    "doi": "10.15586/qas.v16i2.1467",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s00216-024-05262-4",
+    "title": "Paper-based fluorescence sensor array with functionalized carbon quantum dots for bacterial discrimination using a machine learning algorithm",
+    "doi": "10.1007/s00216-024-05262-4",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.snb.2024.135811",
+    "title": "Label-free detection of pathogenic microorganism using Ag NPs@PDMS sponge SERS substrate and machine learning",
+    "doi": "10.1016/j.snb.2024.135811",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.17010/ijcs/2024/v9/i2/173861",
+    "title": "Precision Mushroom Farm Monitoring System With Classification of Toxic Mushrooms in Punjab : A Comprehensive Review",
+    "doi": "10.17010/ijcs/2024/v9/i2/173861",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.35848/1347-4065/ad3008",
+    "title": "Accurate nanoparticle size measurement by combining photometry and tracking analysis",
+    "doi": "10.35848/1347-4065/ad3008",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1364/boe.517213",
+    "title": "Rapid and accurate identification of bacteria utilizing laser-induced breakdown spectroscopy",
+    "doi": "10.1364/boe.517213",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.29121/shodhkosh.v5.i1.2024.1876",
+    "title": "ANALYZING MACHINE LEARNING METHODS TO ENHANCE GRAIN QUALITY ASSESSMENT AND EVOLUTION",
+    "doi": "10.29121/shodhkosh.v5.i1.2024.1876",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.crfs.2024.100679",
+    "title": "Machine learning assisted biosensing technology: An emerging powerful tool for improving the intelligence of food safety detection",
+    "doi": "10.1016/j.crfs.2024.100679",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1093/fqsafe/fyae007",
+    "title": "Dynamic comprehensive quality assessment of post-harvest grape in different transportation chains using SAHP–CatBoost machine learning",
+    "doi": "10.1093/fqsafe/fyae007",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1093/ismejo/wrae213",
+    "title": "Taeniasis impacts human gut microbiome composition and function",
+    "doi": "10.1093/ismejo/wrae213",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3389/fsufs.2024.1475602",
+    "title": "The evolution of precision agriculture and food safety: a bibliometric study",
+    "doi": "10.3389/fsufs.2024.1475602",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/foods13223697",
+    "title": "Food Public Opinion Prevention and Control Model Based on Sentiment Analysis",
+    "doi": "10.3390/foods13223697",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/su16219538",
+    "title": "Consumer Usability Test of Mobile Food Safety Inquiry Platform Based on Image Recognition",
+    "doi": "10.3390/su16219538",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jclepro.2024.144024",
+    "title": "High-throughput identification of fusarium head blight resistance in wheat varieties using field robot-assisted imaging and deep learning techniques",
+    "doi": "10.1016/j.jclepro.2024.144024",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1109/lgrs.2024.3456637",
+    "title": "An Edge Computing-Based Solution for Real-Time Leaf Disease Classification Using Thermal Imaging",
+    "doi": "10.1109/lgrs.2024.3456637",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/foods13152313",
+    "title": "Robust Detection of Cracked Eggs Using a Multi-Domain Training Method for Practical Egg Production",
+    "doi": "10.3390/foods13152313",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jfca.2024.106404",
+    "title": "SC-HybridSN: A deep learning network method for rapid discriminant analysis of industrial paraffin contamination levels in rice",
+    "doi": "10.1016/j.jfca.2024.106404",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3897/ejfa.2024.125630",
+    "title": "Global warming’s grip on agriculture: Strategies for sustainable production amidst climate change using regression based prediction",
+    "doi": "10.3897/ejfa.2024.125630",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.tifs.2024.104555",
+    "title": "The potential new microbial hazard monitoring tool in food safety: Integration of metabolomics and artificial intelligence",
+    "doi": "10.1016/j.tifs.2024.104555",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/foods13020235",
+    "title": "Intelligent Biosensors Promise Smarter Solutions in Food Safety 4.0",
+    "doi": "10.3390/foods13020235",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3934/mbe.2024161",
+    "title": "A snail species identification method based on deep learning in food safety",
+    "doi": "10.3934/mbe.2024161",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.25165/j.ijabe.20241705.8975",
+    "title": "Review of the deep learning for food image processing",
+    "doi": "10.25165/j.ijabe.20241705.8975",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.54097/rmtxzn48",
+    "title": "Neural Network Model for Surface Raman Spectroscopy and Pesticide Concentration of Spinach",
+    "doi": "10.54097/rmtxzn48",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.vibspec.2024.103692",
+    "title": "Discriminant analysis of a mixture of pathogenic bacteria into different types and proportions by surface-enhanced Raman scattering spectroscopy combined with chemometric methods",
+    "doi": "10.1016/j.vibspec.2024.103692",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.47363/jopngr/2024(1)e102",
+    "title": "Food Fraud in Olive Oils",
+    "doi": "10.47363/jopngr/2024(1)e102",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.tifs.2024.104480",
+    "title": "Enhancing food authentication screening through the integration of chemometrics and ambient ionization mass spectrometry: A comprehensive review",
+    "doi": "10.1016/j.tifs.2024.104480",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.postharvbio.2024.113293",
+    "title": "Optimizing aflatoxin B1 detection in peanut kernels through deep modular combination optimization algorithm: A deep learning approach to quality evaluation of postharvest nuts",
+    "doi": "10.1016/j.postharvbio.2024.113293",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jtbi.2024.112007",
+    "title": "A hybrid approach to study and forecast climate-sensitive norovirus infections in the USA",
+    "doi": "10.1016/j.jtbi.2024.112007",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2024.142265",
+    "title": "Novel DART-MS approach for rapid and environmentally friendly determination of the geographical origin of hazelnuts (Corylus avellana L.)",
+    "doi": "10.1016/j.foodchem.2024.142265",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acs.analchem.4c01778",
+    "title": "Rapid Convolutional Algorithm for the Discovery of Blueberry Honey Authenticity Markers via Nontargeted LC-MS Analysis",
+    "doi": "10.1021/acs.analchem.4c01778",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/separations11060181",
+    "title": "Characterization of the Volatilomic Fingerprint of Culinary Aromatic Herbs: A Comparative Study Based on Chemometric Analysis",
+    "doi": "10.3390/separations11060181",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodcont.2024.110489",
+    "title": "Food authentication goes green: Determination of the geographical origin of grain maize (Zea mays L.) using direct analysis in real time mass spectrometry (DART-MS)",
+    "doi": "10.1016/j.foodcont.2024.110489",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2024.138684",
+    "title": "Traceability and authentication in agri-food production: A multivariate approach to the characterization of the Italian food excellence elephant garlic (Allium ampeloprasum L.), a vasoactive nutraceutical",
+    "doi": "10.1016/j.foodchem.2024.138684",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.afres.2024.100679",
+    "title": "Extracting chemical food safety hazards from the scientific literature automatically using large language models",
+    "doi": "10.1016/j.afres.2024.100679",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jhazmat.2025.140994",
+    "title": "Plasmonic microsphere lens arrays-integrated microfluidic SERS chip for mixed pesticides identification with machine learning",
+    "doi": "10.1016/j.jhazmat.2025.140994",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.31083/jfsfq45998",
+    "title": "Meat Freshness Evaluation Methods Based on Spectral Technology: From Traditional to Machine Learning-Enhanced Approaches: A Review",
+    "doi": "10.31083/jfsfq45998",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1108/ejm-08-2024-0645",
+    "title": "From detection to resolution: using machine learning to identify food safety risks and solutions in online consumer reviews",
+    "doi": "10.1108/ejm-08-2024-0645",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2025.147540",
+    "title": "Advancing smart detection of pesticide residues in food through machine learning-enhanced vibrational spectroscopy techniques",
+    "doi": "10.1016/j.foodchem.2025.147540",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.saa.2025.127351",
+    "title": "Mid-infrared spectroscopy combined with machine learning for rapid detection of caffeine in creatine supplements: Supporting food safety and product integrity",
+    "doi": "10.1016/j.saa.2025.127351",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.21608/zvjz.2025.421854.1299",
+    "title": "Forecasting Duck Production in Egypt by using the ARIMA Model",
+    "doi": "10.21608/zvjz.2025.421854.1299",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s11368-025-04185-6",
+    "title": "Prediction of soil available cadmium by machine learning based on cadmium speciation and soil properties: insights from rice and wheat systems",
+    "doi": "10.1007/s11368-025-04185-6",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acsami.5c15196",
+    "title": "Recent Advances in Oxidase-like Nanozymes: Mechanisms, Prediction Models, and Applications",
+    "doi": "10.1021/acsami.5c15196",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2025.147143",
+    "title": "Integrated surface-enhanced Raman spectroscopy and machine learning for identification and quantification of multi-target pesticide residues in fruit juices",
+    "doi": "10.1016/j.foodchem.2025.147143",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.5281/zenodo.17831423",
+    "title": "Application of Arti icial Intelligence (AI) in Animal Husbandry",
+    "doi": "10.5281/zenodo.17831423",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.55057/ijbtm.2025.7.9.25",
+    "title": "Industry 4.0 Integration for Cocoa Bean Quality Inspection in the Bakery Industry",
+    "doi": "10.55057/ijbtm.2025.7.9.25",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.bios.2025.118202",
+    "title": "Machine learning-assisted dual-amplified visual platform based on fluorescent metal-organic framework and photonic crystals enables ATP detection for pathogen monitoring",
+    "doi": "10.1016/j.bios.2025.118202",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acs.est.5c13400",
+    "title": "Ferrous Oxidation-Driven Adsorptive and Oxidative Transformation Boosts Electron Exchange Capacity of Dissolved Organic Matter: Environmental Implications",
+    "doi": "10.1021/acs.est.5c13400",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.12732/ijam.v38i8s.1012",
+    "title": "TO IMPLEMENT AN IOT-BASED REAL-TIME INTELLIGENT DELIVERY SERVICE MODEL THAT ENHANCES THE FRESHNESS, QUALITY, AND SAFETY OF PERISHABLE FOOD ITEMS FROM PREPARATION TO FINAL DELIVERY",
+    "doi": "10.12732/ijam.v38i8s.1012",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.saa.2025.127118",
+    "title": "ATR-FTIR spectroscopy coupled with deep learning for the identification and quantitative detection of Panax notoginseng adulteration",
+    "doi": "10.1016/j.saa.2025.127118",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.20885/ijhi.vol1.iss2.art7",
+    "title": "Digital transformation in the halal industry: A bibliometric analysis of global research",
+    "doi": "10.20885/ijhi.vol1.iss2.art7",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.fufo.2025.100793",
+    "title": "The future of food bio-manufacturing: Unleashing the potential of single-cell protein from low-cost raw materials",
+    "doi": "10.1016/j.fufo.2025.100793",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.cej.2025.169409",
+    "title": "Integrative machine learning and molecular insights into ZEN degradation by Apiotrichum mycotoxinivorans",
+    "doi": "10.1016/j.cej.2025.169409",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/app151910787",
+    "title": "A Reputation-Enhanced Shapley–FAHP Method for Multi-Dimensional Food Safety Evaluation",
+    "doi": "10.3390/app151910787",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.nanoms.2025.09.009",
+    "title": "MXene/peptide biomimetic olfactory sensor array with machine learning for gas sensing",
+    "doi": "10.1016/j.nanoms.2025.09.009",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.55041/ijcope.v2i9.190",
+    "title": "Waste2Meal: A Literature Review of Food Waste Management, NGO-Based Food Donation and Intelligent Food Redistribution System",
+    "doi": "10.55041/ijcope.v2i9.190",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jafr.2025.102372",
+    "title": "Advancing SERS-based detection of micro and nanoplastics in Agroecosystems: Current progress, challenges, and future directions",
+    "doi": "10.1016/j.jafr.2025.102372",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/fft2.70129",
+    "title": "Application of Surface‐Enhanced Raman Spectroscopy (SERS) in Histamine Analysis of Aquatic Products: Principles, Applications, Challenges, and Prospects",
+    "doi": "10.1002/fft2.70129",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1080/15376516.2025.2553859",
+    "title": "Food safety analysis: network toxicology, molecular docking, machine learning and single-cell analysis to interpret sodium benzoate-induced renal injury from multiple perspectives",
+    "doi": "10.1080/15376516.2025.2553859",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acs.analchem.5c04478",
+    "title": "Kinetic and Mechanistic Discrepancies of Single/Dual-Atom Nanozymes Drive a Triple-Channel Sensing Array for Machine Learning-Assisted Antioxidant Discrimination",
+    "doi": "10.1021/acs.analchem.5c04478",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.36948/ijfmr.2025.v07i04.54505",
+    "title": "Improving Transparency and Compliance in Agricultural Supply Chains Through IT and Traceability Systems Using Blockchain and ERP Integration",
+    "doi": "10.36948/ijfmr.2025.v07i04.54505",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/systems13080715",
+    "title": "Food Safety Risk Prediction and Regulatory Policy Enlightenment Based on Machine Learning",
+    "doi": "10.3390/systems13080715",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.ijfoodmicro.2025.111388",
+    "title": "Escherichia coli O157:H7 survival and transfer dynamics on cold chain packaging materials: An integrated experimental-machine learning framework",
+    "doi": "10.1016/j.ijfoodmicro.2025.111388",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.35378/gujs.1581396",
+    "title": "Evaluations of Comet Assay Data Through Statistical Analysis, Machine Learning, and Multi-Criteria Decision-Making Methods for Genotoxic Potential of Food Sweeteners",
+    "doi": "10.35378/gujs.1581396",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jhazmat.2025.139523",
+    "title": "Distribution of geogenic arsenic in European topsoil and potential concerns for food safety",
+    "doi": "10.1016/j.jhazmat.2025.139523",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.tifs.2025.105180",
+    "title": "Portable devices and machine learning-assisted lateral flow assay for food safety analysis: Developments and perspectives",
+    "doi": "10.1016/j.tifs.2025.105180",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jfca.2025.108115",
+    "title": "Portable mass spectrometry and machine learning for detecting Angelica sinensis adulteration",
+    "doi": "10.1016/j.jfca.2025.108115",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.ijantimicag.2025.107575",
+    "title": "Genomic insights into nontyphoidal Salmonella: Prediction of antimicrobial resistance with whole genome-based machine learning",
+    "doi": "10.1016/j.ijantimicag.2025.107575",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1038/s41598-025-02763-9",
+    "title": "Hybrid machine learning and physics-based model for estimating lettuce (Lactuca sativa) growth and resource consumption in aeroponic systems",
+    "doi": "10.1038/s41598-025-02763-9",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.talanta.2025.128522",
+    "title": "Laser-induced breakdown spectroscopy coupled with machine learning for rapid quantification of Escherichia coli concentration",
+    "doi": "10.1016/j.talanta.2025.128522",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.talanta.2025.128524",
+    "title": "Development of laccase-like nanozymes and the analytical applications in conjunction with emerging sensing technologies",
+    "doi": "10.1016/j.talanta.2025.128524",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.13088/jiis.2025.31.2.131",
+    "title": "Evaluating the Impact of Food Safety Management Systems on the Predictability of Hazards in Imported Processed Foods Using Machine Learning",
+    "doi": "10.13088/jiis.2025.31.2.131",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodcont.2025.111522",
+    "title": "Multi-task deep learning utilizing VOCs detected by HS-GC-IMS for geographical origin tracing and adulteration detection of turmeric powder",
+    "doi": "10.1016/j.foodcont.2025.111522",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.tifs.2025.105145",
+    "title": "Machine learning-powered multi-omics for food microbiology and smarter food safety",
+    "doi": "10.1016/j.tifs.2025.105145",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2025.145170",
+    "title": "Analysis of food safety based on machine learning: A comprehensive review and future prospects",
+    "doi": "10.1016/j.foodchem.2025.145170",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/jsfa.14418",
+    "title": "Multicolor fluorescent sensors based on a mixture of CdTe quantum dots and ionic liquid for the visual detection of sulfur dioxide residues in food",
+    "doi": "10.1002/jsfa.14418",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.aprim.2025.103224",
+    "title": "Scientific production in primary health care in Latin American and Caribbean Countries (1980–2024): A web of science perspective",
+    "doi": "10.1016/j.aprim.2025.103224",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s11694-025-03371-x",
+    "title": "Accurate detection of safflower adulteration in saffron by ATR-FTIR spectroscopy and feature selection and machine learning algorithms",
+    "doi": "10.1007/s11694-025-03371-x",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/adfm.202507044",
+    "title": "Tongue‐Inspired Dual‐Mode Sensing System for Effective Liquid Identification",
+    "doi": "10.1002/adfm.202507044",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/minf.202400357",
+    "title": "Development of Machine Learning‐Based Models for Mutagenicity Predictions with Applications to Non‐Sugar Sweeteners",
+    "doi": "10.1002/minf.202400357",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1080/00207543.2025.2507800",
+    "title": "Exploring blockchain technologies in sustainable supply chains – unveiling the latent research topics using an AI approach",
+    "doi": "10.1080/00207543.2025.2507800",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s13668-025-00657-w",
+    "title": "Application of Bioinformatics and Machine Learning Tools in Food Safety",
+    "doi": "10.1007/s13668-025-00657-w",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/s25103135",
+    "title": "Machine Learning-Enhanced Dual-Band Plasmonic Sensing for Simultaneous Qualitative and Quantitative Detection of Biomolecules in the Mid-Infrared Region",
+    "doi": "10.3390/s25103135",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.tifs.2025.105077",
+    "title": "Luminescence-based techniques to monitor pre-, post-harvest and processing changes in fresh produce and derivatives: Principles, applications and trends",
+    "doi": "10.1016/j.tifs.2025.105077",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.engappai.2025.110960",
+    "title": "A survey on machine learning methods for food safety risk assessment: Approaches, challenges, and future outlook",
+    "doi": "10.1016/j.engappai.2025.110960",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1080/87559129.2025.2499645",
+    "title": "Machine Learning-Based Smart Technology Enables Precise and Efficient Detection of Food Safety Risks",
+    "doi": "10.1080/87559129.2025.2499645",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2025.144585",
+    "title": "Simultaneous determination of pesticide residues and rapid discrimination of corn production origin using ambient ionization mass spectrometry combined with machine learning",
+    "doi": "10.1016/j.foodchem.2025.144585",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/admt.202500536",
+    "title": "Progress in Surface Plasmon and Other Resonance Biosensors for Biomedical Applications",
+    "doi": "10.1002/admt.202500536",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1108/sd-03-2025-0068",
+    "title": "Food safety compliance with customer reviews",
+    "doi": "10.1108/sd-03-2025-0068",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2025.144078",
+    "title": "Machine learning-guided Orbitrap-HRAMS-based metabolomic fingerprinting for geographical origin, variety and tissue specific authentication, and adulteration detection of turmeric and ashwagandha",
+    "doi": "10.1016/j.foodchem.2025.144078",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s00216-025-05816-0",
+    "title": "Rapid and accurate identification of foodborne bacteria: a combined approach using confocal Raman micro-spectroscopy and explainable machine learning",
+    "doi": "10.1007/s00216-025-05816-0",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1073/pnas.2421921122",
+    "title": "Climate change amplifies neurotoxic methylmercury threat to Asian fish consumers",
+    "doi": "10.1073/pnas.2421921122",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2025.144003",
+    "title": "Tracking nutritional and quality changes in frozen pork: A 12-month study using 7 categories of meat parameters and VIS/NIR spectroscopy",
+    "doi": "10.1016/j.foodchem.2025.144003",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodres.2025.116285",
+    "title": "Progress in machine learning-supported electronic nose and hyperspectral imaging technologies for food safety assessment: A review",
+    "doi": "10.1016/j.foodres.2025.116285",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.52783/jisem.v10i19s.2974",
+    "title": "Chromatic Diagnostics: Enhancing Paddy Disease Detection with Filter-Based Feature Transformation",
+    "doi": "10.52783/jisem.v10i19s.2974",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2025.143754",
+    "title": "An ultra-sensitive, intelligent platform for food safety monitoring: Label-free detection of illegal additives using self-assembled SERS substrates and machine learning",
+    "doi": "10.1016/j.foodchem.2025.143754",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.36676/urr.v12.i1.1462",
+    "title": "The Role of Cloud-Based WMS Platforms in Ensuring Regulatory Compliance and Adaptability",
+    "doi": "10.36676/urr.v12.i1.1462",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.52783/jisem.v10i14s.2318",
+    "title": "Chromatic Diagnostics: Enhancing Paddy Disease Detection with Filter-Based Feature Transformation",
+    "doi": "10.52783/jisem.v10i14s.2318",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodcont.2025.111256",
+    "title": "Machine learning-enhanced color recognition of test strips for rapid pesticide residue detection in fruits and vegetables",
+    "doi": "10.1016/j.foodcont.2025.111256",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.54254/2755-2721/2025.20986",
+    "title": "Exploring the Potential of Photonic Crystal Sensors in Modern Detection Technologies",
+    "doi": "10.54254/2755-2721/2025.20986",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2025.143502",
+    "title": "Machine learning-assisted Fourier transform infrared spectroscopy to predict adulteration in coriander powder",
+    "doi": "10.1016/j.foodchem.2025.143502",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.bios.2025.117286",
+    "title": "Colorimetric – Fluorescence – Photothermal tri-mode sensor array combining the machine learning method for the selective identification of sulfonylurea pesticides",
+    "doi": "10.1016/j.bios.2025.117286",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.55041/ijsrem41634",
+    "title": "OCR and NLP based Personalized Allergen Notifying System",
+    "doi": "10.55041/ijsrem41634",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodcont.2025.111226",
+    "title": "Predicting cadmium accumulation in carrot (Daucus carota L.) using reflectance spectroscopy and machine learning",
+    "doi": "10.1016/j.foodcont.2025.111226",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.snb.2025.137448",
+    "title": "Cloud machine learning-enhanced peroxidase-like enzyme visual sensor for rapid detection of sulfur-containing pesticides",
+    "doi": "10.1016/j.snb.2025.137448",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2025.143391",
+    "title": "Machine learning: An effective tool for monitoring and ensuring food safety, quality, and nutrition",
+    "doi": "10.1016/j.foodchem.2025.143391",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1108/jkm-07-2024-0853",
+    "title": "Leveraging social media data in knowledge management to identify noncompliance: insights from the foodservice industry",
+    "doi": "10.1108/jkm-07-2024-0853",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.tifs.2025.104872",
+    "title": "Machine learning-enhanced electrochemical sensors for food safety: Applications and perspectives",
+    "doi": "10.1016/j.tifs.2025.104872",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1186/s12967-024-06047-0",
+    "title": "An integrative analysis reveals cancer risk associated with artificial sweeteners",
+    "doi": "10.1186/s12967-024-06047-0",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.saa.2025.125718",
+    "title": "Prediction of Deoxynivalenol contamination in wheat kernels and flour based on visible near-infrared spectroscopy, feature selection and machine learning modelling",
+    "doi": "10.1016/j.saa.2025.125718",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.58915/jere.v16.2024.1662",
+    "title": "Hand-Held Shelf Life Decay Detector for Non-Destructive Fruits Quality Assessment",
+    "doi": "10.58915/jere.v16.2024.1662",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.29261/pakvetj/2025.115",
+    "title": "Emerging Zoonotic Diseases: Epidemiology, Public Health Impact, and the Urgent Need for a Unified “One Health” Approach",
+    "doi": "10.29261/pakvetj/2025.115",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.63345/ijrsml.v13.i3.11",
+    "title": "The Role of Cloud-Based WMS Platforms in Ensuring Regulatory Compliance and Adaptability",
+    "doi": "10.63345/ijrsml.v13.i3.11",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.34133/research.0713",
+    "title": "Advancements in Intelligent Sensing Technologies for Food Safety Detection",
+    "doi": "10.34133/research.0713",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.37855/jah.2025.v27i04.109",
+    "title": "Durian (Durio zibethinus L.) research in the Philippines (2000–2025): A review of progress and challenges in tropical fruit science",
+    "doi": "10.37855/jah.2025.v27i04.109",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.5281/zenodo.17532168",
+    "title": "Revolutionizing Food Processing and Preservation through Smart and Sustainable Technologies",
+    "doi": "10.5281/zenodo.17532168",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.14569/ijacsa.2025.0161196",
+    "title": "Ensuring End-to-End Traceability and Sustainability in the FSC: A Modular Web3 Architecture Integrating Blockchain, IoT, and Machine Learning",
+    "doi": "10.14569/ijacsa.2025.0161196",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1186/s12896-025-01092-z",
+    "title": "Explainable deep learning ensemble framework for accurate classification of wild poisonous mushroom species",
+    "doi": "10.1186/s12896-025-01092-z",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3389/fpls.2025.1718758",
+    "title": "TSSC: a new deep learning model for accurate pea leaf disease identification",
+    "doi": "10.3389/fpls.2025.1718758",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s12530-025-09773-y",
+    "title": "A deep learning-based early warning model for food safety risks: evidence from the aquatic products sector in China",
+    "doi": "10.1007/s12530-025-09773-y",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jfca.2025.108394",
+    "title": "Rapid anatomical classification and lead contamination analysis in edible legumes using novel LIBS–deep learning frameworks",
+    "doi": "10.1016/j.jfca.2025.108394",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/s25185796",
+    "title": "Advances in Nondestructive Technologies for External Eggshell Quality Evaluation",
+    "doi": "10.3390/s25185796",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s12161-025-02892-x",
+    "title": "Multi-class Fruit Freshness and Adulteration Detection Using Deep Learning Models Optimized by Simulated Annealing and Grad-CAM",
+    "doi": "10.1007/s12161-025-02892-x",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.cej.2025.167988",
+    "title": "Deep learning-assisted aggregation-induced emission microspheres decoding platform for multiplex single-particle sensing of mycotoxins",
+    "doi": "10.1016/j.cej.2025.167988",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.7759/s44389-025-07037-z",
+    "title": "A Novel Approach for Rice Disease Classification Under Intra-Class Variability",
+    "doi": "10.7759/s44389-025-07037-z",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.47738/jads.v6i4.988",
+    "title": "Image-Based Fish Freshness Classification Using Two-Phase Transfer Learning with Deep Learning Fusion Model",
+    "doi": "10.47738/jads.v6i4.988",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.61173/4kwtg685",
+    "title": "Automatic recognition of snack packaging time information based on YOLOv11",
+    "doi": "10.61173/4kwtg685",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.35633/inmateh-76-23",
+    "title": "DETECTION OF EARLY BRUISING IN ‘HUANGGUAN’ PEAR BASED ON MCCDeepLabV3+ MODEL",
+    "doi": "10.35633/inmateh-76-23",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.64336/001c.143179",
+    "title": "FreshU-GAN: A Deep Learning model for determining beef freshness",
+    "doi": "10.64336/001c.143179",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.aca.2025.344501",
+    "title": "Chemically and Electromagnetically dual-enhanced COFs-Au@AgNPs SERS sensor integrated with deep learning for ultrasensitive detection of neonicotinoid pesticides",
+    "doi": "10.1016/j.aca.2025.344501",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.33545/26180723.2025.v8.i7d.2144",
+    "title": "Smart innovations in stored grain protection",
+    "doi": "10.33545/26180723.2025.v8.i7d.2144",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acs.analchem.5c02441",
+    "title": "Slice-Inference-Assisted Lightweight Small Object Detection Model for Holographic Digital Immunoassay Quantification",
+    "doi": "10.1021/acs.analchem.5c02441",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.afres.2025.101039",
+    "title": "Improving food safety: Synthetic data augmentation for accurate mushroom species identification in complex environments",
+    "doi": "10.1016/j.afres.2025.101039",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.eswa.2025.127550",
+    "title": "Enhancing food safety review classification with large language models and label embedding",
+    "doi": "10.1016/j.eswa.2025.127550",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acs.jafc.4c11492",
+    "title": "Hyperspectral Imaging and Deep Learning for Quality and Safety Inspection of Fruits and Vegetables: A Review",
+    "doi": "10.1021/acs.jafc.4c11492",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.37936/ecti-cit.2025192.259717",
+    "title": "Deep Learning Based Wheat Yield Prophecy and Irrigation Schedule Management to Reduce Water Waste",
+    "doi": "10.37936/ecti-cit.2025192.259717",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.ecoinf.2025.103145",
+    "title": "PestDet: A unified detection framework for accurate and efficient stored-grain pest detection",
+    "doi": "10.1016/j.ecoinf.2025.103145",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/foods14061024",
+    "title": "Smart Grain Storage Solution: Integrated Deep Learning Framework for Grain Storage Monitoring and Risk Alert",
+    "doi": "10.3390/foods14061024",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1038/s41538-025-00393-z",
+    "title": "Emerging trends in SERS-based veterinary drug detection: multifunctional substrates and intelligent data approaches",
+    "doi": "10.1038/s41538-025-00393-z",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.compag.2025.110071",
+    "title": "Pixel-level spectral reconstruction and compressed projection based on deep learning in detecting aflatoxin B1",
+    "doi": "10.1016/j.compag.2025.110071",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acs.analchem.4c04453",
+    "title": "Lens-Free Holographic Imaging-Based Immunosensor Using Unpaired Data Set Signal-to-Noise Ratio-Enhanced Modal Transformation for Biosensing",
+    "doi": "10.1021/acs.analchem.4c04453",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acssensors.4c03209",
+    "title": "Multiplex Detection and Quantification of Virus Co-Infections Using Label-free Surface-Enhanced Raman Spectroscopy and Deep Learning Algorithms",
+    "doi": "10.1021/acssensors.4c03209",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2025.142930",
+    "title": "Detection of camellia oil adulteration based on near-infrared spectroscopy and smartphone combined with deep learning and multimodal fusion",
+    "doi": "10.1016/j.foodchem.2025.142930",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s44187-025-00273-1",
+    "title": "Emboldening food security for global sustainability yoking artificial intelligence",
+    "doi": "10.1007/s44187-025-00273-1",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.34133/ultrafastscience.0124",
+    "title": "Upconversion Photoluminescence Lifetime Imaging via Multi-Prior Physics-Enhanced Deep Learning",
+    "doi": "10.34133/ultrafastscience.0124",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.23977/autml.2025.060207",
+    "title": "A Review of the Application of Machine Vision in Food Quality Inspection",
+    "doi": "10.23977/autml.2025.060207",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s00604-025-07430-4",
+    "title": "Hollow polydopamine for the enhanced ultrasensitive dual-modal immunochromatographic detection of Salmonella typhimurium in dairy products via machine learning",
+    "doi": "10.1007/s00604-025-07430-4",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.microc.2025.116289",
+    "title": "Ultraviolet-visible spectroscopy and performance evaluation of chemometric tools: A sustainable alternative for classification of the fusarium sambucinum species complex",
+    "doi": "10.1016/j.microc.2025.116289",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2025.147021",
+    "title": "QDs fluorescent immunosensor based on magnetic separation coupled with machine learning for aflatoxin B1 detection in vegetable oils",
+    "doi": "10.1016/j.foodchem.2025.147021",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.fochx.2025.103016",
+    "title": "Toward smart and in-situ mycotoxin detection in food via vibrational spectroscopy and machine learning",
+    "doi": "10.1016/j.fochx.2025.103016",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1093/g3journal/jkaf176",
+    "title": "Genomic and hyperspectral imaging-based prediction blending enables selection for reduced deoxynivalenol content in wheat grains",
+    "doi": "10.1093/g3journal/jkaf176",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acs.jafc.5c02477",
+    "title": "DeepMBEnzy: An AI-Driven Database of Mycotoxin Biotransformation Enzymes",
+    "doi": "10.1021/acs.jafc.5c02477",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.fochx.2025.102467",
+    "title": "Strategy to improve the confidence level of qualitative screening by high resolution mass spectrometry: A case study of mycotoxins in maize",
+    "doi": "10.1016/j.fochx.2025.102467",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.microc.2025.114057",
+    "title": "Dynamic visual monitoring of triazole pesticide residues and penetration behavior in fruits and vegetables by surface-enhanced Raman spectroscopy combined with chemometrics",
+    "doi": "10.1016/j.microc.2025.114057",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/s25072316",
+    "title": "Detection of Pesticide Residues Using Three-Dimensional SERS Substrate Based on CNTs/Ag/AgNWs/SiO2",
+    "doi": "10.3390/s25072316",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acsagscitech.4c00757",
+    "title": "Electrostatic and Capillary Force-Enhanced Dynamic SERS Combined with Machine Learning for Rapid Quantification of Structurally Similar Triazole Pesticides in Tobacco",
+    "doi": "10.1021/acsagscitech.4c00757",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/agriculture15020195",
+    "title": "Raman Spectroscopy and Its Application in Fruit Quality Detection",
+    "doi": "10.3390/agriculture15020195",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodcont.2025.111936",
+    "title": "Coupled models for food fraud evaluation of unripe banana flour: Enhanced prediction with XGBoost and variable importance assessed by SHAP",
+    "doi": "10.1016/j.foodcont.2025.111936",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1177/09603360251412696",
+    "title": "Spectroscopy-assisted quality control of high biological value fortified fruit juices: A joint Austria–Hungary project",
+    "doi": "10.1177/09603360251412696",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodres.2025.117331",
+    "title": "Detection of adulteration in acerola (Malpighia emarginata DC.) pulps using a portable near-infrared (nir) spectrophotometer and chemometric",
+    "doi": "10.1016/j.foodres.2025.117331",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/horticulturae11030329",
+    "title": "Innovative Tools for Nitrogen Fertilization Traceability in Organic Farming Products: A Fennel Case Study",
+    "doi": "10.3390/horticulturae11030329",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1039/d5ay00686d",
+    "title": "Geographical authentication of rose cakes via integrated HS-SPME-GC-MS, GC-IMS, and chemometric profiling",
+    "doi": "10.1039/d5ay00686d",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.fbp.2025.11.011",
+    "title": "Enhanced mask-random forest RCNN and 3D point cloud assisted shape and defect recognition for protein and aflatoxin prediction in nut processing",
+    "doi": "10.1016/j.fbp.2025.11.011",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/s25165028",
+    "title": "Development and Implementation of an IoT-Enabled Smart Poultry Slaughtering System Using Dynamic Object Tracking and Recognition",
+    "doi": "10.3390/s25165028",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1159/000545406",
+    "title": "From Genes to Public Health: The Journey Continues!",
+    "doi": "10.1159/000545406",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.25135/rfac.2025.10th.3671",
+    "title": "Authenticity and Nutritional Value in Olive Oil: New Technologies and Prospects",
+    "doi": "10.25135/rfac.2025.10th.3671",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.fochx.2025.103088",
+    "title": "Multi-element fingerprints of muscle tissues of Eriocheir sinensis from 8 major production areas in China to promote geographical origin and food safety authentication",
+    "doi": "10.1016/j.fochx.2025.103088",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1080/87559129.2025.2553677",
+    "title": "Mass Spectrometry of Proteins, Peptides and Small Molecules for Food Authentication – A Systematic Survey",
+    "doi": "10.1080/87559129.2025.2553677",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.fochx.2025.102804",
+    "title": "Untargeted lipidomics profiling for halal authentication of meatball products from mixed meat sources",
+    "doi": "10.1016/j.fochx.2025.102804",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.21776/ub.afssaae.2025.008.02.4",
+    "title": "Volatilomics with SPME/GC-MS method for halal species authentication of meat products",
+    "doi": "10.21776/ub.afssaae.2025.008.02.4",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.lwt.2025.117920",
+    "title": "Investigating the impact of particle size on the volatile and non-volatile metabolite variations of ginger powder",
+    "doi": "10.1016/j.lwt.2025.117920",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.aca.2025.344006",
+    "title": "Data fusion of elemental and metabolic fingerprints of asparagus with random forest approaches",
+    "doi": "10.1016/j.aca.2025.344006",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.focha.2025.100914",
+    "title": "Untargeted metabolomics profiling for the geographical authentication of traditional pempek using high-resolution orbitrap mass spectrometry",
+    "doi": "10.1016/j.focha.2025.100914",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.5455/ovj.2025.v15.i2.13",
+    "title": "The employment of FTIR-ATR spectroscopy and GC-MS combined with chemometrics for rapid detection of adulteration of pork oil in Gabus fish oil (Channa striata) for halal authentication",
+    "doi": "10.5455/ovj.2025.v15.i2.13",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.59232/rls-v1i2p105",
+    "title": "Predictive Microbiology Using AI to Model Microbial Dynamics and Antibiotic Resistance Mechanisms",
+    "doi": "10.59232/rls-v1i2p105",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jneb.2025.05.032",
+    "title": "Digital Food Safety: Insights from Fact-Checking ChatGPT Consumer Interactions",
+    "doi": "10.1016/j.jneb.2025.05.032",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/foods14152650",
+    "title": "Topic Modeling Analysis of Children’s Food Safety Management Using BigKinds News Big Data: Comparing the Implementation Times of the Comprehensive Plan for Children’s Dietary Safety Management",
+    "doi": "10.3390/foods14152650",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/fft2.70377",
+    "title": "Machine Learning–Assisted Fluorescent Eu@ZnMOF for the Enoxacin and Glyphosate Detection in Food by Suppressing Sensitization and Ligand–Metal Charge Transfer",
+    "doi": "10.1002/fft2.70377",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1128/aem.01551-26",
+    "title": "Microbiomes of soils and leafy vegetables in urban agriculture systems reflect crop management and local environmental conditions",
+    "doi": "10.1128/aem.01551-26",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodres.2026.120937",
+    "title": "Integrating microbiome source tracking, machine learning, and precision intervention for data-driven control of microbial contamination in food processing",
+    "doi": "10.1016/j.foodres.2026.120937",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.cofs.2026.101488",
+    "title": "Colorimetric Sensor Arrays and Machine Learning for Supply Chain Food Safety Monitoring: A State-of-the-Art Review of Advances, Limitations, and Translational Challenges",
+    "doi": "10.1016/j.cofs.2026.101488",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.5281/zenodo.23057279",
+    "title": "A Machine Learning Method for Prediction of Yogurt Quality and Consumers Preferencesusing Sensory Attributes and Image Processing Techniques",
+    "doi": "10.5281/zenodo.23057279",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2026.151370",
+    "title": "A RCA-based signal amplification and machine learning-assisted sandwich-type dual-mode split aptamers sensor for the simultaneous detection of diarrhetic shellfish toxins",
+    "doi": "10.1016/j.foodchem.2026.151370",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1080/10408347.2026.2738868",
+    "title": "Bridging the Gap: Spectroscopy, Machine Learning, and the Path to Reliable Food Safety Analysis",
+    "doi": "10.1080/10408347.2026.2738868",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/photonics13090889",
+    "title": "Microstructured Optical Sensors: Design, Fabrication, and Applications",
+    "doi": "10.3390/photonics13090889",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.talanta.2026.130611",
+    "title": "Synergistic selectivity carbon-dot-embedded imprinted fluorescence sensor with decision tree for intelligent on-site detection of hexavalent chromium",
+    "doi": "10.1016/j.talanta.2026.130611",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acsaom.6c00428",
+    "title": "Luminescent Metal–Organic Frameworks for pH Sensing: A Critical Overview from Molecular Design to Point-of-Care Diagnostics",
+    "doi": "10.1021/acsaom.6c00428",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jhazmat.2026.143568",
+    "title": "Explainable machine learning-assisted Raman spectroscopy-based fast Versicolorin A detection in maize for early aflatoxin warning and safety sorting",
+    "doi": "10.1016/j.jhazmat.2026.143568",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.isci.2026.117470",
+    "title": "Beyond predictive accuracy: A case for mechanism-informed, uncertainty-aware machine learning in food microbiology",
+    "doi": "10.1016/j.isci.2026.117470",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1111/1541-4337.70653",
+    "title": "Biomimetic Design of Biopolymer‐Based Water‐Resistant Food Packaging Materials",
+    "doi": "10.1111/1541-4337.70653",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/npp2.70059",
+    "title": "Uptake, metabolism, and bioremediation of neonicotinoid insecticides in soil–plant systems: A review",
+    "doi": "10.1002/npp2.70059",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jep.2026.122316",
+    "title": "Ethnoveterinary herbal practices are associated with reduced within-farm antibiotic use and improved farm performance in commercial poultry in Bangladesh: A multi-district cross-sectional study",
+    "doi": "10.1016/j.jep.2026.122316",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.trac.2026.119104",
+    "title": "Hyperspectral imaging and machine learning for mycotoxigenic fungi and mycotoxins: surrogate detection, evidence standards and industrial deployment",
+    "doi": "10.1016/j.trac.2026.119104",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.snb.2026.140745",
+    "title": "Differential competitive mechanism-driven three-channel sensor array for machine learning-enabled organophosphorus pesticides identification",
+    "doi": "10.1016/j.snb.2026.140745",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acsanm.6c02589",
+    "title": "Fluorescent-Based Sensing for Tetracycline Antibiotics Using Sodium Carboxymethylcellulose and Machine Learning-Assisted Recognition",
+    "doi": "10.1021/acsanm.6c02589",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.cogsc.2026.101091",
+    "title": "Fermentelligence – Can AI-optimised fermentation of agri-food side streams deliver the sustainable protein promise?",
+    "doi": "10.1016/j.cogsc.2026.101091",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3389/fsufs.2026.1864233",
+    "title": "Temporal stability analysis and regime-based risk intelligence framework for European food safety: a comprehensive machine learning approach",
+    "doi": "10.3389/fsufs.2026.1864233",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.cclet.2026.113339",
+    "title": "Rapid chemiluminescent sensing of organophosphorus pesticides assisted by machine learning algorithms",
+    "doi": "10.1016/j.cclet.2026.113339",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s00216-026-06693-x",
+    "title": "Dual-mode integrated electrochemical sensing of E. coli in real matrices enabled by machine learning",
+    "doi": "10.1007/s00216-026-06693-x",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodres.2026.120168",
+    "title": "Machine learning-assisted spectroscopic approaches for pesticide residue detection in food matrices",
+    "doi": "10.1016/j.foodres.2026.120168",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.47119/ijrp1002011720269641",
+    "title": "Leveraging Non-Traditional Urban Data Sources for Public Health Surveillance: A Review of Emerging Data Streams, Analytical Approaches, and Implementation Challenges",
+    "doi": "10.47119/ijrp1002011720269641",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.saa.2026.128508",
+    "title": "Rapid detection of pesticide residues on tomato surfaces using hyperspectral imaging and machine learning",
+    "doi": "10.1016/j.saa.2026.128508",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.microc.2026.119182",
+    "title": "Synergizing nanomaterials and machine learning for smart colorimetric sensing in food safety: A critical review",
+    "doi": "10.1016/j.microc.2026.119182",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.saa.2026.128494",
+    "title": "Machine learning enabled surface-enhanced Raman spectroscopy quantitative analysis for food safety monitoring",
+    "doi": "10.1016/j.saa.2026.128494",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/foods15142522",
+    "title": "Interpretable Machine Learning for Predicting Enrofloxacin Residues in Fish Using a Large Literature-Derived Database",
+    "doi": "10.3390/foods15142522",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.saa.2026.128426",
+    "title": "Machine learning-assisted prediction of beef spoilage using full-spectrum FTIR gas analysis",
+    "doi": "10.1016/j.saa.2026.128426",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s13197-026-06803-8",
+    "title": "Smart biosensing packaging and artificial intelligence-integrated edible sensors for detecting shelf life: a paradigm shift in real-time food safety monitoring",
+    "doi": "10.1007/s13197-026-06803-8",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.36085/jsai.v9i2.10555",
+    "title": "Modeling Public Issues and Attitudes Toward the Free Nutritious Meals Program Using a Hybrid BERTopic and IndoBERT Architecture",
+    "doi": "10.36085/jsai.v9i2.10555",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s10068-026-02210-z",
+    "title": "Interoperable artificial intelligence for food safety management systems across the food supply chain: a systematic review",
+    "doi": "10.1007/s10068-026-02210-z",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.23751/pn.2026.18386",
+    "title": "Estimated Glyoxal Concentrations in Foods with Machine Learning-Based Transformation Strategies",
+    "doi": "10.23751/pn.2026.18386",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1111/pce.70692",
+    "title": "Systems‐Level Developmental Reprogramming Under Waterlogging Stress in Cowpea Revealed by Integrated Phenotypic, Physiological, and Transcriptomic Analysis",
+    "doi": "10.1111/pce.70692",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1080/00032719.2026.2692630",
+    "title": "From Data to Decision: A Critical Review of Spectral and Machine Learning Methods for Food Analysis",
+    "doi": "10.1080/00032719.2026.2692630",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acsanm.6c01897",
+    "title": "Rational Design of High-Performance Nanozymes via Machine Learning for Smartphone-Based Quercetin Sensing",
+    "doi": "10.1021/acsanm.6c01897",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s42979-026-05117-y",
+    "title": "Effective Neural Network Model with Multispectral Imaging for Food Contamination Detection",
+    "doi": "10.1007/s42979-026-05117-y",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1186/s43014-026-00397-6",
+    "title": "Smart screening of acrylamide in biscuits using NIR spectroscopy and machine learning modeling: a PAT-oriented study",
+    "doi": "10.1186/s43014-026-00397-6",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.cej.2026.178048",
+    "title": "Single atom anchored covalent organic framework assisted with machine learning for high-throughput pesticides discrimination",
+    "doi": "10.1016/j.cej.2026.178048",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/cnma.70289",
+    "title": "Multicolored CQDs Synthesis via Solvent Effects: Machine Learning to Establish a Prediction Model and Portable Detection of NO 2 −",
+    "doi": "10.1002/cnma.70289",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.22214/ijraset.2026.83061",
+    "title": "SurplusShift: A Technology-Driven Approach for Efficient Surplus Food Redistribution and Food Waste Minimization",
+    "doi": "10.22214/ijraset.2026.83061",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/pr14111690",
+    "title": "Machine Learning-Guided Electrochemical Fingerprinting for Rapid Polyethylene Microplastic Detection in Seawater and Seafood Matrices",
+    "doi": "10.3390/pr14111690",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.20935/acadeng8291",
+    "title": "Smart cold chains for food systems: IoT monitoring, predictive analytics, and emerging technologies",
+    "doi": "10.20935/acadeng8291",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acs.analchem.6c00521",
+    "title": "Surface-Dominated and Tunable 2D MOF-Based Nanozyme Array for Smartphone-Integrated Intelligent Discrimination of Multiple Antioxidants",
+    "doi": "10.1021/acs.analchem.6c00521",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acssensors.6c00430",
+    "title": "An Intelligent Photocatalytic Self-Cleaning SERS Platform with Machine Learning for On-Site Detection of Multiple Antibiotics",
+    "doi": "10.1021/acssensors.6c00430",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s44373-026-00131-4",
+    "title": "Fundamentals of electrochemical sensors, nanomaterials, and progressive applications",
+    "doi": "10.1007/s44373-026-00131-4",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.18280/isi.310419",
+    "title": "Machine Learning-Based Prediction of Mushroom Edibility Using Morphological Traits and Regularized Classification Models",
+    "doi": "10.18280/isi.310419",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.15282/isse.1.1.2026.14277",
+    "title": "Electrical capacitance tomography for detecting rice moisture content in a container",
+    "doi": "10.15282/isse.1.1.2026.14277",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1038/s41598-026-50484-4",
+    "title": "Machine learning-assisted paper-based chemiluminescence biosensor for choline quantification in infant milk: toward portable nutritional quality monitoring",
+    "doi": "10.1038/s41598-026-50484-4",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.14710/ldjr.9.2026.62-81",
+    "title": "Evaluasi Implementasi Kebijakan Pengawasan Keamanan PSAT Impor terhadap Risiko Kontaminasi Logam Berat di Indonesia",
+    "doi": "10.14710/ldjr.9.2026.62-81",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.pce.2026.104454",
+    "title": "Integrated electro-bioremediation of dye-contaminated soils using dielectric monitoring and machine learning prediction",
+    "doi": "10.1016/j.pce.2026.104454",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.tifs.2026.105752",
+    "title": "Machine learning-enhanced strategies for detecting modified and emerging mycotoxins: Advances and future directions",
+    "doi": "10.1016/j.tifs.2026.105752",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/ps.70772",
+    "title": "Food safety assessment of hemipteran‐specific insecticidal protein Tpp78Aa from Bacillus thuringiensis",
+    "doi": "10.1002/ps.70772",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.cej.2026.176278",
+    "title": "S/N induced coordination isomerism hydrogels on 3D-printed device for machine learning-assisted multiplex detection of heavy metal ions",
+    "doi": "10.1016/j.cej.2026.176278",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.23960/jitet.v14i2.9357",
+    "title": "Hybrid Intelligence For Precision Milk Quality Assessment Integrating Naïve Bayes And K-Means Clustering",
+    "doi": "10.23960/jitet.v14i2.9357",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.52711/0974-4150.2026.00020",
+    "title": "A Review of Analytical Method Validation: Current Regulatory Guidelines and Practical Challenges",
+    "doi": "10.52711/0974-4150.2026.00020",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1111/1541-4337.70474",
+    "title": "Identifying Food Packaging Migrants: Current Analytical Capabilities, Challenges, and Future Prospects",
+    "doi": "10.1111/1541-4337.70474",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/foods15071176",
+    "title": "Ensemble Learning Based on Bagging and Hybrid Sampling for Food Safety Risk Prediction",
+    "doi": "10.3390/foods15071176",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.saa.2026.127810",
+    "title": "Ensemble machine learning enhanced Raman spectroscopy for high accuracy and noise robust classification of carbamate pesticides",
+    "doi": "10.1016/j.saa.2026.127810",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.microc.2026.117841",
+    "title": "Advanced sensing and machine learning technologies for economically motivated adulterations (EMA) management: Trends toward sustainability",
+    "doi": "10.1016/j.microc.2026.117841",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.15662/ijeetr.2026.0802050",
+    "title": "AI Enabled Food Batch Tracking and Expiry Alert Management System",
+    "doi": "10.15662/ijeetr.2026.0802050",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.ijfoodmicro.2026.111732",
+    "title": "Machine learning-based modeling for monitoring and predicting the detection rate and severity of pathogenic microorganisms in seafood",
+    "doi": "10.1016/j.ijfoodmicro.2026.111732",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s00216-026-06415-3",
+    "title": "Towards “greener” strategies in quality control: rapid volatilomics of cocoa based on HS-GC-IMS and machine learning",
+    "doi": "10.1007/s00216-026-06415-3",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.26555/ijain.v12i1.2014",
+    "title": "A comprehensive comparative analysis of chicken meat classification techniques through machine learning models",
+    "doi": "10.26555/ijain.v12i1.2014",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.22214/ijraset.2026.77559",
+    "title": "VegCheck: A Vegetable Detection Website",
+    "doi": "10.22214/ijraset.2026.77559",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/ajae.70058",
+    "title": "Online platform entry and food safety risk: Evidence from the Chinese restaurant industry",
+    "doi": "10.1002/ajae.70058",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.9734/ajarr/2026/v20i21285",
+    "title": "Applications and Prospects of Machine Learning in Grain Processing and Quality Inspection",
+    "doi": "10.9734/ajarr/2026/v20i21285",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.29284/kttd4e71",
+    "title": "Machine Learning-Enhanced Shelf-Life Prediction Model For Packaged Foods Using Environmental Cues",
+    "doi": "10.29284/kttd4e71",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodres.2026.118585",
+    "title": "Machine learning modeling for predicting growth dynamics of Listeria monocytogenes using ComBase database: A comprehensive feature engineering approach",
+    "doi": "10.1016/j.foodres.2026.118585",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jspr.2026.102973",
+    "title": "Aflatoxin detection and quality assessment in dried red chilli (Capsicum annum L.): A multifaceted approach using physical, microstructural, and machine learning techniques",
+    "doi": "10.1016/j.jspr.2026.102973",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.fochx.2026.103646",
+    "title": "Machine learning prioritization of antibiotic residues in aquatic foods reveals exposure-driven genotoxic risk mediated by BCL2",
+    "doi": "10.1016/j.fochx.2026.103646",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acssensors.5c03353",
+    "title": "Light-Addressable Photoelectrochemical Sensors for High-Throughput and Multiplex Detection: Principles, Applications, and Future Perspectives",
+    "doi": "10.1021/acssensors.5c03353",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jspr.2026.102962",
+    "title": "Smart sensor and artificial intelligence technologies for postharvest loss reduction and food safety in nutri-cereals",
+    "doi": "10.1016/j.jspr.2026.102962",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodres.2026.118523",
+    "title": "Machine learning–driven nanoparticle–enhanced paper chromogenic array sensor approach for detecting sub-lethally injured Salmonella in low moisture food",
+    "doi": "10.1016/j.foodres.2026.118523",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acs.analchem.5c07000",
+    "title": "A Smartphone-Read, Machine Learning-Enhanced Lanthanide Hydrogel Sensor for Multimodal and On-Site Detection of Kanamycin in Food Safety",
+    "doi": "10.1021/acs.analchem.5c07000",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s00604-025-07832-4",
+    "title": "Machine learning-assisted SERS detection of pyrethroid pesticides in edible fungi using a magnetic nanosensor",
+    "doi": "10.1007/s00604-025-07832-4",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s11104-026-08272-6",
+    "title": "A novel quantitative approach for factor identification and risk prediction of cadmium accumulation in wheat using machine learning and Bayesian models",
+    "doi": "10.1007/s11104-026-08272-6",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.26599/nr.2026.94908412",
+    "title": "Quantum dot-based POCT systems: From multiplexed detection to cross-domain applications",
+    "doi": "10.26599/nr.2026.94908412",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1080/17518253.2025.2608409",
+    "title": "Vibrational spectroscopy using portable devices combined with traditional machine learning: a powerful tool for insect rearing and food quality assessment",
+    "doi": "10.1080/17518253.2025.2608409",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jenvman.2026.128545",
+    "title": "Novel simple accurate detection of microplastics based on image of photoluminescent nanoparticle carbon dots via machine learning and deep feature embedding",
+    "doi": "10.1016/j.jenvman.2026.128545",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/adsu.202501302",
+    "title": "Application and Machine Learning‐Assisted Recognition of MOF‐Based Fluorescent Sensors in the Detection of Food Contaminants",
+    "doi": "10.1002/adsu.202501302",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1039/d6an00221h",
+    "title": "Antibiotic residue detection based on SERS technology: enhancement mechanisms, material innovations, and challenges in on-site applications",
+    "doi": "10.1039/d6an00221h",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1093/ijlct/ctag111",
+    "title": "Unlocking low-carbon consumption: research on heterogeneity in willingness to pay for environmental premiums across age cohorts",
+    "doi": "10.1093/ijlct/ctag111",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.talanta.2026.130586",
+    "title": "Early diagnosis of cadmium stress in rice by intelligent profiling of multiple response indicators with portable Raman SERS and deep learning",
+    "doi": "10.1016/j.talanta.2026.130586",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.sna.2026.118216",
+    "title": "Specific pesticide residues detection via HIT-based terahertz sensor and deep learning-optimized design",
+    "doi": "10.1016/j.sna.2026.118216",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/efd2.70178",
+    "title": "Facile Fabrication of PVA Nanofibers Decorated With Ratiometric Fluorescent Carbon Dots for Chlorpyrifos Recognition With Deep Learning",
+    "doi": "10.1002/efd2.70178",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/smll.74139",
+    "title": "Research Progress of Single/Multi‐Mode Optical Sensors on Visual Monitoring of Food Freshness: A Review",
+    "doi": "10.1002/smll.74139",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/foods15122083",
+    "title": "Nondestructive Detection of Foreign Matter in Pu-erh Ripe Tea Based on Deep Learning",
+    "doi": "10.3390/foods15122083",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodcont.2026.112332",
+    "title": "Quantifying multi-source adulteration in cinnamon powder using deep learning-based image analysis",
+    "doi": "10.1016/j.foodcont.2026.112332",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1364/ao.598781",
+    "title": "Open-set recognition for surface-enhanced Raman scattering spectroscopy via deep learning and GASF",
+    "doi": "10.1364/ao.598781",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.37965/jait.2026.0990",
+    "title": "Intelligent Wild Mushroom Recognition Using YOLOv11n: A YOLOv11n-Based System for Accurate and Real-Time Identification",
+    "doi": "10.37965/jait.2026.0990",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1080/00032719.2026.2668538",
+    "title": "Ultraviolet Resonance Raman Identification of Small-Molecule Toxins by Frequency-Consistent Generative Augmentation",
+    "doi": "10.1080/00032719.2026.2668538",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acs.analchem.6c00501",
+    "title": "Deep Learning-Assisted Room-Temperature Phosphorescence Sensor Array Based on Host–Guest Doping for Visual Discrimination of Triazole Fungicides",
+    "doi": "10.1021/acs.analchem.6c00501",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.microc.2026.118192",
+    "title": "Hyperspectral imaging combined with interpretable deep learning for rapid detection of zearalenone and ochratoxin a in corn grits",
+    "doi": "10.1016/j.microc.2026.118192",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.38124/ijisrt/26apr915",
+    "title": "Fruit Quality Assessment and Freshness Prediction System Using Deep Learning",
+    "doi": "10.38124/ijisrt/26apr915",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acs.analchem.6c00277",
+    "title": "Antioxidative and Robust Fluorescent Hydrogel for Deep Learning-Assisted Non-Destructive Detection of Hg 2+",
+    "doi": "10.1021/acs.analchem.6c00277",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.30829/zero.v10i1.28735",
+    "title": "Geometric Data Augmentation with a Two-Stage Fine-Tuning Strategy for EfficientNetB3-Based Fruit Condition Classification",
+    "doi": "10.30829/zero.v10i1.28735",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1186/s13007-026-01519-4",
+    "title": "FloraSyntropy-net: scalable deep learning with novel FloraSyntropy archive for large-scale plant disease diagnosis",
+    "doi": "10.1186/s13007-026-01519-4",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s11694-026-04201-4",
+    "title": "Deep learning algorithms for near-infrared spectroscopy-based quantitative analysis of binary adulteration in camellia oil",
+    "doi": "10.1007/s11694-026-04201-4",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s11694-026-04088-1",
+    "title": "Artificial intelligence-driven food safety and quality control",
+    "doi": "10.1007/s11694-026-04088-1",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s00217-025-04977-7",
+    "title": "Deep learning for systemic food safety analytics: forecasting RASFF notifications and interpreting risk drivers",
+    "doi": "10.1007/s00217-025-04977-7",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1007/s12293-026-00495-5",
+    "title": "Advancing food safety: deep learning for accurate detection of bacterial contaminants",
+    "doi": "10.1007/s12293-026-00495-5",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.infrared.2026.106402",
+    "title": "Infrared hyperspectral imaging integrated with an attentive spatial-spectral neural network for precise postharvest detection of Aspergillus flavus contamination and nutrient variations in peanut kernels",
+    "doi": "10.1016/j.infrared.2026.106402",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.9775/kvfd.2025.35393",
+    "title": "Cattle Identification with CLIP-Based Biometric Features",
+    "doi": "10.9775/kvfd.2025.35393",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1039/d6ay00224b",
+    "title": "Deep learning-empowered SERS: deciphering the multidimensional information code of complex biological samples",
+    "doi": "10.1039/d6ay00224b",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1109/tim.2026.3697074",
+    "title": "Battery-Less Meat Freshness Detection via Far-Field RF Energy Harvesting and BiLSTM Attention Networks",
+    "doi": "10.1109/tim.2026.3697074",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1109/access.2026.3737590",
+    "title": "PCAE: A Partial Convolution Autoencoder for Hyperspectral Anomaly Detection in Food Safety Inspection",
+    "doi": "10.1109/access.2026.3737590",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.aca.2026.346293",
+    "title": "Machine learning-assisted fluorescence immunochromatographic detection of Salmonella typhimurium in complex food matrices via tannic acid-enhanced AIE nanoprobes",
+    "doi": "10.1016/j.aca.2026.346293",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.saa.2026.128169",
+    "title": "Anthocyanin-based colorimetric sensor for aflatoxin B1 (AFB1) detection in wheat: Performance optimization via near-infrared (NIR) spectral characterization and structurally improved recurrent neural network (RNN)",
+    "doi": "10.1016/j.saa.2026.128169",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.33795/jartel.v16i2.9092",
+    "title": "The Utilization of The Grey Level Co-Occurrence Matrix (GLCM) Method for Classifying Grape Texture Based on Pesticide Residue Levels in Post Harvest Sorting",
+    "doi": "10.33795/jartel.v16i2.9092",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/chemosensors14050116",
+    "title": "Ensemble Learning Combined with Laser-Induced Breakdown Spectroscopy for Detecting Pesticide Residues in Xinhui Dried Tangerine Peel",
+    "doi": "10.3390/chemosensors14050116",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1021/acsanm.6c00433",
+    "title": "Hexagonal Au Nanostructure SERS Metasurface for AI-Driven Detection of Pesticide Residues in Real Food Samples",
+    "doi": "10.1021/acsanm.6c00433",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1155/joch/8140242",
+    "title": "Interpreting the Raman, IR, and NIR Vibrational Fingerprints of Chlorothalonil Using Anharmonic DFT Analysis",
+    "doi": "10.1155/joch/8140242",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.53982/ajerd.2026.0902.17-j",
+    "title": "Development of an Optimized SVM Framework using Frilled-Lizard Metaheuristic Algorithm for Enhanced Classification of Salmonella Infection and Healthy Poultry Conditions",
+    "doi": "10.53982/ajerd.2026.0902.17-j",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.62762/jiap.2025.569459",
+    "title": "Embedded Electronic IoT System for Poultry Health Monitoring and AI-Powered Disease Detection from Feces",
+    "doi": "10.62762/jiap.2025.569459",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1002/jsfa.70934",
+    "title": "Advanced multimodeling of isotopic and elemental content for cheese authentication",
+    "doi": "10.1002/jsfa.70934",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodres.2026.118936",
+    "title": "Exploring relaxation features for rapid identification of olive oil adulteration via low-field nuclear magnetic resonance integrated with chemometrics",
+    "doi": "10.1016/j.foodres.2026.118936",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1080/03610470.2026.2743375",
+    "title": "Investigating Differences in the Volatile and Sensory Profiles of Nectaron and Superdelic Hops Grown in the Tasman Region of New Zealand",
+    "doi": "10.1080/03610470.2026.2743375",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.28918/jhc.v1i2.15131",
+    "title": "Chemical Analysis and Safety Standards of Halal Food Additives: Ensuring Purity and Compliance with Islamic Guidelines",
+    "doi": "10.28918/jhc.v1i2.15131",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodcont.2026.112525",
+    "title": "Authentication of geographic origin and production method of mullet (Mugil cephalus) roe using HRMS-based small-molecule fingerprinting",
+    "doi": "10.1016/j.foodcont.2026.112525",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.fbio.2026.109439",
+    "title": "Geographical traceability of paprika from emerging production regions: Combined UHPLC-Q-Orbitrap-HRMS-based untargeted metabolomics and lipidomics for marker discovery",
+    "doi": "10.1016/j.fbio.2026.109439",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1080/87559129.2026.2631784",
+    "title": "Research Progress of Traceability Technologies for Large-Scale Geographical Specialty Food Origins",
+    "doi": "10.1080/87559129.2026.2631784",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.foodchem.2026.148302",
+    "title": "Transforming food authenticity testing by the exploitation of a machine learning – Data fusion approach: a tea case study",
+    "doi": "10.1016/j.foodchem.2026.148302",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.48048/tis.2026.12122",
+    "title": "LC–HRMS Metabolomics Fingerprints and Pathway Signatures Authenticate Geographic Origin of Pempek (Channa striata)",
+    "doi": "10.48048/tis.2026.12122",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.fbio.2026.108253",
+    "title": "Untargeted UHPLC-HRMS-based metabolomics for traceability of lupin (Lupinus albus L.): Revealing the impact of geographical origin and farming practices",
+    "doi": "10.1016/j.fbio.2026.108253",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.fufo.2026.101152",
+    "title": "Natural language processing in food safety research",
+    "doi": "10.1016/j.fufo.2026.101152",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.5281/zenodo.20771599",
+    "title": "Integrity: AI-Powered Food Label Analysis System",
+    "doi": "10.5281/zenodo.20771599",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.tifs.2026.105592",
+    "title": "Knowledge graph and large language model synergy for food safety: Approaches and perspectives",
+    "doi": "10.1016/j.tifs.2026.105592",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.3390/foods15193420",
+    "title": "Generative and Foundation-Model Artificial Intelligence in Food Safety Analysis, Authenticity Identification, and Quality Control: A Systematic Review of Validation and Decision Readiness",
+    "doi": "10.3390/foods15193420",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.5281/zenodo.23212452",
+    "title": "Paying for Nutrition: A Mechanism-Design Approach to the Nutrient Density Standard",
+    "doi": "10.5281/zenodo.23212452",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  }
+]
