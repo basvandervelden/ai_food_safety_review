@@ -52,4 +52,55 @@ class ASReviewTests(unittest.TestCase):
             self.assertEqual(rows[0]["title"],"Example")
             self.assertEqual(rows[0]["label"],"1")
             self.assertEqual(sheet,"ASReview")
+    def test_synthetic_training_and_blind_sampling(self):
+        import importlib.util
+        if importlib.util.find_spec("sklearn") is None:
+            self.skipTest("Optional ML dependencies are not installed")
+        with TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            input_file=root/"training.csv"
+            with input_file.open("w",newline="",encoding="utf-8") as f:
+                w=csv.writer(f);w.writerow(["title","abstract","label","doi"])
+                for i in range(160):
+                    label=int(i%4==0 or i%4==1)
+                    title=("Food safety pathogen AI" if label else "Farming crop yield prediction")+" study "+str(i)
+                    abstract=("Deep learning detects Salmonella in food" if label else "Machine learning predicts agricultural harvest outcomes")
+                    w.writerow([title,abstract,label,"10.1000/"+str(i)])
+                for i in range(4):w.writerow(["Unscreened "+str(i),"","-1",""])
+            pool_file=root/"pool.json"
+            candidates=[]
+            for i in range(210):
+                label=int(i%4<2)
+                candidates.append({"doi":"10.2000/"+str(i),
+                    "title":("Food safety pathogen AI" if label else "Farming crop yield prediction")+" study "+str(i),
+                    "abstract":("Deep learning detects Salmonella in food" if label else "Machine learning predicts agricultural harvest outcomes")})
+            pool_file.write_text(json.dumps(candidates),encoding="utf-8")
+            args=type("Args",(),{"input":str(input_file),"sheet":None,
+                "title_col":None,"abstract_col":None,"label_col":None,"doi_col":None,
+                "seed":42,"sample_size":30,"target_recall":.95,"pool":str(pool_file),
+                "output_dir":str(root/"output")})()
+            model.train(args)
+            out=root/"output"
+            self.assertTrue((out/"classifier.joblib").exists())
+            report=json.loads((out/"evaluation.json").read_text())
+            self.assertEqual(report["input"]["unlabelled_ignored"],4)
+            self.assertEqual(report["heldout"]["n"],32)
+            frame=json.loads((out/"sample_frame.json").read_text())
+            self.assertEqual(frame["population"],210)
+            self.assertEqual(len(frame["selected"]),30)
+            with (out/"blind_sample.csv").open(encoding="utf-8-sig") as f:
+                rows=list(csv.DictReader(f))
+            self.assertEqual(len(rows),30)
+            self.assertNotIn("score",rows[0])
+            self.assertNotIn("predicted",rows[0])
+            for row in rows:
+                row["human_label"]=int("Food safety" in row["title"])
+            labeled=out/"independent_labels.csv"
+            with labeled.open("w",newline="",encoding="utf-8-sig") as f:
+                w=csv.DictWriter(f,fieldnames=rows[0].keys());w.writeheader();w.writerows(rows)
+            evaluate_args=type("Args",(),{"labels":str(labeled),"frame":str(out/"sample_frame.json"),
+                "sheet":None,"id_col":None,"label_col":None,"output":str(out/"sample_eval.json")})()
+            model.evaluate_sample(evaluate_args)
+            self.assertTrue((out/"sample_eval.json").exists())
+
 if __name__=="__main__":unittest.main()
