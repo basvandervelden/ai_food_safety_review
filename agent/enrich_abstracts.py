@@ -24,7 +24,7 @@ import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
 POOL=ROOT/"data"/"openalex_pool.json"
-CACHE=ROOT/"data"/"abstract_enrichment.json"
+CACHE=ROOT/"private"/"abstract_enrichment.json"
 REPORT=ROOT/"data"/"abstract_enrichment_report.json"
 MARKDOWN=ROOT/"data"/"abstract_enrichment_report.md"
 USER_AGENT="LivingAIFoodSafety/1.0 (academic research; https://github.com/basvandervelden/ai_food_safety_review)"
@@ -131,6 +131,7 @@ def load(path,default):
     except FileNotFoundError:return default
 
 def save(path,obj):
+    path.parent.mkdir(parents=True,exist_ok=True)
     tmp=path.with_suffix(path.suffix+".tmp")
     tmp.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     tmp.replace(path)
