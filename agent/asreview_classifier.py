@@ -195,7 +195,7 @@ def pool_rows(path):
         # Enrichment is a separate DOI-keyed cache: never overwrite existing
         # OpenAlex abstracts, only fill genuine gaps for model training.
         if p.name=="openalex_pool.json":
-            cache_path=p.parent/"abstract_enrichment.json"
+            cache_path=p.parent.parent/"private"/"abstract_enrichment.json"
             if cache_path.exists():
                 cache=json.loads(cache_path.read_text(encoding="utf-8"))
                 augmented=[]
