@@ -191,7 +191,21 @@ def pool_rows(path):
     p=Path(path)
     if p.suffix.lower()==".json":
         d=json.loads(p.read_text(encoding="utf-8"))
-        return d if isinstance(d,list) else d["papers"]
+        rows=d if isinstance(d,list) else d["papers"]
+        # Enrichment is a separate DOI-keyed cache: never overwrite existing
+        # OpenAlex abstracts, only fill genuine gaps for model training.
+        if p.name=="openalex_pool.json":
+            cache_path=p.parent/"abstract_enrichment.json"
+            if cache_path.exists():
+                cache=json.loads(cache_path.read_text(encoding="utf-8"))
+                augmented=[]
+                for row in rows:
+                    value=cache.get(str(row.get("doi","")).lower(),{})
+                    if not str(row.get("abstract") or "").strip() and value.get("status")=="found":
+                        row={**row,"abstract":value["abstract"],"abstract_source":value["source"]}
+                    augmented.append(row)
+                return augmented
+        return rows
     h,rows,_=read_table(p)
     tc=column(h,TITLE);ac=column(h,ABSTRACT,required=False);dc=column(h,DOI,required=False)
     return [{"title":r.get(tc,""),"abstract":r.get(ac,"") if ac else "",
