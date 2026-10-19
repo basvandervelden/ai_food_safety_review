@@ -1,0 +1,12 @@
+# Local/private ASReview labels and classifier artifacts: never publish these.
+output/
+private/
+.asreview/
+*.joblib
+*.pkl
+# Original ASReview screening exports should be kept outside the public repo.
+ASReview*.xlsx
+ASReview*.xlsm
+ASReview*.csv
+asreview_*.xlsx
+asreview_*.csv
