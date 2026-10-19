@@ -7,13 +7,20 @@ The standalone [ASReview classifier workflow](docs/asreview_classifier.md) prepa
 
 An independent, locally viewable and searchable evidence-map prototype that builds on van Meer et al. (2026), [*Artificial intelligence in food safety*](https://doi.org/10.1038/s41538-026-00925-1), *npj Science of Food*.
 
-## Automatic abstract recovery
+## Private-only abstract retrieval — paused
 
-When OpenAlex lacks an abstract, the separate daily [Europe PMC / PubMed / Crossref retrieval workflow](docs/abstract_enrichment.md) attempts to fill the gap (up to 500 articles per day, API-only, **no ChatGPT Work**). It stores DOI-verified abstracts and provenance in `data/abstract_enrichment.json`, plus a separate coverage report. The ASReview classifier can automatically use recovered texts for missing OpenAlex abstracts.
+The DOI-verified [abstract retrieval tools](docs/abstract_enrichment.md) can recover
+missing OpenAlex abstracts from Europe PMC, PubMed and Crossref without ChatGPT
+Work. However, **automatic retrieval is currently disabled**. Its cache now
+uses a Git-ignored `private/` folder, **not this public repository**. The
+public OpenAlex archive, published paper records, static website and their
+accessible branch history have been redacted to bibliographic metadata.
+No remote private archive has been created yet. A private GitHub repository
+is required before automated retention and scheduled retrieval are resumed.
 
 ## Daily OpenAlex scan (from 2024)
 
-The `Refresh literature` GitHub Actions workflow runs **every day at 06:15 UTC**.
+The `Refresh literature` GitHub Actions workflow is **temporarily paused** until private data handling is in place.
 It searches each year from **2024-01-01 through today**, fetching up to 20 pages
 of 100 works per query/year. The results are deduplicated by DOI, classified as
 **automated candidates**, and added to the public dashboard.
