@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-10-19T18:25:44.782860+00:00",
+  "total_openalex_records": 3763,
+  "openalex_abstracts_present": 2458,
+  "openalex_abstracts_missing": 1305,
+  "additional_abstracts_found": 208,
+  "combined_abstracts_present": 2666,
+  "combined_coverage_pct": 70.8,
+  "still_missing": 1097,
+  "additional_by_source": {
+    "Europe PMC": 208
+  },
+  "processed_today": 500,
+  "requests_this_run": 1084,
+  "provider_errors": 0,
+  "cached_misses": 292
+}
