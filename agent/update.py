@@ -23,6 +23,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 DB = ROOT/'data'/'papers.json'
 PROGRESS = ROOT/'data'/'search_progress.json'
+OPENALEX_POOL = ROOT/'data'/'openalex_pool.json'
 # A search costs 10 OpenAlex credits ($0.001); stop with a $0.10 buffer.
 # This is a local budget limit, not a billing-control API. Do not enable prepaid
 # usage if strict zero-cost operation is required.
@@ -332,6 +333,16 @@ def main(argv=None):
     overrides=json.loads(overrides_file.read_text(encoding='utf-8')) if overrides_file.exists() else {}
     print(f'Retrieving all publication years {a.start_date} through {a.end_date}…',file=sys.stderr)
     works, progress=fetch_works(a.days or 0,a.per_query,start_date=a.start_date,end_date=a.end_date,max_pages=a.max_pages)
+    # Keep the entire discovery set, including articles screened out by rules.
+    # A future classifier needs the original screening denominator.
+    pool=json.loads(OPENALEX_POOL.read_text(encoding='utf-8')) if OPENALEX_POOL.exists() else []
+    all_found={p['id']:p for p in pool}
+    new_pool=0
+    for doc in works:
+        if doc['id'] not in all_found:
+            all_found[doc['id']]=doc
+            new_pool+=1
+    print(f'Full discovery pool: {len(all_found)} works; {new_pool} newly archived',file=sys.stderr)
     added=0; queued=[]; dropped=0
     for doc in works:
         if doc['id'] in existing: continue
@@ -387,6 +398,7 @@ def main(argv=None):
         write_json_and_js('digest.json',make_digest(papers),'LIVING_REVIEW_DIGEST')
         (ROOT/'data'/'review_queue.json').write_text(json.dumps(queued,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         PROGRESS.write_text(json.dumps(progress,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+        OPENALEX_POOL.write_text(json.dumps(list(all_found.values()),ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
     return 0
 
 if __name__=='__main__': raise SystemExit(main())
