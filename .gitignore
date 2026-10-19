@@ -10,3 +10,7 @@ ASReview*.xlsm
 ASReview*.csv
 asreview_*.xlsx
 asreview_*.csv
+
+# Hard guard against accidentally recommitting third-party abstract caches.
+data/abstract_enrichment.json
+data/abstract_enrichment*.ndjson
