@@ -14,6 +14,16 @@ class ASReviewTests(unittest.TestCase):
         self.assertEqual([model.label_value(x) for x in ("1","0","-1","", "Included","Excluded")],
                          [1,0,None,None,1,0])
         with self.assertRaises(ValueError): model.label_value("unknown")
+    def test_final_label_column_precedence(self):
+        args=type("Args",(),dict(title_col=None,abstract_col=None,label_col=None,doi_col=None))()
+        headers=["title","doi","included","included_final"]
+        data=[{"title":"Paper A","doi":"10.1000/a","included":"0.1","included_final":"1"},
+              {"title":"Paper B","doi":"10.1000/b","included":"1","included_final":"0"}]
+        records,info=model.records_from_asreview(headers,data,args)
+        self.assertEqual(info["columns"]["label"],"included_final")
+        self.assertEqual((info["positive_1"],info["negative_0"]),(1,1))
+        self.assertEqual([r["label"] for r in records],[1,0])
+
     def test_no_unlabelled_negatives(self):
         with TemporaryDirectory() as tmp:
             path=Path(tmp)/"decisions.csv"
