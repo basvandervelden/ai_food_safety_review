@@ -2,6 +2,31 @@
 
 **Status:** pipeline prepared and tested with synthetic labels, not yet trained on the real ASReview decisions. Its outputs do not change the live website or the existing inclusion decisions.
 
+## Validated original Excel export (21 October 2026)
+
+The file `asreview_final(1).xlsx` has sheet `Sheet1`, 783 publication rows
+and the intended **final eligibility outcome** in **column AA,
+`included_final`**: 161 records with 1 (final include) and 622 with 0 (not
+finally included). There are no -1 or missing values in that column. The
+corresponding predictors and identifiers are `title` (column C) and `doi`
+(column I). There is **no `abstract` column** in that workbook, so a
+title-plus-abstract model requires joining legitimate private abstract sources
+first. Exactly one duplicated DOI/title identity is present, with no
+contradictory final labels; deduplicating yields 782 unique labels
+(161 positive, 621 negative).
+
+This final full-text inclusion outcome is not the same as the active-learning
+title/abstract decision. The original review reports 349 records that did not
+receive manual initial screening; do not claim that all 622 zeros are
+independently human-reviewed exclusions. Evaluate on independently assessed
+records, and distinguish final eligibility labels from original ASReview
+screening judgements in any paper.
+
+For this workbook specify
+`--sheet Sheet1 --label-col included_final --title-col title --doi-col doi`
+when running `train`. The importer also prioritizes `included_final` by
+default over the legacy duplicate `included` columns.
+
 ## Input required
 
 Provide the original ASReview export (.xlsx, .xlsm, .csv or .tsv) containing, ideally:
