@@ -20,7 +20,7 @@ import xml.etree.ElementTree as ET
 
 TITLE = ("title","article_title","record_title")
 ABSTRACT = ("abstract","article_abstract","description")
-LABEL = ("label","screening_label","decision","human_label","relevance","include","included")
+LABEL = ("included_final","label","screening_label","decision","human_label","relevance","include","included")
 DOI = ("doi","doi_url","digital_object_identifier")
 YES = {"1","yes","true","include","included","relevant"}
 NO = {"0","no","false","exclude","excluded","irrelevant"}
