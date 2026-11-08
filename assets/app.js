@@ -108,8 +108,70 @@
   function setupDetails(){document.addEventListener('click',e=>{const btn=e.target.closest('[data-open]');if(btn)showDetail(btn.dataset.open);});$('detail-backdrop').addEventListener('click',e=>{if(e.target===$('detail-backdrop'))hideDetail();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('detail-backdrop').hidden)hideDetail();if(e.key==='Tab'&&!$('detail-backdrop').hidden){const focusable=[...$('detail-dialog').querySelectorAll('button,a[href]')];if(!focusable.length)return;const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});}
   function countBy(key){return papers.filter(p=>p.screening?.status!=='excluded').reduce((counts,p)=>{const value=p[key]||'Other';counts[value]=(counts[value]||0)+1;return counts;},{});}
   function barsHtml(counts, order=null){const items=order?order.map(label=>[label,counts[label]||0]):Object.entries(counts).sort((a,b)=>b[1]-a[1]);const max=items[0]?.[1]||1;return items.map(([title,n])=>`<div class="bar-item"><div class="bar-label"><span>${esc(title)}</span><span>${n} ${n===1?'paper':'papers'}</span></div><div class="track"><div class="fill" style="width:${Math.max(3,(n/max)*100)}%"></div></div></div>`).join('');}
+
+  function setupTrend(){
+    const chart=$('trend-chart'),api=window.LIVING_CHARTS;
+    if(!chart||!api)return;
+    let days=window.matchMedia && window.matchMedia('(max-width:600px)').matches?30:180;
+    let selected=null;
+    const controls=document.createElement('div');
+    controls.className='trend-controls';
+    controls.setAttribute('role','group');
+    controls.setAttribute('aria-label','Publication date range');
+    controls.innerHTML='<span class="trend-controls-label">Period</span>'+[[30,'30 days'],[90,'90 days'],[180,'180 days'],[365,'1 year']].map(([n,label])=>'<button type="button" class="trend-range-button" data-trend-range="'+n+'" aria-pressed="false">'+label+'</button>').join('');
+    chart.before(controls);
+    const readout=document.createElement('div');
+    readout.className='trend-readout';
+    readout.setAttribute('aria-live','polite');
+    readout.setAttribute('aria-atomic','true');
+    chart.after(readout);
+    function paint(){
+      const series=api.publicationSeries(papers,days);
+      chart.innerHTML=api.publicationTrend(papers,days);
+      const svg=chart.querySelector('svg');
+      svg.setAttribute('tabindex','0');
+      svg.setAttribute('aria-keyshortcuts','ArrowLeft ArrowRight Home End');
+      controls.querySelectorAll('button').forEach(b=>{b.setAttribute('aria-pressed',String(Number(b.dataset.trendRange)===days));});
+      selected=null;
+      const total=series.total.toLocaleString('en-GB');
+      readout.textContent=total+' indexed candidates with publication dates in the selected period. Hover, tap or use arrow keys to inspect a day.';
+      const width=660,left=45,right=12,top=18,bottom=258-57,maxY=Math.max(1,Math.ceil(Math.max(4,...series.counts)/4)*4);
+      function select(index){
+        selected=Math.max(0,Math.min(series.days-1,index));
+        const date=series.dates[selected],count=series.counts[selected],avg=series.averages[selected];
+        const display=new Date(date+'T00:00:00Z').toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});
+        const x=left+(selected+.5)*(width-left-right)/series.days;
+        const cursor=svg.querySelector('.trend-cursor');
+        cursor.setAttribute('visibility','visible');
+        const line=cursor.querySelector('line'),dot=cursor.querySelector('circle');
+        line.setAttribute('x1',x);line.setAttribute('x2',x);
+        dot.setAttribute('cx',x);dot.setAttribute('cy',bottom-(avg/maxY)*(bottom-top));
+        readout.textContent=display+' · '+count+' indexed paper'+(count===1?'':'s')+' · 7-day mean: '+avg.toFixed(1);
+      }
+      const atPointer=event=>{
+        const rect=svg.getBoundingClientRect();
+        const viewX=(event.clientX-rect.left)*width/rect.width;
+        select(Math.floor((viewX-left)/(width-left-right)*series.days));
+      };
+      svg.addEventListener('pointermove',atPointer);
+      svg.addEventListener('pointerdown',atPointer);
+      svg.addEventListener('pointerleave',()=>{if(selected===null)return;svg.querySelector('.trend-cursor').setAttribute('visibility','hidden');});
+      svg.addEventListener('keydown',event=>{
+        if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
+        event.preventDefault();
+        select(event.key==='Home'?0:event.key==='End'?series.days-1:event.key==='ArrowRight'?Math.min(series.days-1,(selected??series.days-1)+1):Math.max(0,(selected??series.days)-1));
+      });
+    }
+    controls.addEventListener('click',event=>{
+      const button=event.target.closest('[data-trend-range]');if(!button)return;
+      days=Number(button.dataset.trendRange);
+      paint();
+    });
+    paint();
+  }
+
   function renderTrends(){
-    $('trend-chart').innerHTML=window.LIVING_CHARTS.publicationTrend(papers);
+    setupTrend();
     $('domain-bars').innerHTML=barsHtml(countBy('domain'));
     const familyCounts=Object.fromEntries(families.map(f=>[f,0])); papers.filter(p=>p.screening?.status!=='excluded').forEach(p=>familyCounts[familyOf(p)]++);
     $('method-bars').innerHTML=barsHtml(familyCounts, families);

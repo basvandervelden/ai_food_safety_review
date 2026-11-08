@@ -101,3 +101,20 @@ body.dark .science-percent{fill:#fcf6ff}
 body.dark .science-domain-text[fill="#28212a"]{fill:#30242b}
 @media(max-width:900px){.viz-sun-layout{grid-template-columns:1fr}.viz-card-sun .viz-chart{max-width:880px}.viz-domain-legend{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}}
 @media(max-width:600px){.viz-card{padding:19px 14px}.science-callout{font-size:12px}.viz-domain-legend{display:flex}.viz-header{gap:12px}.viz-heading{margin-top:45px}.viz-stacked-legend{justify-content:flex-start;gap:12px}}
+
+
+/* Daily publication chart: icon SVG strokes must never outline chart labels. */
+svg.chart-svg{stroke:none;stroke-width:0;overflow:visible}
+svg.chart-svg text{stroke:none!important;stroke-width:0!important;paint-order:normal;fill:var(--ink-2);font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:12.5px;font-weight:400;letter-spacing:0}
+.trend-chart{height:auto;min-height:250px;margin-top:8px;overflow-x:auto;overflow-y:hidden;touch-action:pan-x}
+.trend-chart svg.chart-svg{height:auto;min-width:560px;max-width:none;display:block;user-select:none;outline-offset:4px}
+.trend-controls{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:18px}
+.trend-controls-label{font-size:12px;color:var(--muted);margin-right:6px}
+.trend-range-button{padding:7px 11px;border:1px solid var(--line);color:var(--ink-2);background:var(--card);border-radius:8px;font-size:12px;line-height:1.2;font-weight:450}
+.trend-range-button[aria-pressed="true"]{border-color:var(--primary);background:var(--primary-light);color:var(--primary-deep);font-weight:650}
+.trend-range-button:hover{border-color:var(--primary)}
+.trend-readout{padding:10px 12px;margin-top:8px;border-radius:8px;background:var(--bg-soft);color:var(--ink-2);font-size:12px;line-height:1.5;min-height:40px;font-variant-numeric:tabular-nums}
+.trend-cursor{pointer-events:none}
+@media(max-width:600px){.trend-chart{min-height:0}.trend-chart svg.chart-svg{min-width:540px}.trend-controls-label{width:100%;margin:0 0 2px}.trend-range-button{font-size:12px;padding:8px 10px}}
+body.dark .trend-range-button[aria-pressed="true"]{background:#433852;color:#f5ecff}
+
