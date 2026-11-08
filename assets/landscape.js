@@ -143,7 +143,7 @@ function publicationTrend(papers,days=180){
  const highest=Math.max(4,...counts),stepY=Math.max(1,Math.ceil(highest/4)),maxY=stepY*4,dx=plotW/counts.length,bw=Math.max(1.2,dx*.74);
  const xAt=i=>L+(i+.5)*dx,yAt=v=>base-v/maxY*plotH;
  const fmt=v=>Number(v).toFixed(1);
- let svg='<svg class="chart-svg trend-svg" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Indexed food safety AI candidate papers per publication date for the last '+series.days+' days; columns show daily totals and a line shows the seven-day moving average">';
+ let svg='<svg class="chart-svg" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Indexed food safety AI candidate papers per publication date for the last '+series.days+' days; columns show daily totals and a line shows the seven-day moving average">';
  svg+='<title>Daily indexed publications. Select a day for its exact count.</title>';
  for(let t=0;t<=4;t++){
   const val=t*stepY,y=yAt(val);
