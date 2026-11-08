@@ -11,6 +11,8 @@ on:
       - 'data/**'
       - '.github/workflows/update-literature.yml'
   workflow_dispatch:
+  schedule:
+    - cron: '15 6 * * *' # Daily at 06:15 UTC (07:15/08:15 Netherlands)
 
 concurrency:
   group: living-ai-food-safety-${{ github.ref }}
@@ -18,7 +20,6 @@ concurrency:
 
 jobs:
   update:
-    if: ${{ false }} # Paused: would commit third-party abstract text publicly
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
@@ -36,13 +37,12 @@ jobs:
             echo "::error::Missing OPENALEX_API_KEY. Get a free key at https://openalex.org/settings/api and add it under Settings > Secrets and variables > Actions > Repository secrets."
             exit 1
           fi
+      # The updater screens abstracts in memory, then strips them from all public JSON/JS exports.
       - name: Search all publications from 1 January 2024 through today
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           OPENAI_API_KEY: '' # Metadata-only screening; avoid paid LLM charges in the daily job
         run: python agent/update.py --start-date 2024-01-01 --per-query 100 --max-pages 20
-      - name: Measure abstract coverage for all OpenAlex discoveries
-        run: python agent/abstract_coverage.py
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -54,7 +54,7 @@ jobs:
         run: |
           git config user.name "living-review-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html data/papers.csv data/papers.json data/papers.js data/digest.json data/digest.js data/review_queue.json data/search_progress.json data/openalex_pool.json data/abstract_coverage.json data/abstract_coverage.md
+          git add index.html data/papers.csv data/papers.json data/papers.js data/digest.json data/digest.js data/review_queue.json data/search_progress.json data/openalex_pool.json
           if ! git diff --cached --quiet; then
             git commit -m "data: daily literature search checkpoint"
             git push
