@@ -93,6 +93,10 @@ def render():
     papers=sorted((p for p in data['papers'] if p.get('screening',{}).get('status')!='excluded'),key=lambda p:p.get('date',''),reverse=True)
     create_csv(papers)
     doc=IDX.read_text(encoding='utf-8')
+    # The trend is now daily (not yearly); keep the prerendered headings and accessible label accurate.
+    doc=doc.replace('Number of indexed publications by year','Indexed candidate papers by publication date')
+    doc=doc.replace('aria-label="Publication counts by year"','aria-label="Publication counts by day"')
+    doc=doc.replace('class="trend-chart" role="img"','class="trend-chart" role="group"')
     doc=replace_marker(doc,'paper-list','\n'.join(card(p) for p in papers))
     charts=render_charts(papers,collection='all',family='Deep learning (DL)')
     doc=replace_marker(doc,'trend-chart',charts['trend'])
