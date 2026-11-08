@@ -2,12 +2,12 @@
   "meta": {
     "mode": "automated_candidates",
     "title": "Living AI for Food Safety",
-    "updated_at": "2026-11-08T13:27:55Z",
+    "updated_at": "2026-11-08T13:41:40Z",
     "note": "Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.",
     "original_review_doi": "10.1038/s41538-026-00925-1",
     "source": "OpenAlex title/abstract search + optional LLM classification",
-    "retrieved": 3903,
-    "new_candidates": 62,
+    "retrieved": 3905,
+    "new_candidates": 1,
     "review_queue": 348,
     "lookback_days": null,
     "search_start": "2024-01-01",
@@ -27779,6 +27779,36 @@
         "status": "automated_candidate",
         "confidence": 0.97,
         "reason": "Keyword evidence: 2 food-safety signals, 5 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.71465/fbg368",
+      "doi": "10.71465/fbg368",
+      "title": "Domain-Adaptive Knowledge-Enhanced Learning for Generalized Food Hazard Identification",
+      "authors": [
+        "Noah Ramirez",
+        "Huilan Liu"
+      ],
+      "date": "2025-04-30",
+      "year": 2025,
+      "journal": "Frontiers in Biotechnology and Genetics",
+      "url": "https://doi.org/10.71465/fbg368",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-08",
+      "openalex_id": "https://openalex.org/W4414809882",
+      "domain": "Chemical hazards",
+      "application": "Risk forecasting",
+      "data_type": "Other",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 2 food-safety signals, 2 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
