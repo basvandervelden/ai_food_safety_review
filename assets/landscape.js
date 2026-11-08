@@ -117,11 +117,60 @@ function stacked(rows){
  svg+=`<text class="science-axis-title" x="${W/2}" y="${H-6}" text-anchor="middle">Publication year</text><text class="science-axis-title" x="19" y="${H/2}" text-anchor="middle" transform="rotate(-90 19 ${H/2})">Number of papers</text></svg>`;
  return svg;
 }
+
+function publicationTrend(papers){
+ const DAYS=180,DAY_MS=86400000,W=540,H=190,L=35,R=10,T=18,B=49;
+ const now=new Date(),end=Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate());
+ const start=end-(DAYS-1)*DAY_MS,bufferStart=start-6*DAY_MS;
+ const series=Array(DAYS+6).fill(0);
+ for(const p of papers){
+  if(p.screening && p.screening.status==="excluded")continue;
+  if(p.date_precision && p.date_precision!=="day")continue;
+  const date=String(p.date||"");
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(date))continue;
+  const at=Date.parse(date+"T00:00:00Z"),index=Math.round((at-bufferStart)/DAY_MS);
+  if(Number.isInteger(index)&&index>=0&&index<series.length)series[index]++;
+ }
+ const values=series.slice(6);
+ const rolling=values.map((_,i)=>series.slice(i,i+7).reduce((a,b)=>a+b,0)/7);
+ const peak=Math.max(4,...values),tickStep=Math.max(1,Math.ceil(peak/4)),maxY=tickStep*4;
+ const base=H-B,plotW=W-L-R,plotH=base-T,step=plotW/DAYS,barWidth=Math.max(1.2,step*.72);
+ let svg='<svg class="chart-svg" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Daily counts of indexed candidate papers by OpenAlex publication date for the past 180 days, with trailing seven-day average">';
+ svg+='<title>Publications per calendar day (last 180 days)</title>';
+ for(let i=0;i<=4;i++){
+  const count=i*tickStep,y=base-(count/maxY)*plotH;
+  svg+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y.toFixed(2)+'" y2="'+y.toFixed(2)+'" stroke="var(--line)" stroke-dasharray="'+(i?'3 4':'0')+'" stroke-width="1"/>';
+  svg+='<text x="'+(L-6)+'" y="'+(y+3).toFixed(2)+'" text-anchor="end">'+count+'</text>';
+ }
+ const monthNames=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+ for(let i=0;i<DAYS;i++){
+  const ms=start+i*DAY_MS,d=new Date(ms),date=d.toISOString().slice(0,10);
+  if(d.getUTCDate()===1){
+   const x=L+(i+.5)*step;
+   svg+='<line x1="'+x.toFixed(2)+'" x2="'+x.toFixed(2)+'" y1="'+T+'" y2="'+base+'" stroke="var(--line)" stroke-opacity=".4" stroke-dasharray="2 5"/>';
+   svg+='<text x="'+x.toFixed(2)+'" y="'+(base+15)+'" text-anchor="middle">'+monthNames[d.getUTCMonth()]+'</text>';
+  }
+  const count=values[i];
+  if(!count)continue;
+  const x=L+i*step+(step-barWidth)/2,y=base-count/maxY*plotH;
+  svg+='<rect x="'+x.toFixed(2)+'" y="'+y.toFixed(2)+'" width="'+barWidth.toFixed(2)+'" height="'+(base-y).toFixed(2)+'" rx=".4" fill="#c8b4e2" stroke="none"><title>'+date+': '+count+' candidate paper'+(count===1?'':'s')+'</title></rect>';
+ }
+ const points=rolling.map((v,i)=>{
+  const x=L+(i+.5)*step,y=base-v/maxY*plotH;
+  return (i?'L':'M')+x.toFixed(2)+' '+y.toFixed(2);
+ }).join(' ');
+ svg+='<path d="'+points+'" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>';
+ svg+='<rect x="'+(L+5)+'" y="'+(H-27)+'" width="9" height="9" fill="#c8b4e2" stroke="none"/><text x="'+(L+18)+'" y="'+(H-19)+'">Per publication day</text>';
+ svg+='<line x1="'+(L+166)+'" x2="'+(L+186)+'" y1="'+(H-23)+'" y2="'+(H-23)+'" stroke="var(--primary)" stroke-width="2.5"/><text x="'+(L+193)+'" y="'+(H-19)+'">7-day average</text>';
+ svg+='</svg>';
+ return svg;
+}
+
 function render(papers,collection="all",family="Deep learning (DL)"){
  const rows=eligible(papers,collection),sun=sunburst(rows,family);
- return {sun:sun.svg,legend:sun.legend,summary:sun.summary,bars:stacked(rows),key:FAMILIES.map((f,i)=>`<span class="science-key"><i style="background:${TECH_COLORS[i]}"></i>${esc(f)}</span>`).join("")};
+ return {sun:sun.svg,legend:sun.legend,summary:sun.summary,bars:stacked(rows),trend:publicationTrend(rows),key:FAMILIES.map((f,i)=>`<span class="science-key"><i style="background:${TECH_COLORS[i]}"></i>${esc(f)}</span>`).join("")};
 }
-const api={FAMILIES,render,method,eligible};
+const api={FAMILIES,render,method,eligible,publicationTrend};
 if(typeof window!=="undefined")window.LIVING_CHARTS=api;
 return api;
 })();

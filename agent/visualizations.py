@@ -26,6 +26,6 @@ process.stdout.write(JSON.stringify(charts));
         text=True, capture_output=True, check=True, timeout=30
     )
     result_data=json.loads(result.stdout)
-    for field in ('sun','legend','summary','bars','key'):
+    for field in ('sun','legend','summary','bars','key','trend'):
         if field not in result_data: raise ValueError('Chart generator missing '+field)
     return result_data

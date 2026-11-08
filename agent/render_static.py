@@ -63,27 +63,6 @@ def horizontal_bars(counts, order=None):
     return '\n'.join(f'''<div class="bar-item"><div class="bar-label"><span>{e(label)}</span><span>{num} {'paper' if num==1 else 'papers'}</span></div><div class="track"><div class="fill" style="width:{max(3, num / peak * 100):.2f}%"></div></div></div>''' for label,num in items)
 
 
-def year_chart(papers):
-    counts=Counter(p.get('year') for p in papers if isinstance(p.get('year'),int))
-    years=sorted(counts)
-    maximum=max(counts.values(),default=1)
-    width,height,top,base=500,176,17,147
-    step=width/max(len(years),4)
-    barwidth=min(48,step*.53)
-    pieces=[f'<svg class="chart-svg" viewBox="0 0 540 {height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Publication counts by year">']
-    for tick in range(4):
-        n=-(-maximum*tick//3)
-        y=base-(n/maximum)*(base-top)
-        pieces.append(f'<line x1="37" x2="527" y1="{y}" y2="{y}" stroke="var(--line)" stroke-width="1" stroke-dasharray="3 5"/><text x="27" y="{y+3}" text-anchor="end">{n}</text>')
-    for i,yr in enumerate(years):
-        n=counts[yr]
-        x=42+step*i+step/2
-        y=base-(n/maximum)*(base-top)
-        color='#8063ac' if i==len(years)-1 else '#c8b4e2'
-        pieces.append(f'<rect x="{x-barwidth/2}" y="{y}" width="{barwidth}" height="{base-y}" rx="5" fill="{color}"><title>{yr}: {n} indexed publications</title></rect><text x="{x}" y="168" text-anchor="middle">{yr}</text><text x="{x}" y="{max(10,y-6)}" text-anchor="middle">{n}</text>')
-    return ''.join(pieces)+'</svg>'
-
-
 def replace_marker(doc, key, content):
     pattern = rf'(<!-- SSR:{re.escape(key)}:start -->).*?(<!-- SSR:{re.escape(key)}:end -->)'
     doc,n=re.subn(pattern, lambda m:m.group(1)+'\n'+content+'\n'+m.group(2),doc,flags=re.S)
@@ -115,10 +94,10 @@ def render():
     create_csv(papers)
     doc=IDX.read_text(encoding='utf-8')
     doc=replace_marker(doc,'paper-list','\n'.join(card(p) for p in papers))
-    doc=replace_marker(doc,'trend-chart',year_chart(papers))
+    charts=render_charts(papers,collection='all',family='Deep learning (DL)')
+    doc=replace_marker(doc,'trend-chart',charts['trend'])
     doc=replace_marker(doc,'domain-bars',horizontal_bars(Counter(p.get('domain') or 'Other' for p in papers)))
     doc=replace_marker(doc,'method-bars',horizontal_bars(Counter(family_from_record(p) for p in papers), AI_FAMILIES))
-    charts=render_charts(papers,collection='all',family='Deep learning (DL)')
     doc=replace_marker(doc,'sunburst',charts['sun'])
     doc=replace_marker(doc,'sun-legend',charts['legend'])
     doc=replace_marker(doc,'stacked',charts['bars'])

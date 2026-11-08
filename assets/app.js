@@ -108,12 +108,8 @@
   function setupDetails(){document.addEventListener('click',e=>{const btn=e.target.closest('[data-open]');if(btn)showDetail(btn.dataset.open);});$('detail-backdrop').addEventListener('click',e=>{if(e.target===$('detail-backdrop'))hideDetail();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('detail-backdrop').hidden)hideDetail();if(e.key==='Tab'&&!$('detail-backdrop').hidden){const focusable=[...$('detail-dialog').querySelectorAll('button,a[href]')];if(!focusable.length)return;const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});}
   function countBy(key){return papers.filter(p=>p.screening?.status!=='excluded').reduce((counts,p)=>{const value=p[key]||'Other';counts[value]=(counts[value]||0)+1;return counts;},{});}
   function barsHtml(counts, order=null){const items=order?order.map(label=>[label,counts[label]||0]):Object.entries(counts).sort((a,b)=>b[1]-a[1]);const max=items[0]?.[1]||1;return items.map(([title,n])=>`<div class="bar-item"><div class="bar-label"><span>${esc(title)}</span><span>${n} ${n===1?'paper':'papers'}</span></div><div class="track"><div class="fill" style="width:${Math.max(3,(n/max)*100)}%"></div></div></div>`).join('');}
-  function renderTrends(){const ys=countBy('year'),years=Object.keys(ys).map(Number).sort((a,b)=>a-b),max=Math.max(1,...Object.values(ys)),width=500,height=176,top=17,base=147;
-    const span=Math.max(years.length,4),step=width/span,barW=Math.min(48,step*.53);
-    let svg=`<svg class="chart-svg" viewBox="0 0 540 ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Publication counts by year">`;
-    for(let tick=0;tick<=3;tick++){const n=Math.ceil(max*tick/3),y=base-(n/max)*(base-top);svg+=`<line x1="37" x2="527" y1="${y}" y2="${y}" stroke="var(--line)" stroke-width="1" stroke-dasharray="${tick?'3 5':'0'}"/><text x="27" y="${y+3}" text-anchor="end">${n}</text>`;}
-    years.forEach((year,i)=>{const val=ys[year],x=42+step*i+step/2,y=base-(val/max)*(base-top);svg+=`<rect x="${x-barW/2}" y="${y}" width="${barW}" height="${base-y}" rx="5" fill="${i===years.length-1?'#8063ac':'#c8b4e2'}"><title>${year}: ${val} paper(s) in the selected collection</title></rect><text x="${x}" y="168" text-anchor="middle">${year}</text><text x="${x}" y="${Math.max(10,y-6)}" text-anchor="middle">${val}</text>`;});
-    $('trend-chart').innerHTML=svg+'</svg>';
+  function renderTrends(){
+    $('trend-chart').innerHTML=window.LIVING_CHARTS.publicationTrend(papers);
     $('domain-bars').innerHTML=barsHtml(countBy('domain'));
     const familyCounts=Object.fromEntries(families.map(f=>[f,0])); papers.filter(p=>p.screening?.status!=='excluded').forEach(p=>familyCounts[familyOf(p)]++);
     $('method-bars').innerHTML=barsHtml(familyCounts, families);
