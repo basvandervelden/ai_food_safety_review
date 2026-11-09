@@ -2,22 +2,22 @@
   "meta": {
     "mode": "automated_candidates",
     "title": "Living AI for Food Safety",
-    "updated_at": "2026-11-08T14:13:19Z",
+    "updated_at": "2026-11-09T16:25:51Z",
     "note": "Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.",
     "original_review_doi": "10.1038/s41538-026-00925-1",
     "source": "OpenAlex title/abstract search + optional LLM classification",
-    "retrieved": 3905,
-    "new_candidates": 0,
+    "retrieved": 3906,
+    "new_candidates": 1,
     "review_queue": 348,
     "lookback_days": null,
     "search_start": "2024-01-01",
-    "search_end": "2026-11-08",
+    "search_end": "2026-11-09",
     "max_pages": 20,
     "search_progress": {
       "status": "completed",
       "signature": "adff9f6a16d684ab",
       "calls_this_run": 102,
-      "last_checked": "2026-11-08",
+      "last_checked": "2026-11-09",
       "coverage_warnings": []
     },
     "query_count": 19,
@@ -17230,6 +17230,35 @@
         "status": "automated_candidate",
         "confidence": 0.84,
         "reason": "Keyword evidence: 5 food-safety signals, 1 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.37745/gjar.2013/vol14n15987",
+      "doi": "10.37745/gjar.2013/vol14n15987",
+      "title": "Digital Water Quality Monitoring for Pre-Harvest Safety: A Critical Review of IoT, AI and Rapid Sensors in Irrigation Management",
+      "authors": [
+        "A. O. Alli"
+      ],
+      "date": "2026-01-01",
+      "year": 2026,
+      "journal": "Global Journal of Agricultural Research",
+      "url": "https://doi.org/10.37745/gjar.2013/vol14n15987",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-09",
+      "openalex_id": "https://openalex.org/W7224795260",
+      "domain": "Microbiological hazards",
+      "application": "Methods & perspectives",
+      "data_type": "Sensors & biosensors",
+      "ai_method": "Review / synthesis",
+      "ai_family": "Other / mixed",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 2 food-safety signals, 3 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
