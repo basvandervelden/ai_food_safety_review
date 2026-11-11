@@ -147,13 +147,6 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
-    "id": "doi:10.1016/j.jhazmat.2024.135481",
-    "title": "Identifying heavy metal sources and health risks in soil-vegetable systems of fragmented vegetable fields based on machine learning, positive matrix factorization model and Monte Carlo simulation",
-    "doi": "10.1016/j.jhazmat.2024.135481",
-    "score": 0.48,
-    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
-  },
-  {
     "id": "doi:10.5281/zenodo.22107022",
     "title": "IoT Enabled Smart Packaging System for Food Safety and Quality Control: A Systematic Review",
     "doi": "10.5281/zenodo.22107022",
@@ -1428,16 +1421,16 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
-    "id": "doi:10.1021/acs.analchem.6c05907",
-    "title": "Interfacial Assembly of Metal-Phenolic Network-Confined AIEgen Nanotags: Enhancing Emission Performance for Machine Learning-Assisted Hue-Decodable Ratiometric Fluorescent Immunochromatographic Detection",
-    "doi": "10.1021/acs.analchem.6c05907",
+    "id": "doi:10.1016/j.tifs.2026.106222",
+    "title": "Regulatory governance and full-scale digital transformation for prediction-based food safety management: Global trends and future perspectives",
+    "doi": "10.1016/j.tifs.2026.106222",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
-    "id": "doi:10.1016/j.tifs.2026.106222",
-    "title": "Regulatory Governance and Full-Scale Digital Transformation for Prediction-Based Food Safety Management: Global Trends and Future Perspectives",
-    "doi": "10.1016/j.tifs.2026.106222",
+    "id": "doi:10.1021/acs.analchem.6c05907",
+    "title": "Interfacial Assembly of Metal-Phenolic Network-Confined AIEgen Nanotags: Enhancing Emission Performance for Machine Learning-Assisted Hue-Decodable Ratiometric Fluorescent Immunochromatographic Detection",
+    "doi": "10.1021/acs.analchem.6c05907",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
@@ -2054,6 +2047,13 @@
     "id": "doi:10.1093/ijlct/ctag111",
     "title": "Unlocking low-carbon consumption: research on heterogeneity in willingness to pay for environmental premiums across age cohorts",
     "doi": "10.1093/ijlct/ctag111",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.5281/zenodo.24078234",
+    "title": "Quantum Machine Learning for Food Quality Classification and Safety Analytics: A Feasibility Analysis",
+    "doi": "10.5281/zenodo.24078234",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },

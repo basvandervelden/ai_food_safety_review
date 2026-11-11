@@ -2,28 +2,195 @@
   "meta": {
     "mode": "automated_candidates",
     "title": "Living AI for Food Safety",
-    "updated_at": "2026-11-10T14:57:30Z",
+    "updated_at": "2026-11-11T14:27:02Z",
     "note": "Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.",
     "original_review_doi": "10.1038/s41538-026-00925-1",
     "source": "OpenAlex title/abstract search + optional LLM classification",
-    "retrieved": 3906,
-    "new_candidates": 0,
+    "retrieved": 3919,
+    "new_candidates": 12,
     "review_queue": 348,
     "lookback_days": null,
     "search_start": "2024-01-01",
-    "search_end": "2026-11-10",
+    "search_end": "2026-11-11",
     "max_pages": 20,
     "search_progress": {
       "status": "completed",
       "signature": "adff9f6a16d684ab",
       "calls_this_run": 102,
-      "last_checked": "2026-11-10",
+      "last_checked": "2026-11-11",
       "coverage_warnings": []
     },
     "query_count": 19,
     "llm_enabled": false
   },
   "papers": [
+    {
+      "id": "doi:10.5281/zenodo.24096930",
+      "doi": "10.5281/zenodo.24096930",
+      "title": "Artificial Intelligence In The Food Industry: A Review Of Quality Inspection, Spoilage Prediction, Demand Forecasting And Traceability",
+      "authors": [
+        "Galande Atharva Satish",
+        "Prof. N. G. Rokade",
+        "Prof. M. C. Kolse",
+        "Prof. S. K. Said"
+      ],
+      "date": "2026-11-10",
+      "year": 2026,
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24096930",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-11",
+      "openalex_id": "https://openalex.org/W7225740626",
+      "domain": "General food safety",
+      "application": "Methods & perspectives",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Review / synthesis",
+      "ai_family": "Other / mixed",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 6 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1007/s00604-026-08532-3",
+      "doi": "10.1007/s00604-026-08532-3",
+      "title": "COF-AgNPs nanozyme combined with multimodal machine learning for dual-mode detection of Hg2+ in aquatic products",
+      "authors": [
+        "Fuhou Li",
+        "Lulu Ye",
+        "Jingyi Ye",
+        "Zhiwei Xu",
+        "Qi Ming",
+        "Yumeng Guo",
+        "Y. Wang",
+        "Junhuan Wang",
+        "Weixia Wang",
+        "Jinri Chen"
+      ],
+      "date": "2026-11-10",
+      "year": 2026,
+      "journal": "Microchimica Acta",
+      "url": "https://doi.org/10.1007/s00604-026-08532-3",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-11",
+      "openalex_id": "https://openalex.org/W7202080578",
+      "domain": "Chemical hazards",
+      "application": "Laboratory testing",
+      "data_type": "Spectroscopy",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 2 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1186/s43014-026-00442-4",
+      "doi": "10.1186/s43014-026-00442-4",
+      "title": "AI-driven approaches for food risk assessment: current advances and future trends",
+      "authors": [
+        "Nady Khairy Elbarbary",
+        "Marwa Abd-Elsayed Ali",
+        "Ahmed Fotouh",
+        "Ahmed Shaban Ahmed",
+        "Rania Samir Zaki"
+      ],
+      "date": "2026-11-09",
+      "year": 2026,
+      "journal": "Food Production Processing and Nutrition",
+      "url": "https://doi.org/10.1186/s43014-026-00442-4",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-11",
+      "openalex_id": "https://openalex.org/W7225597780",
+      "domain": "Microbiological hazards",
+      "application": "Risk forecasting",
+      "data_type": "Spectroscopy",
+      "ai_method": "LLMs / foundation models",
+      "ai_family": "LLMs / foundation models",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 4 food-safety signals, 5 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1002/jsfa.71237",
+      "doi": "10.1002/jsfa.71237",
+      "title": "Nontargeted metabolomics‐based discrimination of the geographical origin of P teridium aquilinum using liquid chromatography–high‐resolution mass spectrometry and machine learning",
+      "authors": [
+        "Subin Gwon",
+        "Kyeongnam Kim",
+        "Ho Jin Kim",
+        "Chaeeun Kim",
+        "Hwang‐Ju Jeon"
+      ],
+      "date": "2026-11-09",
+      "year": 2026,
+      "journal": "Journal of the Science of Food and Agriculture",
+      "url": "https://doi.org/10.1002/jsfa.71237",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-11",
+      "openalex_id": "https://openalex.org/W7225759854",
+      "domain": "General food safety",
+      "application": "Early warning",
+      "data_type": "Mass spectrometry",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.3390/bios16110638",
+      "doi": "10.3390/bios16110638",
+      "title": "Signal-Generating Materials in Cross-Reactive Molecularly Imprinted Polymer Arrays for Multiplexed Sensing: From Materials Design to Computational Decoding",
+      "authors": [
+        "Solpa Lee",
+        "Seoyeon Baek",
+        "Yongwoo Jang"
+      ],
+      "date": "2026-11-07",
+      "year": 2026,
+      "journal": "Biosensors",
+      "url": "https://doi.org/10.3390/bios16110638",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-11",
+      "openalex_id": "https://openalex.org/W7225619414",
+      "domain": "General food safety",
+      "application": "Laboratory testing",
+      "data_type": "Sensors & biosensors",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
     {
       "id": "doi:10.1021/acs.jafc.6c08837",
       "doi": "10.1021/acs.jafc.6c08837",
@@ -54,6 +221,40 @@
         "status": "automated_candidate",
         "confidence": 0.84,
         "reason": "Keyword evidence: 2 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.foodcont.2026.112755",
+      "doi": "10.1016/j.foodcont.2026.112755",
+      "title": "Rapid detection of Aspergillus flavus infection and aflatoxin B1 concentrations in pecans using hyperspectral imaging and lightweight convolutional neural networks",
+      "authors": [
+        "Kaihao Ji",
+        "Fei Shen",
+        "王大臣",
+        "Linyun Xu",
+        "Hongping Zhou",
+        "Xuesong Jiang"
+      ],
+      "date": "2026-11-01",
+      "year": 2026,
+      "journal": "Food Control",
+      "url": "https://doi.org/10.1016/j.foodcont.2026.112755",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-11",
+      "openalex_id": "https://openalex.org/W7225610575",
+      "domain": "Chemical hazards",
+      "application": "Laboratory testing",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.66,
+        "reason": "Keyword evidence: 1 food-safety signals, 2 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
@@ -17006,6 +17207,69 @@
       }
     },
     {
+      "id": "doi:10.5281/zenodo.24101853",
+      "doi": "10.5281/zenodo.24101853",
+      "title": "Revolutionizing Food Safety Through AI-Powered Freshness Detection and Intelligent Expiry Prediction",
+      "authors": [
+        "Gunjan and Rishita Vohra",
+        "Mr.Ritiesh Kumar Chandel",
+        "Akhilesh Das"
+      ],
+      "date": "2026-01-01",
+      "year": 2026,
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24101853",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-11",
+      "openalex_id": "https://openalex.org/W7225744869",
+      "domain": "General food safety",
+      "application": "Inspection & enforcement",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 2 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.5281/zenodo.24096979",
+      "doi": "10.5281/zenodo.24096979",
+      "title": "Artificial Intelligence In The Food Industry: A Review Of Quality Inspection, Spoilage Prediction, Demand Forecasting And Traceability",
+      "authors": [
+        "Galande Atharva Satish",
+        "Prof. N. G. Rokade",
+        "Prof. M. C. Kolse",
+        "Prof. S. K. Said"
+      ],
+      "date": "2026-01-01",
+      "year": 2026,
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24096979",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-11",
+      "openalex_id": "https://openalex.org/W7225752978",
+      "domain": "General food safety",
+      "application": "Methods & perspectives",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Review / synthesis",
+      "ai_family": "Other / mixed",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 6 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
       "id": "doi:10.5281/zenodo.23719414",
       "doi": "10.5281/zenodo.23719414",
       "title": "INTEGRATING CROP PHENOLOGY INTO PROBABILISTIC DEEP LEARNING FOR RELIABLE YIELD FORECASTS",
@@ -17427,6 +17691,35 @@
         "status": "automated_candidate",
         "confidence": 0.84,
         "reason": "Keyword evidence: 1 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.14252/foodsafetyfscj.d-26-00001",
+      "doi": "10.14252/foodsafetyfscj.d-26-00001",
+      "title": "Integrating Artificial Intelligence and Next-Generation Exposure Assessment into Food Safety Risk Assessment: Opportunities, Limitations, and Regulatory Implications",
+      "authors": [
+        "Alfi Sophian"
+      ],
+      "date": "2026-01-01",
+      "year": 2026,
+      "journal": "Food Safety",
+      "url": "https://doi.org/10.14252/foodsafetyfscj.d-26-00001",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-11",
+      "openalex_id": "https://openalex.org/W7225587028",
+      "domain": "General food safety",
+      "application": "Risk forecasting",
+      "data_type": "Other",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 3 food-safety signals, 3 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
@@ -18616,6 +18909,46 @@
       "data_type": "Sensors & biosensors",
       "ai_method": "Classical machine learning",
       "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.66,
+        "reason": "Keyword evidence: 2 food-safety signals, 1 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1038/s41467-025-67391-3",
+      "doi": "10.1038/s41467-025-67391-3",
+      "title": "MIDAS: rapid, multiplexed molecular profiling for integrated host–pathogen analysis",
+      "authors": [
+        "Yong Jun Lim",
+        "Mohammad Asadi Tokmedash",
+        "Matthew Allen",
+        "Cameron Gruich",
+        "Jun Hee Choi",
+        "Changheon Kim",
+        "Nicole R. Falkowski",
+        "Bryan R. Goldsmith",
+        "Kathleen A. Stringer",
+        "Robert P. Dickson",
+        "Ki Wan Bong",
+        "Jouha Min"
+      ],
+      "date": "2025-12-19",
+      "year": 2025,
+      "journal": "Nature Communications",
+      "url": "https://doi.org/10.1038/s41467-025-67391-3",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-11",
+      "openalex_id": "https://openalex.org/W4417478991",
+      "domain": "Microbiological hazards",
+      "application": "Laboratory testing",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
       "source_group": "automated_candidate",
       "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
       "screening": {
@@ -31753,6 +32086,69 @@
         "status": "automated_candidate",
         "confidence": 0.84,
         "reason": "Keyword evidence: 1 food-safety signals, 7 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.68159/q022564908",
+      "doi": "10.68159/q022564908",
+      "title": "AI for Food Quality, Safety, and Authenticity: An Integrative Review of Sensing, Prediction, Traceability, and Explainable Decision Systems",
+      "authors": [
+        "Burak Demir",
+        "Elif Arslan",
+        "Mehmet Kaya",
+        "Selin Kurt"
+      ],
+      "date": "2025-01-01",
+      "year": 2025,
+      "journal": "Unknown source",
+      "url": "https://doi.org/10.68159/q022564908",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-11",
+      "openalex_id": "https://openalex.org/W7225756642",
+      "domain": "Food fraud & authenticity",
+      "application": "Methods & perspectives",
+      "data_type": "Spectroscopy",
+      "ai_method": "Review / synthesis",
+      "ai_family": "Other / mixed",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 3 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.68159/g164039063",
+      "doi": "10.68159/g164039063",
+      "title": "Explainable AI for Food Safety Decisions: A Framework for Risk Interpretation, Regulatory Confidence, and Operational Accountability",
+      "authors": [
+        "Lars Andersen",
+        "Freya Nielsen",
+        "Mette Sørensen"
+      ],
+      "date": "2025-01-01",
+      "year": 2025,
+      "journal": "Unknown source",
+      "url": "https://doi.org/10.68159/g164039063",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-11",
+      "openalex_id": "https://openalex.org/W7225699175",
+      "domain": "General food safety",
+      "application": "Inspection & enforcement",
+      "data_type": "Genomics & sequencing",
+      "ai_method": "Other / unspecified",
+      "ai_family": "Other / mixed",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.66,
+        "reason": "Keyword evidence: 2 food-safety signals, 1 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
