@@ -2,28 +2,60 @@
   "meta": {
     "mode": "automated_candidates",
     "title": "Living AI for Food Safety",
-    "updated_at": "2026-11-11T14:27:02Z",
+    "updated_at": "2026-11-12T15:19:19Z",
     "note": "Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.",
     "original_review_doi": "10.1038/s41538-026-00925-1",
     "source": "OpenAlex title/abstract search + optional LLM classification",
-    "retrieved": 3919,
-    "new_candidates": 12,
+    "retrieved": 3923,
+    "new_candidates": 2,
     "review_queue": 348,
     "lookback_days": null,
     "search_start": "2024-01-01",
-    "search_end": "2026-11-11",
+    "search_end": "2026-11-12",
     "max_pages": 20,
     "search_progress": {
       "status": "completed",
       "signature": "adff9f6a16d684ab",
       "calls_this_run": 102,
-      "last_checked": "2026-11-11",
+      "last_checked": "2026-11-12",
       "coverage_warnings": []
     },
     "query_count": 19,
     "llm_enabled": false
   },
   "papers": [
+    {
+      "id": "doi:10.1021/acssensors.6c04513",
+      "doi": "10.1021/acssensors.6c04513",
+      "title": "Deep Learning-Enabled Magnetic Bead-Capture Fluorescence In Situ Hybridization Enables Multiplex Identification and Digital Counting of Pathogenic Bacteria",
+      "authors": [
+        "Lingyan Kong",
+        "Sijia Yan",
+        "Jun Wang",
+        "Xu Wang"
+      ],
+      "date": "2026-11-11",
+      "year": 2026,
+      "journal": "ACS Sensors",
+      "url": "https://doi.org/10.1021/acssensors.6c04513",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-12",
+      "openalex_id": "https://openalex.org/W7225788555",
+      "domain": "Microbiological hazards",
+      "application": "Laboratory testing",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 3 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
     {
       "id": "doi:10.5281/zenodo.24096930",
       "doi": "10.5281/zenodo.24096930",
@@ -221,6 +253,38 @@
         "status": "automated_candidate",
         "confidence": 0.84,
         "reason": "Keyword evidence: 2 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.jfca.2026.109689",
+      "doi": "10.1016/j.jfca.2026.109689",
+      "title": "Pork quality and safety detection: Frontier applications and developments of Raman spectroscopy",
+      "authors": [
+        "Ning Xu",
+        "Bangxu Chen",
+        "Xiao'e Lou",
+        "Chuanqi Xie"
+      ],
+      "date": "2026-11-01",
+      "year": 2026,
+      "journal": "Journal of Food Composition and Analysis",
+      "url": "https://doi.org/10.1016/j.jfca.2026.109689",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-12",
+      "openalex_id": "https://openalex.org/W7225742991",
+      "domain": "Microbiological hazards",
+      "application": "Laboratory testing",
+      "data_type": "Spectroscopy",
+      "ai_method": "Other / unspecified",
+      "ai_family": "Other / mixed",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 3 food-safety signals, 1 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
