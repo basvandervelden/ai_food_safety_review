@@ -2,22 +2,22 @@
   "meta": {
     "mode": "automated_candidates",
     "title": "Living AI for Food Safety",
-    "updated_at": "2026-11-13T14:38:46Z",
+    "updated_at": "2026-11-14T13:34:45Z",
     "note": "Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.",
     "original_review_doi": "10.1038/s41538-026-00925-1",
     "source": "OpenAlex title/abstract search + optional LLM classification",
-    "retrieved": 3923,
-    "new_candidates": 0,
+    "retrieved": 3927,
+    "new_candidates": 3,
     "review_queue": 348,
     "lookback_days": null,
     "search_start": "2024-01-01",
-    "search_end": "2026-11-13",
+    "search_end": "2026-11-14",
     "max_pages": 20,
     "search_progress": {
       "status": "completed",
       "signature": "adff9f6a16d684ab",
-      "calls_this_run": 102,
-      "last_checked": "2026-11-13",
+      "calls_this_run": 103,
+      "last_checked": "2026-11-14",
       "coverage_warnings": []
     },
     "query_count": 19,
@@ -85,6 +85,39 @@
         "status": "automated_candidate",
         "confidence": 0.84,
         "reason": "Keyword evidence: 1 food-safety signals, 6 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1051/epjconf/202639201005/pdf",
+      "doi": "10.1051/epjconf/202639201005/pdf",
+      "title": "Water spectral pattern changes associated with Ochratoxin A contamination in white wine",
+      "authors": [
+        "John‐Lewis Zinia Zaukuu",
+        "Godfred Lartei Lartey",
+        "Claudia Awinkine",
+        "Magdalene Amoatemaah Antwi",
+        "Zoltan Kovacs"
+      ],
+      "date": "2026-11-10",
+      "year": 2026,
+      "journal": "Springer Link (Chiba Institute of Technology)",
+      "url": "https://doi.org/10.1051/epjconf/202639201005/pdf",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-14",
+      "openalex_id": "https://openalex.org/W7225916460",
+      "domain": "Chemical hazards",
+      "application": "Risk forecasting",
+      "data_type": "Spectroscopy",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 3 food-safety signals, 1 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
@@ -1144,6 +1177,40 @@
         "status": "automated_candidate",
         "confidence": 0.84,
         "reason": "Keyword evidence: 1 food-safety signals, 5 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.3967/bes2026.109",
+      "doi": "10.3967/bes2026.109",
+      "title": "Emerging Technologies for Viability Assessment of Foodborne Pathogens: From Molecular Dyes to Artificial Intelligence.",
+      "authors": [
+        "Ze Yu Wang",
+        "Anum Farid",
+        "Zhi Wei Chen",
+        "Jia Yi Qi",
+        "Xin Shen",
+        "Hong Liu"
+      ],
+      "date": "2026-10-20",
+      "year": 2026,
+      "journal": "PubMed",
+      "url": "https://doi.org/10.3967/bes2026.109",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-14",
+      "openalex_id": "https://openalex.org/W7225850229",
+      "domain": "Microbiological hazards",
+      "application": "Laboratory testing",
+      "data_type": "Spectroscopy",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 3 food-safety signals, 2 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
@@ -17587,6 +17654,40 @@
         "status": "automated_candidate",
         "confidence": 0.97,
         "reason": "Keyword evidence: 2 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.30919/faf2666",
+      "doi": "10.30919/faf2666",
+      "title": "Machine Learning Predictive Models for the Allergen Detection System in Food Ingredients",
+      "authors": [
+        "Rajesh Natarajan",
+        "Sujatha Krishna",
+        "Pradeepa Ganesan",
+        "Saleem Raja Abdul Samad",
+        "Syed Ibrahim Hussain",
+        "Ms. Myra Patalay"
+      ],
+      "date": "2026-01-01",
+      "year": 2026,
+      "journal": "ES Food & Agroforestry",
+      "url": "https://doi.org/10.30919/faf2666",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-14",
+      "openalex_id": "https://openalex.org/W7225851298",
+      "domain": "General food safety",
+      "application": "Laboratory testing",
+      "data_type": "Other",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 3 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
