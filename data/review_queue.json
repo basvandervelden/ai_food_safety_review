@@ -1435,6 +1435,13 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
+    "id": "doi:10.55041/ijsrem68951",
+    "title": "Smart Multi-Sensor System for Food Adulteration and Quality Analysis",
+    "doi": "10.55041/ijsrem68951",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
     "id": "doi:10.1016/j.snb.2026.141151",
     "title": "Phenylalanine-modified perylene-based MOF with an orthogonal electrochemical-photoelectrochemical dual-mode aptasensor toward Aflatoxin B1 detection guided by machine learning",
     "doi": "10.1016/j.snb.2026.141151",
@@ -1522,6 +1529,13 @@
     "id": "doi:10.3390/photonics13090889",
     "title": "Microstructured Optical Sensors: Design, Fabrication, and Applications",
     "doi": "10.3390/photonics13090889",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1039/d6an00221h",
+    "title": "Antibiotic residue detection based on SERS technology: enhancement mechanisms, material innovations, and challenges in on-site applications",
+    "doi": "10.1039/d6an00221h",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
@@ -1974,6 +1988,13 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
+    "id": "doi:10.1093/ijlct/ctag111",
+    "title": "Unlocking low-carbon consumption: research on heterogeneity in willingness to pay for environmental premiums across age cohorts",
+    "doi": "10.1093/ijlct/ctag111",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
     "id": "doi:10.1016/j.foodres.2026.118523",
     "title": "Machine learning–driven nanoparticle–enhanced paper chromogenic array sensor approach for detecting sub-lethally injured Salmonella in low moisture food",
     "doi": "10.1016/j.foodres.2026.118523",
@@ -2030,23 +2051,9 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
-    "id": "doi:10.1039/d6an00221h",
-    "title": "Antibiotic residue detection based on SERS technology: enhancement mechanisms, material innovations, and challenges in on-site applications",
-    "doi": "10.1039/d6an00221h",
-    "score": 0.48,
-    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
-  },
-  {
     "id": "doi:10.56975/ijrar.v13i2.332950",
     "title": "A Hybrid Blockchain and Machine Learning Framework for Secure, Transparent, and Traceable Agricultural Product Supply Chain Management",
     "doi": "10.56975/ijrar.v13i2.332950",
-    "score": 0.48,
-    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
-  },
-  {
-    "id": "doi:10.1093/ijlct/ctag111",
-    "title": "Unlocking low-carbon consumption: research on heterogeneity in willingness to pay for environmental premiums across age cohorts",
-    "doi": "10.1093/ijlct/ctag111",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
