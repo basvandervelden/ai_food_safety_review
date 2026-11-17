@@ -1,19 +1,19 @@
 {
-  "generated_on": "2026-11-16",
-  "new_last_30_days": 1131,
+  "generated_on": "2026-11-17",
+  "new_last_30_days": 88,
   "domains": {
-    "Food fraud & authenticity": 172,
-    "Microbiological hazards": 291,
-    "General food safety": 453,
-    "Chemical hazards": 203,
-    "Foodborne illness": 12
+    "Chemical hazards": 15,
+    "Food fraud & authenticity": 13,
+    "Microbiological hazards": 23,
+    "General food safety": 36,
+    "Foodborne illness": 1
   },
   "recent_ids": [
+    "doi:10.3389/fmicb.2026.1993463",
     "doi:10.1038/s41598-026-79484-0",
     "doi:10.1002/cfch.70048",
     "doi:10.1007/s43621-026-04953-5",
-    "doi:10.1007/s44187-026-01308-x",
-    "doi:10.1021/acssensors.6c04513"
+    "doi:10.1007/s44187-026-01308-x"
   ],
   "caveat": "Counts reflect ingestion into this prototype, not all papers published in the period."
 }

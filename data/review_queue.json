@@ -322,16 +322,16 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
-    "id": "doi:10.3390/foods13020235",
-    "title": "Intelligent Biosensors Promise Smarter Solutions in Food Safety 4.0",
-    "doi": "10.3390/foods13020235",
+    "id": "doi:10.3934/mbe.2024161",
+    "title": "A snail species identification method based on deep learning in food safety",
+    "doi": "10.3934/mbe.2024161",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
-    "id": "doi:10.3934/mbe.2024161",
-    "title": "A snail species identification method based on deep learning in food safety",
-    "doi": "10.3934/mbe.2024161",
+    "id": "doi:10.3390/foods13020235",
+    "title": "Intelligent Biosensors Promise Smarter Solutions in Food Safety 4.0",
+    "doi": "10.3390/foods13020235",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
@@ -1281,6 +1281,13 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
+    "id": "doi:10.1039/d5ay00686d",
+    "title": "Geographical authentication of rose cakes via integrated HS-SPME-GC-MS, GC-IMS, and chemometric profiling",
+    "doi": "10.1039/d5ay00686d",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
     "id": "doi:10.1177/09603360251412696",
     "title": "Spectroscopy-assisted quality control of high biological value fortified fruit juices: A joint Austria–Hungary project",
     "doi": "10.1177/09603360251412696",
@@ -1298,13 +1305,6 @@
     "id": "doi:10.3390/horticulturae11030329",
     "title": "Innovative Tools for Nitrogen Fertilization Traceability in Organic Farming Products: A Fennel Case Study",
     "doi": "10.3390/horticulturae11030329",
-    "score": 0.48,
-    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
-  },
-  {
-    "id": "doi:10.1039/d5ay00686d",
-    "title": "Geographical authentication of rose cakes via integrated HS-SPME-GC-MS, GC-IMS, and chemometric profiling",
-    "doi": "10.1039/d5ay00686d",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
@@ -1421,6 +1421,13 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
+    "id": "doi:10.22214/ijraset.2026.85030",
+    "title": "Food Waste Intelligence: A Predictive-Prescriptive Machine Learning Framework for Food Waste Reduction and Surplus Donation Analysis",
+    "doi": "10.22214/ijraset.2026.85030",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
     "id": "doi:10.1016/j.tifs.2026.106222",
     "title": "Regulatory governance and full-scale digital transformation for prediction-based food safety management: Global trends and future perspectives",
     "doi": "10.1016/j.tifs.2026.106222",
@@ -1438,6 +1445,13 @@
     "id": "doi:10.55041/ijsrem68951",
     "title": "Smart Multi-Sensor System for Food Adulteration and Quality Analysis",
     "doi": "10.55041/ijsrem68951",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jhazmat.2026.144220",
+    "title": "Interpretable machine learning assessment of morphological traits and genetic factors associated with cadmium transfer to rice grains during grain filling",
+    "doi": "10.1016/j.jhazmat.2026.144220",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
@@ -2170,6 +2184,13 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
+    "id": "doi:10.1039/d6ay00224b",
+    "title": "Deep learning-empowered SERS: deciphering the multidimensional information code of complex biological samples",
+    "doi": "10.1039/d6ay00224b",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
     "id": "doi:10.1007/s12161-026-03083-y",
     "title": "Fast and Accurate Meat Freshness Classification Using Depthwise Separable Convolution and SPPF",
     "doi": "10.1007/s12161-026-03083-y",
@@ -2222,13 +2243,6 @@
     "id": "doi:10.9775/kvfd.2025.35393",
     "title": "Cattle Identification with CLIP-Based Biometric Features",
     "doi": "10.9775/kvfd.2025.35393",
-    "score": 0.48,
-    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
-  },
-  {
-    "id": "doi:10.1039/d6ay00224b",
-    "title": "Deep learning-empowered SERS: deciphering the multidimensional information code of complex biological samples",
-    "doi": "10.1039/d6ay00224b",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
