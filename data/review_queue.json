@@ -1421,6 +1421,20 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
+    "id": "doi:10.1080/03067319.2026.2759685",
+    "title": "Surface plasmon resonance biosensors: from materials and functionalization to high-performance and intelligent sensing",
+    "doi": "10.1080/03067319.2026.2759685",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1016/j.jhazmat.2026.144220",
+    "title": "Interpretable machine learning assessment of morphological traits and genetic factors associated with cadmium transfer to rice grains during grain filling",
+    "doi": "10.1016/j.jhazmat.2026.144220",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
     "id": "doi:10.22214/ijraset.2026.85030",
     "title": "Food Waste Intelligence: A Predictive-Prescriptive Machine Learning Framework for Food Waste Reduction and Surplus Donation Analysis",
     "doi": "10.22214/ijraset.2026.85030",
@@ -1445,13 +1459,6 @@
     "id": "doi:10.55041/ijsrem68951",
     "title": "Smart Multi-Sensor System for Food Adulteration and Quality Analysis",
     "doi": "10.55041/ijsrem68951",
-    "score": 0.48,
-    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
-  },
-  {
-    "id": "doi:10.1016/j.jhazmat.2026.144220",
-    "title": "Interpretable machine learning assessment of morphological traits and genetic factors associated with cadmium transfer to rice grains during grain filling",
-    "doi": "10.1016/j.jhazmat.2026.144220",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
