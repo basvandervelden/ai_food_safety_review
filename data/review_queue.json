@@ -462,6 +462,13 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
+    "id": "doi:10.55057/ijbtm.2025.7.9.25",
+    "title": "Industry 4.0 Integration for Cocoa Bean Quality Inspection in the Bakery Industry",
+    "doi": "10.55057/ijbtm.2025.7.9.25",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
     "id": "doi:10.21608/zvjz.2025.421854.1299",
     "title": "Forecasting Duck Production in Egypt by using the ARIMA Model",
     "doi": "10.21608/zvjz.2025.421854.1299",
@@ -493,13 +500,6 @@
     "id": "doi:10.5281/zenodo.17831423",
     "title": "Application of Arti icial Intelligence (AI) in Animal Husbandry",
     "doi": "10.5281/zenodo.17831423",
-    "score": 0.48,
-    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
-  },
-  {
-    "id": "doi:10.55057/ijbtm.2025.7.9.25",
-    "title": "Industry 4.0 Integration for Cocoa Bean Quality Inspection in the Bakery Industry",
-    "doi": "10.55057/ijbtm.2025.7.9.25",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
@@ -1057,16 +1057,16 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
-    "id": "doi:10.61173/4kwtg685",
-    "title": "Automatic recognition of snack packaging time information based on YOLOv11",
-    "doi": "10.61173/4kwtg685",
+    "id": "doi:10.35633/inmateh-76-23",
+    "title": "DETECTION OF EARLY BRUISING IN ‘HUANGGUAN’ PEAR BASED ON MCCDeepLabV3+ MODEL",
+    "doi": "10.35633/inmateh-76-23",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
-    "id": "doi:10.35633/inmateh-76-23",
-    "title": "DETECTION OF EARLY BRUISING IN ‘HUANGGUAN’ PEAR BASED ON MCCDeepLabV3+ MODEL",
-    "doi": "10.35633/inmateh-76-23",
+    "id": "doi:10.61173/4kwtg685",
+    "title": "Automatic recognition of snack packaging time information based on YOLOv11",
+    "doi": "10.61173/4kwtg685",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
