@@ -2,28 +2,57 @@
   "meta": {
     "mode": "automated_candidates",
     "title": "Living AI for Food Safety",
-    "updated_at": "2026-11-20T15:31:11Z",
+    "updated_at": "2026-11-21T14:42:30Z",
     "note": "Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.",
     "original_review_doi": "10.1038/s41538-026-00925-1",
     "source": "OpenAlex title/abstract search + optional LLM classification",
-    "retrieved": 3962,
-    "new_candidates": 2,
+    "retrieved": 3978,
+    "new_candidates": 4,
     "review_queue": 352,
     "lookback_days": null,
     "search_start": "2024-01-01",
-    "search_end": "2026-11-20",
+    "search_end": "2026-11-21",
     "max_pages": 20,
     "search_progress": {
       "status": "completed",
       "signature": "adff9f6a16d684ab",
       "calls_this_run": 103,
-      "last_checked": "2026-11-20",
+      "last_checked": "2026-11-21",
       "coverage_warnings": []
     },
     "query_count": 19,
     "llm_enabled": false
   },
   "papers": [
+    {
+      "id": "doi:10.33927/hjic-2026-35",
+      "doi": "10.33927/hjic-2026-35",
+      "title": "Expanding Frontiers of FTIR and ATR-FTIR Spectroscopy for Food Safety: Current Applications and Emerging Trends",
+      "authors": [
+        "Diwakar Singh"
+      ],
+      "date": "2026-11-19",
+      "year": 2026,
+      "journal": "Hungarian Journal of Industry and Chemistry",
+      "url": "https://doi.org/10.33927/hjic-2026-35",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-21",
+      "openalex_id": "https://openalex.org/W7237160555",
+      "domain": "Food fraud & authenticity",
+      "application": "Inspection & enforcement",
+      "data_type": "Mass spectrometry",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.66,
+        "reason": "Keyword evidence: 1 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
     {
       "id": "doi:10.1038/s41538-026-01208-5",
       "doi": "10.1038/s41538-026-01208-5",
@@ -543,6 +572,38 @@
       }
     },
     {
+      "id": "doi:10.61511/jipagi.v3i2.3888",
+      "doi": "10.61511/jipagi.v3i2.3888",
+      "title": "Cheese whey-based edible film and machine learning for sustainable food preservation: A conceptual framework",
+      "authors": [
+        "Prima Cendekia Nirmala Afiatri",
+        "Bangkit Setiyoko",
+        "Aisyah Bening Azzahra Putri",
+        "Galuh Adi Insani"
+      ],
+      "date": "2026-11-05",
+      "year": 2026,
+      "journal": "Jurnal Inovasi Pangan dan Gizi",
+      "url": "https://doi.org/10.61511/jipagi.v3i2.3888",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-21",
+      "openalex_id": "https://openalex.org/W7236566934",
+      "domain": "General food safety",
+      "application": "Early warning",
+      "data_type": "Text & reports",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.66,
+        "reason": "Keyword evidence: 1 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
       "id": "doi:10.1021/acs.jafc.6c08837",
       "doi": "10.1021/acs.jafc.6c08837",
       "title": "MALDI-TOF MS for Next-Generation Food Adulteration Screening: Combined Novel Matrices, Microfluidics, and Artificial Intelligence for High-Throughput and Precise Detection",
@@ -611,6 +672,42 @@
         "status": "automated_candidate",
         "confidence": 0.66,
         "reason": "Keyword evidence: 1 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.jfp.2026.100968",
+      "doi": "10.1016/j.jfp.2026.100968",
+      "title": "Integrating Pan-Genomics and Machine Learning into Foodborne Pathogen Traceability",
+      "authors": [
+        "Song Yong",
+        "Chi Zhang",
+        "Jing-jing Li",
+        "Shi-yu Dai",
+        "Qin Zhang",
+        "Zhen-zhen Yao",
+        "Ying-Ying Ouyang",
+        "Gong Chen-rui"
+      ],
+      "date": "2026-11-01",
+      "year": 2026,
+      "journal": "Journal of Food Protection",
+      "url": "https://doi.org/10.1016/j.jfp.2026.100968",
+      "publication_type": "Review",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-21",
+      "openalex_id": "https://openalex.org/W7236597370",
+      "domain": "Microbiological hazards",
+      "application": "Risk forecasting",
+      "data_type": "Genomics & sequencing",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 5 food-safety signals, 1 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
@@ -18051,6 +18148,42 @@
         "status": "automated_candidate",
         "confidence": 0.97,
         "reason": "Keyword evidence: 2 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.30919/faf2677",
+      "doi": "10.30919/faf2677",
+      "title": "Blockchain-Enabled Traceability and Artificial Intelligent-Based Quality Assessment for Safe and Transparent Food Systems",
+      "authors": [
+        "Neyara Radwan",
+        "Manikarthik Konakalla",
+        "Ravi Teja Reddy Mandala",
+        "Udai Vurum",
+        "C. Hemanth Kumar",
+        "Smita M Nirkhi",
+        "Malathy Batumalay",
+        "Nithesh Naik"
+      ],
+      "date": "2026-01-01",
+      "year": 2026,
+      "journal": "ES Food & Agroforestry",
+      "url": "https://doi.org/10.30919/faf2677",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-21",
+      "openalex_id": "https://openalex.org/W7236754254",
+      "domain": "General food safety",
+      "application": "Inspection & enforcement",
+      "data_type": "Spectroscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 2 food-safety signals, 4 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
