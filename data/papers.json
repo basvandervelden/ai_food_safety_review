@@ -2,22 +2,22 @@
   "meta": {
     "mode": "automated_candidates",
     "title": "Living AI for Food Safety",
-    "updated_at": "2026-11-21T14:42:30Z",
+    "updated_at": "2026-11-22T14:38:48Z",
     "note": "Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.",
     "original_review_doi": "10.1038/s41538-026-00925-1",
     "source": "OpenAlex title/abstract search + optional LLM classification",
-    "retrieved": 3978,
-    "new_candidates": 4,
-    "review_queue": 352,
+    "retrieved": 3983,
+    "new_candidates": 3,
+    "review_queue": 349,
     "lookback_days": null,
     "search_start": "2024-01-01",
-    "search_end": "2026-11-21",
+    "search_end": "2026-11-22",
     "max_pages": 20,
     "search_progress": {
       "status": "completed",
       "signature": "adff9f6a16d684ab",
       "calls_this_run": 103,
-      "last_checked": "2026-11-21",
+      "last_checked": "2026-11-22",
       "coverage_warnings": []
     },
     "query_count": 19,
@@ -10166,6 +10166,41 @@
       }
     },
     {
+      "id": "doi:10.64643/ijirtv12i12-206681-459",
+      "doi": "10.64643/ijirtv12i12-206681-459",
+      "title": "Investigating The Prevalence and Identifying Impact of Tuberculosis Disease in Cattle",
+      "authors": [
+        "Daya Naik",
+        "K M M Parvathraj",
+        "Nivin K S",
+        "Likhitha",
+        "Jayaprada",
+        "Bhavya",
+        "Nagendra G"
+      ],
+      "date": "2026-05-25",
+      "year": 2026,
+      "journal": "International Journal of Innovative Research in Technology",
+      "url": "https://doi.org/10.64643/ijirtv12i12-206681-459",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-22",
+      "openalex_id": "https://openalex.org/W7171523991",
+      "domain": "General food safety",
+      "application": "Laboratory testing",
+      "data_type": "Other",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
       "id": "doi:10.3390/foods15111864",
       "doi": "10.3390/foods15111864",
       "title": "Temporal Screening of High-Risk Food Service Inspections in New York State, 2023–2025: A Case Study Using Multimodal Evidential Learning",
@@ -17801,6 +17836,36 @@
       }
     },
     {
+      "id": "doi:10.56975/ijcrt.v14i3.303619",
+      "doi": "10.56975/ijcrt.v14i3.303619",
+      "title": "A Comparative Study of Deep Learning Architectures (MobileNetV2, EfficientNetB3, and InceptionV3) for Real-World Fruit Quality Classification Using Transfer Learning",
+      "authors": [
+        "Suneeta Devi",
+        "Rohit Singhal"
+      ],
+      "date": "2026-01-01",
+      "year": 2026,
+      "journal": "INTERNATIONAL JOURNAL OF CREATIVE RESEARCH THOUGHTS",
+      "url": "https://doi.org/10.56975/ijcrt.v14i3.303619",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-22",
+      "openalex_id": "https://openalex.org/W7153181038",
+      "domain": "General food safety",
+      "application": "Inspection & enforcement",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 5 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
       "id": "doi:10.5455/ovj.2026.v16.i9.62",
       "doi": "10.5455/ovj.2026.v16.i9.62",
       "title": "A machine learning approach for precision livestock farming: Individual goat detection and identification using YOLOv11 computer vision algorithm for remote monitoring",
@@ -24736,6 +24801,35 @@
         "status": "automated_candidate",
         "confidence": 0.97,
         "reason": "Keyword evidence: 3 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.61577/jmla.2025.100008",
+      "doi": "10.61577/jmla.2025.100008",
+      "title": "The impact of machine learning driven approach on agriculture and food industry: The case of a developing country",
+      "authors": [
+        "Wesley Odeh Odumu"
+      ],
+      "date": "2025-08-02",
+      "year": 2025,
+      "journal": "Unknown source",
+      "url": "https://doi.org/10.61577/jmla.2025.100008",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-22",
+      "openalex_id": "https://openalex.org/W7134842181",
+      "domain": "General food safety",
+      "application": "Risk forecasting",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.66,
+        "reason": "Keyword evidence: 1 food-safety signals, 2 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },

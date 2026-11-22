@@ -1323,13 +1323,6 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
-    "id": "doi:10.1159/000545406",
-    "title": "From Genes to Public Health: The Journey Continues!",
-    "doi": "10.1159/000545406",
-    "score": 0.48,
-    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
-  },
-  {
     "id": "doi:10.25135/rfac.2025.10th.3671",
     "title": "Authenticity and Nutritional Value in Olive Oil: New Technologies and Prospects",
     "doi": "10.25135/rfac.2025.10th.3671",
@@ -1347,13 +1340,6 @@
     "id": "doi:10.1080/87559129.2025.2553677",
     "title": "Mass Spectrometry of Proteins, Peptides and Small Molecules for Food Authentication – A Systematic Survey",
     "doi": "10.1080/87559129.2025.2553677",
-    "score": 0.48,
-    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
-  },
-  {
-    "id": "doi:10.1016/j.fochx.2025.102804",
-    "title": "Untargeted lipidomics profiling for halal authentication of meatball products from mixed meat sources",
-    "doi": "10.1016/j.fochx.2025.102804",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
@@ -2068,13 +2054,6 @@
     "id": "doi:10.1002/adsu.202501302",
     "title": "Application and Machine Learning‐Assisted Recognition of MOF‐Based Fluorescent Sensors in the Detection of Food Contaminants",
     "doi": "10.1002/adsu.202501302",
-    "score": 0.48,
-    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
-  },
-  {
-    "id": "doi:10.56975/ijrar.v13i2.332950",
-    "title": "A Hybrid Blockchain and Machine Learning Framework for Secure, Transparent, and Traceable Agricultural Product Supply Chain Management",
-    "doi": "10.56975/ijrar.v13i2.332950",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
