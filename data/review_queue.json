@@ -1449,6 +1449,13 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
+    "id": "doi:10.1016/j.trac.2026.119276",
+    "title": "Artificial Intelligence in Food Safety Immunoassays: From Signal Processing Mechanisms to On-site Intelligent Sensing Platforms",
+    "doi": "10.1016/j.trac.2026.119276",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
     "id": "doi:10.1016/j.snb.2026.141151",
     "title": "Phenylalanine-modified perylene-based MOF with an orthogonal electrochemical-photoelectrochemical dual-mode aptasensor toward Aflatoxin B1 detection guided by machine learning",
     "doi": "10.1016/j.snb.2026.141151",

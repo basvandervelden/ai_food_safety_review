@@ -2,22 +2,22 @@
   "meta": {
     "mode": "automated_candidates",
     "title": "Living AI for Food Safety",
-    "updated_at": "2026-11-22T14:38:48Z",
+    "updated_at": "2026-11-23T18:14:58Z",
     "note": "Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.",
     "original_review_doi": "10.1038/s41538-026-00925-1",
     "source": "OpenAlex title/abstract search + optional LLM classification",
-    "retrieved": 3983,
-    "new_candidates": 3,
-    "review_queue": 349,
+    "retrieved": 3985,
+    "new_candidates": 7,
+    "review_queue": 350,
     "lookback_days": null,
     "search_start": "2024-01-01",
-    "search_end": "2026-11-22",
+    "search_end": "2026-11-23",
     "max_pages": 20,
     "search_progress": {
       "status": "completed",
       "signature": "adff9f6a16d684ab",
       "calls_this_run": 103,
-      "last_checked": "2026-11-22",
+      "last_checked": "2026-11-23",
       "coverage_warnings": []
     },
     "query_count": 19,
@@ -672,6 +672,37 @@
         "status": "automated_candidate",
         "confidence": 0.66,
         "reason": "Keyword evidence: 1 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.pesd.2026.100006",
+      "doi": "10.1016/j.pesd.2026.100006",
+      "title": "AI-DRIVEN UPCYCLING OF FOOD WASTE INTO FUNCTIONAL FOODS AND HIGH-VALUE INGREDIENTS: ADVANCING THE CIRCULAR BIOECONOMY AND SUSTAINABLE DEVELOPMENT GOALS",
+      "authors": [
+        "Kodimari Aparna",
+        "Prakash Anakha",
+        "Samuel Ayofemi Olalekan Adeyeye"
+      ],
+      "date": "2026-11-01",
+      "year": 2026,
+      "journal": "Process Engineering for Sustainable Development",
+      "url": "https://doi.org/10.1016/j.pesd.2026.100006",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-23",
+      "openalex_id": "https://openalex.org/W7237337544",
+      "domain": "Chemical hazards",
+      "application": "Laboratory testing",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 5 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
@@ -6204,6 +6235,36 @@
         "status": "automated_candidate",
         "confidence": 0.84,
         "reason": "Keyword evidence: 2 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.18280/isi.310730",
+      "doi": "10.18280/isi.310730",
+      "title": "HSI-SpaClassNet: A Deep Learning Framework for Non-Destructive Detection and Concentration Classification of Chlorpyrifos Residues on Spinach Leaves Using Hyperspectral Imaging",
+      "authors": [
+        "Sweta G. Phegade",
+        "Monali Y. Khachane"
+      ],
+      "date": "2026-07-31",
+      "year": 2026,
+      "journal": "Ingénierie des systèmes d information",
+      "url": "https://doi.org/10.18280/isi.310730",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-23",
+      "openalex_id": "https://openalex.org/W7204271991",
+      "domain": "Chemical hazards",
+      "application": "Laboratory testing",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 3 food-safety signals, 2 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
@@ -12594,6 +12655,64 @@
       }
     },
     {
+      "id": "doi:10.61463/ijset.vol.14.issue2.195",
+      "doi": "10.61463/ijset.vol.14.issue2.195",
+      "title": "Automated Rice Grain Quality Assessment Using Computer Vision And Machine Learning Based On Physical Feature Extraction",
+      "authors": [
+        "K.Srikanth"
+      ],
+      "date": "2026-04-10",
+      "year": 2026,
+      "journal": "International Journal of Science Engineering and Technology",
+      "url": "https://doi.org/10.61463/ijset.vol.14.issue2.195",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-23",
+      "openalex_id": "https://openalex.org/W7155625914",
+      "domain": "General food safety",
+      "application": "Inspection & enforcement",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.61463/ijset.vol.14.issue2.179",
+      "doi": "10.61463/ijset.vol.14.issue2.179",
+      "title": "Hybrid Transfer Learning And Machine Learning Framework For Accurate Food Image Classification",
+      "authors": [
+        "Assistant Professor Mr.S K Sankar"
+      ],
+      "date": "2026-04-10",
+      "year": 2026,
+      "journal": "International Journal of Science Engineering and Technology",
+      "url": "https://doi.org/10.61463/ijset.vol.14.issue2.179",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-23",
+      "openalex_id": "https://openalex.org/W7153440857",
+      "domain": "General food safety",
+      "application": "Early warning",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 5 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
       "id": "doi:10.1109/jsen.2026.3681032",
       "doi": "10.1109/jsen.2026.3681032",
       "title": "Cutting-Edge Bioanalytical Transducers for Mycotoxin Surveillance: A Review",
@@ -17740,6 +17859,38 @@
         "status": "automated_candidate",
         "confidence": 0.66,
         "reason": "Keyword evidence: 1 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.65613/742105",
+      "doi": "10.65613/742105",
+      "title": "THE ROLE OF ARTIFICIAL INTELLIGENCE IN SMALL ANIMAL VETERINARY MEDICINE: CURRENT APPLICATIONS AND FUTURE PERSPECTIVES",
+      "authors": [
+        "Elena Atanaskova Petrov",
+        "Elena Davitkovska",
+        "Aleksandra Angeleska",
+        "Risto Uzunov"
+      ],
+      "date": "2026-01-01",
+      "year": 2026,
+      "journal": "Israel Journal of Veterinary Medicine",
+      "url": "https://doi.org/10.65613/742105",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-23",
+      "openalex_id": "https://openalex.org/W7214128902",
+      "domain": "General food safety",
+      "application": "Risk forecasting",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "LLMs / foundation models",
+      "ai_family": "LLMs / foundation models",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 9 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
@@ -32879,6 +33030,36 @@
       }
     },
     {
+      "id": "doi:10.68159/s262479430",
+      "doi": "10.68159/s262479430",
+      "title": "Generative AI in Food Manufacturing and Product Development: A Rapid Evidence Review of Opportunities, Risks, and Governance Needs",
+      "authors": [
+        "Michelle Tan",
+        "Adrian Goh"
+      ],
+      "date": "2025-01-01",
+      "year": 2025,
+      "journal": "Journal of Intelligent Agriculture and Food Systems",
+      "url": "https://doi.org/10.68159/s262479430",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-23",
+      "openalex_id": "https://openalex.org/W7225715124",
+      "domain": "General food safety",
+      "application": "Methods & perspectives",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Review / synthesis",
+      "ai_family": "LLMs / foundation models",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
       "id": "doi:10.68159/q022564908",
       "doi": "10.68159/q022564908",
       "title": "AI for Food Quality, Safety, and Authenticity: An Integrative Review of Sensing, Prediction, Traceability, and Explainable Decision Systems",
@@ -34471,6 +34652,33 @@
         "status": "automated_candidate",
         "confidence": 0.97,
         "reason": "Keyword evidence: 2 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.17756/jfcn.2024-194",
+      "doi": "10.17756/jfcn.2024-194",
+      "title": "Emerging Innovations in Food Technology: Advances in Processing and Packaging for a Sustainable Future",
+      "authors": [],
+      "date": "2024-12-06",
+      "year": 2024,
+      "journal": "Journal of Food Chemistry and Nanotechnology",
+      "url": "https://doi.org/10.17756/jfcn.2024-194",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-23",
+      "openalex_id": "https://openalex.org/W4408418906",
+      "domain": "General food safety",
+      "application": "Early warning",
+      "data_type": "Other",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.66,
+        "reason": "Keyword evidence: 1 food-safety signals, 2 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
