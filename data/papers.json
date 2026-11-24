@@ -2,28 +2,64 @@
   "meta": {
     "mode": "automated_candidates",
     "title": "Living AI for Food Safety",
-    "updated_at": "2026-11-23T18:14:58Z",
+    "updated_at": "2026-11-24T17:49:18Z",
     "note": "Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.",
     "original_review_doi": "10.1038/s41538-026-00925-1",
     "source": "OpenAlex title/abstract search + optional LLM classification",
-    "retrieved": 3985,
-    "new_candidates": 7,
+    "retrieved": 3986,
+    "new_candidates": 2,
     "review_queue": 350,
     "lookback_days": null,
     "search_start": "2024-01-01",
-    "search_end": "2026-11-23",
+    "search_end": "2026-11-24",
     "max_pages": 20,
     "search_progress": {
       "status": "completed",
       "signature": "adff9f6a16d684ab",
       "calls_this_run": 103,
-      "last_checked": "2026-11-23",
+      "last_checked": "2026-11-24",
       "coverage_warnings": []
     },
     "query_count": 19,
     "llm_enabled": false
   },
   "papers": [
+    {
+      "id": "doi:10.3390/agriengineering8120506",
+      "doi": "10.3390/agriengineering8120506",
+      "title": "Smart Biosensor-Based Technologies for Horticultural Supply Chains and Post-Harvest Losses Mitigation",
+      "authors": [
+        "Krishna K.",
+        "Susmita Das",
+        "Rehan .",
+        "Umesh Sharma",
+        "Sunny Sharma",
+        "Amit Kumar",
+        "Rupesh Kumar",
+        "Shilpa Sharma"
+      ],
+      "date": "2026-11-23",
+      "year": 2026,
+      "journal": "AgriEngineering",
+      "url": "https://doi.org/10.3390/agriengineering8120506",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-24",
+      "openalex_id": "https://openalex.org/W7238815437",
+      "domain": "Microbiological hazards",
+      "application": "Laboratory testing",
+      "data_type": "Spectroscopy",
+      "ai_method": "Other / unspecified",
+      "ai_family": "Other / mixed",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 4 food-safety signals, 1 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
     {
       "id": "doi:10.33927/hjic-2026-35",
       "doi": "10.33927/hjic-2026-35",
@@ -18044,6 +18080,43 @@
         "status": "automated_candidate",
         "confidence": 0.66,
         "reason": "Keyword evidence: 1 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.5455/jrvs.20260702112017",
+      "doi": "10.5455/jrvs.20260702112017",
+      "title": "Artificial Intelligence-Powered Diagnostics for Antimicrobial Resistance in Veterinary Medicine: Current Trends and Future Prospects",
+      "authors": [
+        "Uzoka, Ugonna Henry",
+        "Ogundipe, Tolulope Grace",
+        "Ani, Nneka Victoria",
+        "Edward, Idopise",
+        "Ogbonna, Ijeoma Joy",
+        "Isiaka, Amarachukwu Bernaldine",
+        "Esama, Francisca Preye",
+        "Etim, Elizabeth",
+        "Anakwenze, Vivian Nonyelum"
+      ],
+      "date": "2026-01-01",
+      "year": 2026,
+      "journal": "Journal of Research in Veterinary Sciences",
+      "url": "https://doi.org/10.5455/jrvs.20260702112017",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-24",
+      "openalex_id": "https://openalex.org/W7225581147",
+      "domain": "Microbiological hazards",
+      "application": "Early warning",
+      "data_type": "Genomics & sequencing",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 2 food-safety signals, 3 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },

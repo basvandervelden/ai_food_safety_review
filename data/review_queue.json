@@ -1407,6 +1407,13 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
+    "id": "doi:10.1016/j.trac.2026.119276",
+    "title": "Artificial intelligence in food safety immunoassays: From signal processing mechanisms to on-site intelligent sensing platforms",
+    "doi": "10.1016/j.trac.2026.119276",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
     "id": "doi:10.1007/s00604-026-08550-1",
     "title": "Machine learning-assisted Ce/Co metal-organic framework-based fluorescence/electrochemical dual-modal sensor for sensitive detection of ochratoxin A",
     "doi": "10.1007/s00604-026-08550-1",
@@ -1445,13 +1452,6 @@
     "id": "doi:10.55041/ijsrem68951",
     "title": "Smart Multi-Sensor System for Food Adulteration and Quality Analysis",
     "doi": "10.55041/ijsrem68951",
-    "score": 0.48,
-    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
-  },
-  {
-    "id": "doi:10.1016/j.trac.2026.119276",
-    "title": "Artificial Intelligence in Food Safety Immunoassays: From Signal Processing Mechanisms to On-site Intelligent Sensing Platforms",
-    "doi": "10.1016/j.trac.2026.119276",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
