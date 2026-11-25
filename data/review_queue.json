@@ -1813,6 +1813,13 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
+    "id": "doi:10.1039/d6cc00673f",
+    "title": "Synthetic fluorescent receptor arrays for sensing in complex matrices: from robust chemistry to data-driven readouts",
+    "doi": "10.1039/d6cc00673f",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
     "id": "doi:10.1007/s44373-026-00131-4",
     "title": "Fundamentals of electrochemical sensors, nanomaterials, and progressive applications",
     "doi": "10.1007/s44373-026-00131-4",
@@ -2313,6 +2320,13 @@
     "id": "doi:10.1021/acsanm.6c00433",
     "title": "Hexagonal Au Nanostructure SERS Metasurface for AI-Driven Detection of Pesticide Residues in Real Food Samples",
     "doi": "10.1021/acsanm.6c00433",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.1039/d6ra00316h",
+    "title": "A terahertz metamaterial-based approach for detecting trace 1-naphthaleneacetic acid residues via AOO-optimized support vector regression",
+    "doi": "10.1039/d6ra00316h",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },

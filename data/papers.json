@@ -2,22 +2,22 @@
   "meta": {
     "mode": "automated_candidates",
     "title": "Living AI for Food Safety",
-    "updated_at": "2026-11-24T17:49:18Z",
+    "updated_at": "2026-11-25T17:16:13Z",
     "note": "Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.",
     "original_review_doi": "10.1038/s41538-026-00925-1",
     "source": "OpenAlex title/abstract search + optional LLM classification",
-    "retrieved": 3986,
-    "new_candidates": 2,
-    "review_queue": 350,
+    "retrieved": 4023,
+    "new_candidates": 6,
+    "review_queue": 352,
     "lookback_days": null,
     "search_start": "2024-01-01",
-    "search_end": "2026-11-24",
+    "search_end": "2026-11-25",
     "max_pages": 20,
     "search_progress": {
       "status": "completed",
       "signature": "adff9f6a16d684ab",
-      "calls_this_run": 103,
-      "last_checked": "2026-11-24",
+      "calls_this_run": 104,
+      "last_checked": "2026-11-25",
       "coverage_warnings": []
     },
     "query_count": 19,
@@ -11139,6 +11139,47 @@
         "status": "automated_candidate",
         "confidence": 0.97,
         "reason": "Keyword evidence: 3 food-safety signals, 4 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1039/d6an00093b",
+      "doi": "10.1039/d6an00093b",
+      "title": "Machine learning-driven multidimensional tea profiling from a single SERS spectrum: toward practical application",
+      "authors": [
+        "Jincheng Ni",
+        "Yanyan Lu",
+        "Xuewen Chen",
+        "Haoming Bao",
+        "Yu Qiao",
+        "Shuai Zhang",
+        "Daoshuan Ding",
+        "Jiamei Jin",
+        "Huaiyuan Zhao",
+        "Qian Zhao",
+        "Jinhua Wang",
+        "Hongwen Zhang",
+        "Weiping Cai"
+      ],
+      "date": "2026-05-05",
+      "year": 2026,
+      "journal": "The Analyst",
+      "url": "https://doi.org/10.1039/d6an00093b",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-25",
+      "openalex_id": "https://openalex.org/W7138838611",
+      "domain": "Chemical hazards",
+      "application": "Laboratory testing",
+      "data_type": "Spectroscopy",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 3 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
@@ -22882,6 +22923,36 @@
       }
     },
     {
+      "id": "doi:10.1039/d5ay01248a",
+      "doi": "10.1039/d5ay01248a",
+      "title": "Emerging nanosensor technologies for the rapid detection of heavy metal contaminants in agricultural soils",
+      "authors": [
+        "Anyou Xie",
+        "Weihong Wu"
+      ],
+      "date": "2025-10-09",
+      "year": 2025,
+      "journal": "Analytical Methods",
+      "url": "https://doi.org/10.1039/d5ay01248a",
+      "publication_type": "Review",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-25",
+      "openalex_id": "https://openalex.org/W4414250766",
+      "domain": "Chemical hazards",
+      "application": "Laboratory testing",
+      "data_type": "Spectroscopy",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.66,
+        "reason": "Keyword evidence: 2 food-safety signals, 1 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
       "id": "doi:10.1016/j.rineng.2025.107563",
       "doi": "10.1016/j.rineng.2025.107563",
       "title": "Comparative analysis of prediction algorithms for sodium chloride concentration using a liquid crystal microfluidic system",
@@ -23009,6 +23080,36 @@
         "status": "automated_candidate",
         "confidence": 0.97,
         "reason": "Keyword evidence: 2 food-safety signals, 4 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.3390/foods14193411",
+      "doi": "10.3390/foods14193411",
+      "title": "Processing and Real-Time Monitoring Strategies of Aflatoxin Reduction in Pistachios: Innovative Nonthermal Methods, Advanced Biosensing Platforms, and AI-Based Predictive Approaches",
+      "authors": [
+        "Seyed Mohammad Taghi Gharibzahedi",
+        "Sümeyra Savaş"
+      ],
+      "date": "2025-10-02",
+      "year": 2025,
+      "journal": "Foods",
+      "url": "https://doi.org/10.3390/foods14193411",
+      "publication_type": "Review",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-25",
+      "openalex_id": "https://openalex.org/W4414767981",
+      "domain": "Chemical hazards",
+      "application": "Inspection & enforcement",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 3 food-safety signals, 2 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
@@ -27254,6 +27355,39 @@
         "status": "automated_candidate",
         "confidence": 0.84,
         "reason": "Keyword evidence: 2 food-safety signals, 2 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1039/d5ay00358j",
+      "doi": "10.1039/d5ay00358j",
+      "title": "The fluorescence spectrum combined with a broad learning system to characterize the content of difenoconazole in cabbage",
+      "authors": [
+        "Di Wu",
+        "Xiaorong Sun",
+        "Yuhan Liu",
+        "Cuiling Liu",
+        "Jingzhu Wu"
+      ],
+      "date": "2025-06-12",
+      "year": 2025,
+      "journal": "Analytical Methods",
+      "url": "https://doi.org/10.1039/d5ay00358j",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-25",
+      "openalex_id": "https://openalex.org/W4410528712",
+      "domain": "Chemical hazards",
+      "application": "Laboratory testing",
+      "data_type": "Spectroscopy",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.66,
+        "reason": "Keyword evidence: 2 food-safety signals, 1 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
@@ -31816,6 +31950,40 @@
       }
     },
     {
+      "id": "doi:10.1039/d4ay02098g",
+      "doi": "10.1039/d4ay02098g",
+      "title": "Rapid detection and quantitative analysis of thiram in fruits using a shape-adaptable flexible SERS substrate combined with deep learning",
+      "authors": [
+        "Hongjun Wang",
+        "Ziyang Bian",
+        "Yue Wang",
+        "Huijuan Niu",
+        "Zhenshan Yang",
+        "Hefu Li"
+      ],
+      "date": "2025-02-20",
+      "year": 2025,
+      "journal": "Analytical Methods",
+      "url": "https://doi.org/10.1039/d4ay02098g",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-25",
+      "openalex_id": "https://openalex.org/W4407343325",
+      "domain": "Chemical hazards",
+      "application": "Laboratory testing",
+      "data_type": "Spectroscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 2 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
       "id": "doi:10.1007/s12161-025-02768-0",
       "doi": "10.1007/s12161-025-02768-0",
       "title": "Quality Determination of Frozen-Thawed Shrimp Using Machine Learning Algorithms Powered by Explainable Artificial Intelligence",
@@ -32011,6 +32179,40 @@
         "status": "automated_candidate",
         "confidence": 0.84,
         "reason": "Keyword evidence: 1 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1039/d4ra08316d",
+      "doi": "10.1039/d4ra08316d",
+      "title": "Stochastic generalization models learn to comprehensively detect volatile organic compounds associated with foodborne pathogens via Raman spectroscopy",
+      "authors": [
+        "Bohong Zhang",
+        "Anand K. Nambisan",
+        "Abhishek Prakash Hungund",
+        "Xavier Jones",
+        "Qingbo Yang",
+        "Jie Huang"
+      ],
+      "date": "2025-02-13",
+      "year": 2025,
+      "journal": "RSC Advances",
+      "url": "https://doi.org/10.1039/d4ra08316d",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-25",
+      "openalex_id": "https://openalex.org/W4407545235",
+      "domain": "Microbiological hazards",
+      "application": "Laboratory testing",
+      "data_type": "Spectroscopy",
+      "ai_method": "Classical machine learning",
+      "ai_family": "Machine learning (ML)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.97,
+        "reason": "Keyword evidence: 4 food-safety signals, 3 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
