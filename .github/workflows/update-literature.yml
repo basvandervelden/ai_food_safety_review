@@ -99,20 +99,39 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
-      - name: Wait for Pages artifact to become visible
+      - name: Deploy website using verified artifact ID
+        id: deployment
+        timeout-minutes: 13
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          set -euo pipefail
+          artifact_id=""
           for attempt in {1..12}; do
-            if gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages" --jq '.artifacts[] | select(.expired == false) | .id' > /tmp/pages-artifact-ids && [ -s /tmp/pages-artifact-ids ]; then
-              echo "Pages artifact is available."
-              exit 0
+            artifact_id=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages" --jq '[.artifacts[] | select(.expired == false)] | sort_by(.id) | last | .id // empty') || artifact_id=""
+            if [[ "$artifact_id" =~ ^[0-9]+$ ]]; then
+              break
             fi
-            echo "Waiting for Pages artifact (attempt $attempt/12)"
             sleep 10
           done
-          echo "::error::Pages artifact did not become visible in time."
+          [[ "$artifact_id" =~ ^[0-9]+$ ]] || { echo "::error::Pages artifact unavailable"; exit 1; }
+          oidc_token=$(curl --fail --silent --show-error -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -er '.value')
+          echo "::add-mask::$oidc_token"
+          deployment=$(gh api --method POST "repos/$GITHUB_REPOSITORY/pages/deployments" -F artifact_id="$artifact_id" -f pages_build_version="$GITHUB_SHA" -f oidc_token="$oidc_token")
+          deployment_id=$(jq -er '.id // (.status_url | split("/") | last)' <<< "$deployment")
+          page_url=$(jq -er '.page_url' <<< "$deployment")
+          echo "page_url=$page_url" >> "$GITHUB_OUTPUT"
+          for attempt in {1..120}; do
+            status=$(gh api "repos/$GITHUB_REPOSITORY/pages/deployments/$deployment_id" --jq '.status' ) || status="unknown_status"
+            echo "Pages deployment status: $status"
+            case "$status" in
+              succeed) exit 0 ;;
+              deployment_failed|deployment_perms_error|deployment_content_failed|deployment_cancelled|deployment_lost)
+                echo "::error::Pages deployment failed: $status"
+                exit 1 ;;
+            esac
+            sleep 5
+          done
+          gh api --method POST "repos/$GITHUB_REPOSITORY/pages/deployments/$deployment_id/cancel" || true
+          echo "::error::Pages deployment timed out"
           exit 1
-      - name: Deploy website
-        id: deployment
-        uses: actions/deploy-pages@v4
