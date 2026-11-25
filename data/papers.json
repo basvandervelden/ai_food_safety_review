@@ -2,7 +2,7 @@
   "meta": {
     "mode": "automated_candidates",
     "title": "Living AI for Food Safety",
-    "updated_at": "2026-11-25T18:34:04Z",
+    "updated_at": "2026-11-25T19:01:47Z",
     "note": "Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.",
     "original_review_doi": "10.1038/s41538-026-00925-1",
     "source": "OpenAlex title/abstract search + optional LLM classification",
