@@ -1715,13 +1715,6 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
-    "id": "doi:10.23751/pn.2026.18386",
-    "title": "Estimated Glyoxal Concentrations in Foods with Machine Learning-Based Transformation Strategies",
-    "doi": "10.23751/pn.2026.18386",
-    "score": 0.48,
-    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
-  },
-  {
     "id": "doi:10.1111/pce.70692",
     "title": "Systems‐Level Developmental Reprogramming Under Waterlogging Stress in Cowpea Revealed by Integrated Phenotypic, Physiological, and Transcriptomic Analysis",
     "doi": "10.1111/pce.70692",
@@ -2068,6 +2061,13 @@
     "id": "doi:10.1002/adsu.202501302",
     "title": "Application and Machine Learning‐Assisted Recognition of MOF‐Based Fluorescent Sensors in the Detection of Food Contaminants",
     "doi": "10.1002/adsu.202501302",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
+    "id": "doi:10.23751/pn.2026.18386",
+    "title": "Characterization of the estimated glyoxal concept via machine learning-based transformation strategies",
+    "doi": "10.23751/pn.2026.18386",
     "score": 0.48,
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },

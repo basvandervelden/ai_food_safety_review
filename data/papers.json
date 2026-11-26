@@ -2,28 +2,93 @@
   "meta": {
     "mode": "automated_candidates",
     "title": "Living AI for Food Safety",
-    "updated_at": "2026-11-25T19:01:47Z",
+    "updated_at": "2026-11-26T16:57:34Z",
     "note": "Automated candidate evidence map; not a validated systematic review. Publication-date search may miss delayed indexing.",
     "original_review_doi": "10.1038/s41538-026-00925-1",
     "source": "OpenAlex title/abstract search + optional LLM classification",
-    "retrieved": 4023,
-    "new_candidates": 0,
+    "retrieved": 4031,
+    "new_candidates": 3,
     "review_queue": 352,
     "lookback_days": null,
     "search_start": "2024-01-01",
-    "search_end": "2026-11-25",
+    "search_end": "2026-11-26",
     "max_pages": 20,
     "search_progress": {
       "status": "completed",
       "signature": "adff9f6a16d684ab",
       "calls_this_run": 104,
-      "last_checked": "2026-11-25",
+      "last_checked": "2026-11-26",
       "coverage_warnings": []
     },
     "query_count": 19,
     "llm_enabled": false
   },
   "papers": [
+    {
+      "id": "doi:10.3389/frai.2026.1904306",
+      "doi": "10.3389/frai.2026.1904306",
+      "title": "AI-powered electronic noses: advances in machine learning for food quality and sensory assessment",
+      "authors": [
+        "Grace Maria Paulson",
+        "Ameen Pareesa Zidhiq",
+        "Kaushalya Wijayasekara",
+        "Sandeep Singh Rana"
+      ],
+      "date": "2026-11-25",
+      "year": 2026,
+      "journal": "Frontiers in Artificial Intelligence",
+      "url": "https://doi.org/10.3389/frai.2026.1904306",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-26",
+      "openalex_id": "https://openalex.org/W7239722106",
+      "domain": "Food fraud & authenticity",
+      "application": "Laboratory testing",
+      "data_type": "Sensors & biosensors",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 8 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.1021/acssensors.6c04275",
+      "doi": "10.1021/acssensors.6c04275",
+      "title": "Volumetric Digital Microsphere Assay Coupling Cb Ago–CRISPR/Cas12a and Lens-Free Holography for Salmonella typhimurium Detection",
+      "authors": [
+        "Chen Zhan",
+        "Lu Peng",
+        "Xuefei Mao",
+        "Long Biao Wu",
+        "Yiping Chen"
+      ],
+      "date": "2026-11-25",
+      "year": 2026,
+      "journal": "ACS Sensors",
+      "url": "https://doi.org/10.1021/acssensors.6c04275",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-26",
+      "openalex_id": "https://openalex.org/W7239756891",
+      "domain": "Microbiological hazards",
+      "application": "Laboratory testing",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 3 food-safety signals, 1 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
     {
       "id": "doi:10.3390/agriengineering8120506",
       "doi": "10.3390/agriengineering8120506",
@@ -18478,6 +18543,39 @@
         "status": "automated_candidate",
         "confidence": 0.97,
         "reason": "Keyword evidence: 2 food-safety signals, 3 AI signals. Heuristic output requires validation.",
+        "classification_method": "heuristic"
+      }
+    },
+    {
+      "id": "doi:10.32604/iasc.2026.089335",
+      "doi": "10.32604/iasc.2026.089335",
+      "title": "A Profound Exploration of Pretrained, Ensemble, and Custom Convolutional Neural Network Models for Machine-Vision-Based Meat Type Recognition",
+      "authors": [
+        "Zarif Wasif Bhuiyan",
+        "Zaed Bin Monir Atib",
+        "Md. Ataur Rahman",
+        "Mahady Hasan",
+        "Md. Tarek Habib"
+      ],
+      "date": "2026-01-01",
+      "year": 2026,
+      "journal": "Intelligent Automation & Soft Computing",
+      "url": "https://doi.org/10.32604/iasc.2026.089335",
+      "publication_type": "Research article",
+      "source": "OpenAlex",
+      "first_seen": "2026-11-26",
+      "openalex_id": "https://openalex.org/W7239847057",
+      "domain": "Food fraud & authenticity",
+      "application": "Early warning",
+      "data_type": "Imaging & microscopy",
+      "ai_method": "Deep learning",
+      "ai_family": "Deep learning (DL)",
+      "source_group": "automated_candidate",
+      "summary": "Automated candidate identified from title and abstract. Open the source to assess the study.",
+      "screening": {
+        "status": "automated_candidate",
+        "confidence": 0.84,
+        "reason": "Keyword evidence: 1 food-safety signals, 4 AI signals. Heuristic output requires validation.",
         "classification_method": "heuristic"
       }
     },
