@@ -2079,6 +2079,13 @@
     "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
   },
   {
+    "id": "doi:10.1007/s12161-026-03370-8",
+    "title": "Explainable Artificial Intelligence for Intelligent Food Inspection Systems: Transitioning from Predictive Accuracy to Industrial Trust (A Systematic Review)",
+    "doi": "10.1007/s12161-026-03370-8",
+    "score": 0.48,
+    "reason": "Keyword evidence: 1 food-safety signals, 1 AI signals. Heuristic output requires validation."
+  },
+  {
     "id": "doi:10.1016/j.ccr.2026.218685",
     "title": "Smartphone-assisted colorimetric and fluorometric sensing with small-molecule responsive probes: advances and perspectives",
     "doi": "10.1016/j.ccr.2026.218685",
